@@ -10,9 +10,17 @@
 \usepackage{amsmath,amssymb}
 \usepackage{setspace}
 \usepackage{lineno}
-\usepackage{float}
 
 \graphicspath{{figures/}}
+\makeatletter
+\newcommand{\inlinefigurecaption}[2]{%
+  \begingroup
+  \def\@captype{figure}%
+  \caption{#2}%
+  \label{#1}%
+  \endgroup
+}
+\makeatother
 \raggedbottom
 
 \begin{document}
@@ -167,60 +175,56 @@ See the Availability of data and materials section.
 \bmhead{Code availability}
 See the Code availability section.
 
+\nolinenumbers
+\singlespacing
 \section{Figures}
 
-\begin{figure}[H]
-  \centering
+\begin{center}
   \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{Figure_1_study_design_pipeline.pdf}
-  \caption{\textbf{PatchTST-style self-supervised CTG representation learning and evidence chain.}
+\end{center}
+\inlinefigurecaption{fig:study_design}{\textbf{PatchTST-style self-supervised CTG representation learning and evidence chain.}
   Overview of the open-data intrapartum CTG analysis workflow. (A) AI method structure: paired FHR/UC windows were converted into patch tokens, masked by the candidate SSL masking module, encoded by a transformer, trained with masked-patch reconstruction and NT-Xent contrastive consistency, aggregated into record embeddings, and passed to phenotype and risk models. The compact sweep evaluated mixed, block and channel masking; the held-out manuscript-candidate used channel masking. (B) Study design using CTU-UHB/CTU-CHB as the primary raw-signal cohort and CTGDL-FHRMA/UCI Cardiotocography as external representation and feature-level resources. Records were split at the record level into 386 training records and 166 held-out test records. (C) Cohort scale for CTU-UHB training and test records and CTGDL-FHRMA external records. (D) Outcome balance in the record-level training and held-out test split. (E) Evidence map showing which modules support outcome prediction, interpretation, robustness, and external-domain claims.}
-  \label{fig:study_design}
-\end{figure}
+\clearpage
 
-\begin{figure}[H]
-  \centering
+\begin{center}
   \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{Figure_2_model_validation_and_explanation.pdf}
-  \caption{\textbf{Self-supervised CTG representations improve risk enrichment and contribute measurable AI features.}
+\end{center}
+\inlinefigurecaption{fig:model_validation}{\textbf{Self-supervised CTG representations improve risk enrichment and contribute measurable AI features.}
   Held-out validation and explanation of neonatal risk prediction models. (A) Precision-recall curves comparing classical signal features, SSL embeddings, signal-plus-SSL, and signal-plus-SSL-plus-phenotype models in the CTU-UHB held-out test set. (B) Receiver-operating-characteristic curves for the same AI feature sets. (C) Bootstrap validation of AUROC and AUPRC; points show observed test-set estimates and whiskers show 95\% bootstrap confidence intervals from 2,000 resamples. (D) Bootstrap AUPRC differences versus classical signal features. (E) Missingness sensitivity after removing FHR and UC missingness fractions from the feature set. (F) AI embedding contribution from AUPRC-based permutation importance in the signal-plus-SSL model; SSL dimensions appear among the highest-ranking predictors and the SSL embedding family contributes substantial aggregate positive importance. SSL, self-supervised learning.}
-  \label{fig:model_validation}
-\end{figure}
+\clearpage
 
-\begin{figure}[H]
-  \centering
+\begin{center}
   \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{Figure_3_dynamic_phenotype_prototypes.pdf}
-  \caption{\textbf{Dynamic signal phenotypes provide clinically interpretable CTG prototypes.}
+\end{center}
+\inlinefigurecaption{fig:phenotypes}{\textbf{Dynamic signal phenotypes provide clinically interpretable CTG prototypes.}
   Signal-derived phenotype structure and representative CTG trajectories. (A) Neonatal risk rates across four signal phenotypes. (B) Mean cord pH and 5-minute Apgar profile across phenotypes. (C) Standardized phenotype profile heatmap summarizing outcome and signal differences. (D) Mean FHR standard deviation and deceleration-proxy burden across signal phenotypes. (E-H) Representative prototype records closest to the phenotype centroids. Phenotype 2 showed the highest neonatal risk rate and the strongest adverse signal profile, including higher FHR variability and deceleration-proxy burden.}
-  \label{fig:phenotypes}
-\end{figure}
+\clearpage
 
-\begin{figure}[H]
-  \centering
+\begin{center}
   \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{Figure_4_recalibration_and_clinical_utility.pdf}
-  \caption{\textbf{Cross-fitted Platt recalibration improves absolute risk calibration and decision-curve behavior.}
+\end{center}
+\inlinefigurecaption{fig:calibration_dca}{\textbf{Cross-fitted Platt recalibration improves absolute risk calibration and decision-curve behavior.}
   Calibration and clinical utility of the final signal-plus-SSL-plus-signal-phenotype model. (A) Calibration curves for raw, Platt-scaled, and isotonic predictions. Recalibrators were fitted using training-set out-of-fold predictions and evaluated in the held-out test set. (B) Calibration metric panel separating Brier point estimates, ECE point estimates, and bootstrap-mean ECE with 95\% bootstrap confidence intervals; this avoids treating the bin-dependent held-out ECE point estimate as identical to its bootstrap mean. (C) Risk-score distributions before and after Platt recalibration, stratified by observed outcome. (D) Bin-level absolute calibration error. (E) Decision curve analysis across risk thresholds. (F) Mean net benefit in the 0.10--0.30 threshold range. Platt scaling improved calibration while preserving discrimination and AUPRC.}
-  \label{fig:calibration_dca}
-\end{figure}
+\clearpage
 
 \section{Supplementary figures}
 \setcounter{figure}{0}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand{\theHfigure}{S\arabic{figure}}
 
-\begin{figure}[H]
-  \centering
+\begin{center}
   \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{Supplementary_Figure_S1_model_selection_and_sensitivity.pdf}
-  \caption{\textbf{AI model-selection and sensitivity panels for the transformer phenotyping workflow.}
+\end{center}
+\inlinefigurecaption{fig:model_selection_sensitivity}{\textbf{AI model-selection and sensitivity panels for the transformer phenotyping workflow.}
   Supplementary analyses of the self-supervised AI method layer. (A) Exploratory transformer configuration and feature-set combinations ranked by held-out AUPRC. (B) Sensitivity summary across masking strategy, patch length, model dimension and contrastive objective weight, using the best AUPRC observed within each setting. Because these panels use held-out performance for method exploration, they should not be interpreted as a locked independent model-selection experiment. (C) Training-objective trace for a selected-architecture refit, showing masked reconstruction loss and NT-Xent contrastive loss across epochs. (D) Feature-family contribution to AUPRC-based permutation importance for signal-plus-SSL and final phenotype-augmented models.}
-  \label{fig:model_selection_sensitivity}
-\end{figure}
+\clearpage
 
-\begin{figure}[H]
-  \centering
+\begin{center}
   \includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{Supplementary_Figure_S2_external_domain_shift.pdf}
-  \caption{\textbf{CTGDL-FHRMA supports external representation and domain-shift validation.}
+\end{center}
+\inlinefigurecaption{fig:external}{\textbf{CTGDL-FHRMA supports external representation and domain-shift validation.}
   External representation analysis using CTGDL-FHRMA records. Because external neonatal outcome labels were not used for CTGDL-FHRMA, this analysis is interpreted as external representation/domain-shift validation rather than external outcome validation. (A) Principal-component visualization of CTU-UHB and CTGDL-FHRMA transformer embeddings. (B) Domain separability quantified by a CTU-versus-CTGDL classifier. (C) CTGDL-FHRMA records assigned to CTU-derived SSL phenotypes. (D) CTU-UHB neonatal risk gradient across SSL phenotypes.}
-  \label{fig:external}
-\end{figure}
+\clearpage
 
 \section{Supplementary tables}
 
