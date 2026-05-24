@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived Zenodo release DOI once available."
+title: "Self-supervised dynamic cardiotocography phenotyping for calibrated neonatal risk enrichment"
+version: "1.0.0"
+date-released: "2026-05-24"
+repository-code: "https://github.com/Luciky-Leo/ctg-foundation-trajectory"
+license: MIT
+authors:
+  - family-names: Lu
+    given-names: Feifan
+    affiliation: "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    email: "luff94@163.com"
+  - family-names: Guan
+    given-names: Rui
+    affiliation: "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    email: "cngreen785@163.com"
+keywords:
+  - cardiotocography
+  - fetal heart rate
+  - self-supervised learning
+  - PatchTST
+  - dynamic phenotyping
+  - calibration
+  - neonatal risk

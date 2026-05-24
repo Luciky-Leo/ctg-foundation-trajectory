@@ -21,7 +21,7 @@ The supplementary figures are also in `figures/` and are numbered in first-citat
 - `Supplementary_Figure_S1_model_selection_and_sensitivity.pdf`
 - `Supplementary_Figure_S2_external_domain_shift.pdf`
 
-`Figure_1A_openai_flowchart_source.png` is retained only as the source asset for the generated Fig. 1A panel.
+`Figure_1A_method_flowchart_source.png` is retained only as the source asset for the generated Fig. 1A panel.
 
 ## Data attachments
 

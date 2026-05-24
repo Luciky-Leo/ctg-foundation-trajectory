@@ -9,7 +9,7 @@ import pandas as pd
 
 FIG_DIR = Path("results/manuscript/figures")
 SOURCE_DIR = Path("results/manuscript/source_data")
-AI_ARCHITECTURE_IMAGE = Path("docs/figures/fig1a_openai_flowchart.png")
+AI_ARCHITECTURE_IMAGE = Path("docs/figures/fig1a_method_flowchart.png")
 
 PALETTE = {
     "signal_features": "#2f6f9f",

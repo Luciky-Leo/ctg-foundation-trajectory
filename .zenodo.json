@@ -1,0 +1,28 @@
+{
+  "title": "Self-supervised dynamic cardiotocography phenotyping for calibrated neonatal risk enrichment",
+  "upload_type": "software",
+  "description": "Code, manuscript source files, figure source data, supplementary tables and reproducibility files for an open-data intrapartum cardiotocography study of self-supervised dynamic phenotyping and calibrated neonatal risk enrichment.",
+  "creators": [
+    {
+      "name": "Lu, Feifan",
+      "affiliation": "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    },
+    {
+      "name": "Guan, Rui",
+      "affiliation": "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    }
+  ],
+  "keywords": [
+    "cardiotocography",
+    "fetal heart rate",
+    "self-supervised learning",
+    "PatchTST",
+    "dynamic phenotyping",
+    "calibration",
+    "neonatal risk"
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng"
+}

@@ -159,6 +159,12 @@ Interpretation: external FHRMA data show substantial dataset shift, which is imp
 
 The final LaTeX source package is in `manuscript_overleaf/`. Supplementary tables include reviewer-facing sensitivity analyses and a TRIPOD+AI checklist mapping.
 
+## Code archive
+
+Repository URL: https://github.com/Luciky-Leo/ctg-foundation-trajectory
+
+This repository includes `.zenodo.json` and `CITATION.cff` metadata for Zenodo/GitHub release archiving. After enabling the Zenodo GitHub integration and creating a GitHub release, add the resulting DOI to the manuscript Code availability and Data availability statements.
+
 ## License
 
-No license has been applied yet. Add a license before public release if reuse by third parties should be permitted.
+The analysis code is released under the MIT License. Public source datasets remain governed by their original database licenses and access terms.
