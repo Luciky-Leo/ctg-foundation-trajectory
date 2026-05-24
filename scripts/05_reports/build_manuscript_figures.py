@@ -785,7 +785,7 @@ def figure_4():
     plt.close(fig)
 
 
-def figure_s1():
+def figure_s2_external_domain_shift():
     external = read_csv("results/tables/ctgdl_external_embedding_validation.csv")
     assigned = read_csv("results/tables/ctgdl_fhrma_assigned_ssl_phenotypes.csv")
     ssl_summary = read_csv("results/tables/ctu_uhb_ssl_phenotype_summary.csv")
@@ -793,7 +793,7 @@ def figure_s1():
     counts.columns = ["assigned_ctu_ssl_phenotype", "n_records"]
     counts["proportion"] = counts["n_records"] / counts["n_records"].sum()
     ext_map = dict(zip(external["metric"], external["value"]))
-    write_source_data("Figure_S1_source_data.csv", [("A_B", external), ("C", counts), ("D", ssl_summary)])
+    write_source_data("Supplementary_Figure_S2_source_data.csv", [("A_B", external), ("C", counts), ("D", ssl_summary)])
 
     fig = plt.figure(figsize=(7.2, 6.45))
     gs = fig.add_gridspec(2, 2, width_ratios=[1.15, 1.0], height_ratios=[1.0, 1.0])
@@ -837,15 +837,15 @@ def figure_s1():
     add_panel_label(ax_d, "D")
 
     fig.tight_layout(w_pad=1.4, h_pad=1.4)
-    save_pub(fig, "Figure_S1_external_domain_shift")
+    save_pub(fig, "Supplementary_Figure_S2_external_domain_shift")
     plt.close(fig)
 
 
-def figure_s2():
+def figure_s1_model_selection_and_sensitivity():
     sweep = read_csv("results/tables/transformer_sweep_summary_ranked.csv")
     family = read_csv("results/tables/permutation_feature_family_importance.csv")
     losses = read_loss_curve("results/models/transformer_ssl_encoder_metrics.txt")
-    write_source_data("Figure_S2_source_data.csv", [
+    write_source_data("Supplementary_Figure_S1_source_data.csv", [
         ("A", sweep),
         ("B", sweep),
         ("C", losses),
@@ -936,7 +936,7 @@ def figure_s2():
     add_panel_label(ax_d, "D")
 
     fig.tight_layout(h_pad=1.4, w_pad=1.6)
-    save_pub(fig, "Figure_S2_model_selection_and_sensitivity")
+    save_pub(fig, "Supplementary_Figure_S1_model_selection_and_sensitivity")
     plt.close(fig)
 
 
@@ -972,16 +972,16 @@ def figure_manifest():
         },
         {
             "figure": "Figure S1",
-            "file_stem": "Figure_S1_external_domain_shift",
-            "claim": "CTGDL-FHRMA supports external representation/domain-shift validation.",
-            "source_data": "Figure_S1_source_data.csv",
+            "file_stem": "Supplementary_Figure_S1_model_selection_and_sensitivity",
+            "claim": "Transformer configuration, masking, objective loss, and feature-family sensitivity support the AI method layer.",
+            "source_data": "Supplementary_Figure_S1_source_data.csv",
             "panels": "A-D",
         },
         {
             "figure": "Figure S2",
-            "file_stem": "Figure_S2_model_selection_and_sensitivity",
-            "claim": "Transformer configuration, masking, objective loss, and feature-family sensitivity support the AI method layer.",
-            "source_data": "Figure_S2_source_data.csv",
+            "file_stem": "Supplementary_Figure_S2_external_domain_shift",
+            "claim": "CTGDL-FHRMA supports external representation/domain-shift validation.",
+            "source_data": "Supplementary_Figure_S2_source_data.csv",
             "panels": "A-D",
         },
     ]
@@ -995,8 +995,8 @@ def main():
     figure_2()
     figure_3()
     figure_4()
-    figure_s1()
-    figure_s2()
+    figure_s1_model_selection_and_sensitivity()
+    figure_s2_external_domain_shift()
     figure_manifest()
     print(f"Wrote manuscript figures to {FIG_DIR}")
     print(f"Wrote source-data tables to {SOURCE_DIR}")
