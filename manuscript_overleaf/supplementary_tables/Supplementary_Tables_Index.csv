@@ -1,0 +1,11 @@
+table,file,description
+Supplementary Table 1,Supplementary_Table_1_datasets_and_cohort_scale.csv,"Dataset sources, cohort scale, record-level split, window counts, and external validation role."
+Supplementary Table 2,Supplementary_Table_2_model_performance_bootstrap.csv,Held-out model performance with 2000-bootstrap confidence intervals.
+Supplementary Table 3,Supplementary_Table_3_bootstrap_model_differences.csv,Bootstrap pairwise model differences and zero-crossing flags.
+Supplementary Table 4,Supplementary_Table_4_dynamic_phenotype_summary_and_prototypes.csv,Signal and SSL phenotype summaries with representative prototype records.
+Supplementary Table 5,Supplementary_Table_5_prediction_explainability.csv,Permutation importance by feature family and top individual predictors.
+Supplementary Table 6,Supplementary_Table_6_missingness_sensitivity.csv,Performance and model-difference sensitivity after removing missingness features.
+Supplementary Table 7,Supplementary_Table_7_recalibration_and_decision_curve.csv,"Cross-fitted recalibration metrics, recalibration differences, and decision curve summaries."
+Supplementary Table 8,Supplementary_Table_8_external_representation_validation.csv,CTGDL-FHRMA domain-shift and phenotype-assignment validation.
+Supplementary Table 9,Supplementary_Table_9_reviewer_sensitivity_analyses.csv,"Reviewer-requested sensitivity analyses for development-only model selection, SSL PCA dimensionality reduction, elastic-net regularization and pH-threshold outcome definitions."
+Supplementary Table 10,Supplementary_Table_10_TRIPOD_AI_checklist.csv,TRIPOD+AI reporting checklist mapping for the manuscript.

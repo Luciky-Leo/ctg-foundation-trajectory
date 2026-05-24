@@ -1,0 +1,13 @@
+metric,value,table_block,assigned_ctu_ssl_phenotype,n_records
+ctu_records,552.0,external_embedding_metrics,,
+ctgdl_fhrma_records,135.0,external_embedding_metrics,,
+domain_classifier_auroc_ctgdl_vs_ctu,0.9088,external_embedding_metrics,,
+pca_explained_variance_pc1_pc2,0.5092,external_embedding_metrics,,
+ctgdl_assigned_ssl_phenotype_1,56.0,external_embedding_metrics,,
+ctgdl_assigned_ssl_phenotype_2,1.0,external_embedding_metrics,,
+ctgdl_assigned_ssl_phenotype_3,62.0,external_embedding_metrics,,
+ctgdl_assigned_ssl_phenotype_4,16.0,external_embedding_metrics,,
+,,assigned_ssl_phenotype_counts,1.0,56.0
+,,assigned_ssl_phenotype_counts,2.0,1.0
+,,assigned_ssl_phenotype_counts,3.0,62.0
+,,assigned_ssl_phenotype_counts,4.0,16.0

@@ -1,0 +1,6 @@
+dataset,role,url,access,license_or_terms,status,notes
+CTU-UHB / CTU-CHB Intrapartum CTG Database,primary raw signal cohort,https://physionet.org/content/ctu-uhb-ctgdb/1.0.0/,open access,Open Data Commons Attribution License v1.0,verified,552 intrapartum CTG records with FHR/UC signals and clinical metadata
+UCI Cardiotocography,feature-level baseline,https://archive-beta.ics.uci.edu/dataset/193/cardiotocography,open access,UCI repository terms,verified,2126 CTG feature rows; no raw signal
+CTGDL,multi-source external/harmonized validation,https://zenodo.org/records/18023488,open record with subset-specific caveats,mixed; check each subset,verified_with_caveats,Includes CTU-UHB derived files and other sources; SPAM subset notes DUA requirement
+CTU-CHB annotation dataset,optional expert annotation layer,https://doi.org/10.1016/j.dib.2020.105690,article/open supplementary source,check publisher/data terms,identified,Useful for clinically interpretable event annotation if files are accessible
+

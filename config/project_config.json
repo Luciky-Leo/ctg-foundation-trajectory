@@ -1,0 +1,28 @@
+{
+  "project_name": "CTG_Foundation_Trajectory",
+  "primary_dataset": "CTU-UHB / CTU-CHB Intrapartum Cardiotocography Database",
+  "primary_outcomes": [
+    "umbilical_artery_pH_low",
+    "apgar5_low",
+    "composite_neonatal_risk"
+  ],
+  "signal_channels": [
+    "fetal_heart_rate",
+    "uterine_contraction"
+  ],
+  "sampling_plan": {
+    "target_frequency_hz": 4,
+    "analysis_window_minutes": 60,
+    "anchor": "delivery_or_record_end"
+  },
+  "self_supervised_tasks": [
+    "masked_time_series_reconstruction",
+    "contrastive_segment_prediction",
+    "future_window_prediction"
+  ],
+  "external_validation_datasets": [
+    "CTGDL",
+    "UCI Cardiotocography feature baseline"
+  ]
+}
+

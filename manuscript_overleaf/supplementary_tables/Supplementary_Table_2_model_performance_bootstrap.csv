@@ -1,0 +1,41 @@
+model,model_label,metric,point,bootstrap_mean,ci_2_5,ci_97_5,n_bootstrap_valid
+signal_features,Signal features,auroc,0.6303475935828877,0.629339718513768,0.5254294992667086,0.728436582767078,2000.0
+signal_features,Signal features,auprc,0.3365609947521623,0.3521546875061651,0.2173340161299445,0.4941216453489944,2000.0
+signal_features,Signal features,brier,0.2524914255322518,0.2527901299044881,0.2234448724247188,0.2833741030882272,2000.0
+signal_features,Signal features,calibration_intercept,-1.3837556277052283,,,,
+signal_features,Signal features,calibration_slope,0.4876152392048818,,,,
+ssl_embeddings,SSL embeddings,auroc,0.5512477718360071,0.5528680499300068,0.4377028524562413,0.6611151960784314,2000.0
+ssl_embeddings,SSL embeddings,auprc,0.2494845458636568,0.2686802128385183,0.1704149779867698,0.3882017409993332,2000.0
+ssl_embeddings,SSL embeddings,brier,0.2671130328980145,0.2667905749880631,0.242765597368135,0.291066118681557,2000.0
+ssl_embeddings,SSL embeddings,calibration_intercept,-1.3649995814497426,,,,
+ssl_embeddings,SSL embeddings,calibration_slope,0.2456745955547829,,,,
+signal_plus_ssl,Signal + SSL,auroc,0.6481729055258467,0.6471343960011603,0.538559340249914,0.749147465437788,2000.0
+signal_plus_ssl,Signal + SSL,auprc,0.4432108930619304,0.4499875191244661,0.2974163626233831,0.5891492752788606,2000.0
+signal_plus_ssl,Signal + SSL,brier,0.2553646593881311,0.2557460338213892,0.2199225917912409,0.2901248345455643,2000.0
+signal_plus_ssl,Signal + SSL,calibration_intercept,-1.4050109522616443,,,,
+signal_plus_ssl,Signal + SSL,calibration_slope,0.4519704801862288,,,,
+signal_phenotype_only,Signal phenotype only,auroc,0.6002673796791443,0.6000385288087094,0.4951120136700469,0.6970457612454812,2000.0
+signal_phenotype_only,Signal phenotype only,auprc,0.248831581860146,0.2538154309252844,0.1680052905788595,0.3519356417847275,2000.0
+signal_phenotype_only,Signal phenotype only,brier,0.2523033897858863,0.2525105233706702,0.2297537920594275,0.2751069768241617,2000.0
+signal_phenotype_only,Signal phenotype only,calibration_intercept,-1.367550433996081,,,,
+signal_phenotype_only,Signal phenotype only,calibration_slope,0.4662218167419979,,,,
+ssl_phenotype_only,SSL phenotype only,auroc,0.5152629233511586,0.5140916418686758,0.3952277180642983,0.6240440980548894,2000.0
+ssl_phenotype_only,SSL phenotype only,auprc,0.2170298862123005,0.2219605393798261,0.1443950132087777,0.3088902658099974,2000.0
+ssl_phenotype_only,SSL phenotype only,brier,0.2503001577398032,0.2503291776016453,0.2485283467628424,0.2521843939779746,2000.0
+ssl_phenotype_only,SSL phenotype only,calibration_intercept,-1.3570827099931195,,,,
+ssl_phenotype_only,SSL phenotype only,calibration_slope,-0.7466945871717742,,,,
+signal_plus_signal_phenotype,Signal + signal phenotype,auroc,0.6327985739750446,0.6320801894243236,0.5242869875222818,0.7306484616873065,2000.0
+signal_plus_signal_phenotype,Signal + signal phenotype,auprc,0.3495031310249089,0.3618391762815587,0.2209935855174206,0.5007046229775978,2000.0
+signal_plus_signal_phenotype,Signal + signal phenotype,brier,0.2503389380257718,0.2506365242654897,0.2215792221363489,0.2807240601549925,2000.0
+signal_plus_signal_phenotype,Signal + signal phenotype,calibration_intercept,-1.3770081280009177,,,,
+signal_plus_signal_phenotype,Signal + signal phenotype,calibration_slope,0.5030790154930093,,,,
+signal_plus_ssl_phenotype,Signal + SSL phenotype,auroc,0.6281194295900179,0.6267414247460891,0.521442458332799,0.7266798287290257,2000.0
+signal_plus_ssl_phenotype,Signal + SSL phenotype,auprc,0.337671275805512,0.3525676967353953,0.2207002078095881,0.4932474253690798,2000.0
+signal_plus_ssl_phenotype,Signal + SSL phenotype,brier,0.2537056564358851,0.254195449128935,0.2251680460295183,0.2851776117800982,2000.0
+signal_plus_ssl_phenotype,Signal + SSL phenotype,calibration_intercept,-1.38566366917648,,,,
+signal_plus_ssl_phenotype,Signal + SSL phenotype,calibration_slope,0.4739686041976065,,,,
+signal_plus_ssl_plus_signal_phenotype,Signal + SSL + signal phenotype,auroc,0.6559714795008913,0.6551109777162747,0.5490079365079366,0.757695895522388,2000.0
+signal_plus_ssl_plus_signal_phenotype,Signal + SSL + signal phenotype,auprc,0.4324439681648454,0.441243448074725,0.2866637175200281,0.5876589535043436,2000.0
+signal_plus_ssl_plus_signal_phenotype,Signal + SSL + signal phenotype,brier,0.2515696224334074,0.2519678569955685,0.2149571283779804,0.2863152171103807,2000.0
+signal_plus_ssl_plus_signal_phenotype,Signal + SSL + signal phenotype,calibration_intercept,-1.4044988004010317,,,,
+signal_plus_ssl_plus_signal_phenotype,Signal + SSL + signal phenotype,calibration_slope,0.4731855410006625,,,,

@@ -1,0 +1,25 @@
+source_panel,step_order,step,panel_asset,item,value,type,split,records,events,event_rate,non_events,module,Outcome,Interpretation,Robustness,External
+A,1.0,FHR/UC window,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+A,2.0,Patch tokens,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+A,3.0,Masking module,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+A,4.0,Transformer encoder,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+A,5.0,Masked reconstruction,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+A,6.0,NT-Xent contrastive,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+A,7.0,Record embedding,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+A,8.0,Phenotype/risk model,docs/figures/fig1a_openai_flowchart.png,,,,,,,,,,,,,
+C,,,,CTU-UHB records,552.0,records,,,,,,,,,,
+C,,,,CTU-UHB train records,386.0,records,,,,,,,,,,
+C,,,,CTU-UHB test records,166.0,records,,,,,,,,,,
+C,,,,CTU-UHB windows,7602.0,windows,,,,,,,,,,
+C,,,,CTU-UHB train windows,5301.0,windows,,,,,,,,,,
+C,,,,CTU-UHB test windows,2301.0,windows,,,,,,,,,,
+C,,,,CTGDL-FHRMA records,135.0,records,,,,,,,,,,
+C,,,,CTGDL-FHRMA windows,2604.0,windows,,,,,,,,,,
+D,,,,,,,test,166.0,34.0,0.20481927710843373,132.0,,,,,
+D,,,,,,,train,386.0,79.0,0.20466321243523317,307.0,,,,,
+E,,,,,,,,,,,,Self-supervised pretraining,0.0,0.0,1.0,0.0
+E,,,,,,,,,,,,Held-out test prediction,1.0,0.0,1.0,0.0
+E,,,,,,,,,,,,Dynamic phenotypes,1.0,1.0,0.0,0.0
+E,,,,,,,,,,,,Missingness sensitivity,1.0,0.0,1.0,0.0
+E,,,,,,,,,,,,Recalibration + DCA,1.0,0.0,1.0,0.0
+E,,,,,,,,,,,,CTGDL representation test,0.0,0.0,1.0,1.0

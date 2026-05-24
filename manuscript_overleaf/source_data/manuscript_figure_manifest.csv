@@ -1,0 +1,7 @@
+figure,file_stem,claim,source_data,panels
+Figure 1,Figure_1_study_design_pipeline,Open CTG data support a PatchTST-style SSL architecture linked to dynamic phenotyping and validation.,Figure_1_source_data.csv,A-E
+Figure 2,Figure_2_model_validation_and_explanation,SSL representations improve risk enrichment and remain interpretable through feature and sensitivity analyses.,Figure_2_source_data.csv,A-F
+Figure 3,Figure_3_dynamic_phenotype_prototypes,Signal phenotypes provide clinically interpretable dynamic CTG prototypes.,Figure_3_source_data.csv,A-H
+Figure 4,Figure_4_recalibration_and_clinical_utility,Cross-fitted Platt recalibration improves absolute risk calibration and threshold behavior.,Figure_4_source_data.csv,A-F
+Figure S1,Supplementary_Figure_S1_model_selection_and_sensitivity,"Transformer configuration, masking, objective loss, and feature-family sensitivity support the AI method layer.",Supplementary_Figure_S1_source_data.csv,A-D
+Figure S2,Supplementary_Figure_S2_external_domain_shift,CTGDL-FHRMA supports external representation/domain-shift validation.,Supplementary_Figure_S2_source_data.csv,A-D
