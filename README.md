@@ -165,7 +165,7 @@ The final LaTeX source package is in `manuscript_overleaf/`. Supplementary table
 
 Repository URL: https://github.com/Luciky-Leo/ctg-foundation-trajectory
 
-Versioned Zenodo release DOI: https://doi.org/10.5281/zenodo.20364142
+Versioned Zenodo release DOI: https://doi.org/10.5281/zenodo.20376424
 
 This repository includes `.zenodo.json` and `CITATION.cff` metadata for Zenodo/GitHub release archiving.
 

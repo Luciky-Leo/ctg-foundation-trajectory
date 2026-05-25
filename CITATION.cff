@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this repository, please cite the archived Zenodo release DOI."
 title: "Self-supervised cardiotocography trajectory representation for calibrated neonatal risk enrichment"
 version: "1.0.0"
-date-released: "2026-05-24"
+date-released: "2026-05-25"
 repository-code: "https://github.com/Luciky-Leo/ctg-foundation-trajectory"
-doi: "10.5281/zenodo.20364142"
+doi: "10.5281/zenodo.20376424"
 license: MIT
 authors:
   - family-names: Gui
