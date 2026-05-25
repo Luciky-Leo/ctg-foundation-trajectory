@@ -4,11 +4,19 @@
   "description": "Code, manuscript source files, figure source data, supplementary tables and reproducibility files for an open-data intrapartum cardiotocography study of self-supervised dynamic phenotyping and calibrated neonatal risk enrichment.",
   "creators": [
     {
-      "name": "Lu, Feifan",
+      "name": "Gui, Xiaoqian",
       "affiliation": "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
     },
     {
-      "name": "Guan, Rui",
+      "name": "Zhu, Kaisi",
+      "affiliation": "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    },
+    {
+      "name": "Jiang, Ziyii",
+      "affiliation": "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    },
+    {
+      "name": "Lu, Feifani",
       "affiliation": "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
     }
   ],

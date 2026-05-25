@@ -7,14 +7,22 @@ repository-code: "https://github.com/Luciky-Leo/ctg-foundation-trajectory"
 doi: "10.5281/zenodo.20364142"
 license: MIT
 authors:
+  - family-names: Gui
+    given-names: Xiaoqian
+    affiliation: "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    email: "XX@163.com"
+  - family-names: Zhu
+    given-names: Kaisi
+    affiliation: "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    email: "XX@163.com"
+  - family-names: Jiang
+    given-names: Ziyii
+    affiliation: "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
+    email: "XX@163.com"
   - family-names: Lu
-    given-names: Feifan
+    given-names: Feifani
     affiliation: "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
     email: "luff94@163.com"
-  - family-names: Guan
-    given-names: Rui
-    affiliation: "Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University"
-    email: "cngreen785@163.com"
 keywords:
   - cardiotocography
   - fetal heart rate

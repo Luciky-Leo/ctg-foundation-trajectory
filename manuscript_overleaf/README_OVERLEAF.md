@@ -41,4 +41,4 @@ The supplementary figures are also in `figures/` and are numbered in first-citat
 - Figures are forced to appear immediately after the `Figures` and `Supplementary figures` headings in the compiled review PDF.
 - Figure 2C legend was moved above the panel to avoid overlap with confidence-interval lines.
 - Reviewer-facing sensitivity analyses have been added for development-only model selection, PCA-reduced SSL embeddings, elastic-net regularization and pH-only outcome thresholds.
-- Author names, affiliation, funding and contribution statements have been updated for Feifan Lu and Rui Guan. Additional authors can be added before submission if needed.
+- Author names, affiliation, funding and contribution statements have been updated for Xiaoqian Gui, Kaisi Zhu, Ziyii Jiang and Feifani Lu, including equal-contribution statements for the first three authors.
