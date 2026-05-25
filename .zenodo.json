@@ -1,7 +1,7 @@
 {
-  "title": "Self-supervised dynamic cardiotocography phenotyping for calibrated neonatal risk enrichment",
+  "title": "Self-supervised cardiotocography trajectory representation for calibrated neonatal risk enrichment",
   "upload_type": "software",
-  "description": "Code, manuscript source files, figure source data, supplementary tables and reproducibility files for an open-data intrapartum cardiotocography study of self-supervised dynamic phenotyping and calibrated neonatal risk enrichment.",
+  "description": "Code, manuscript source files, figure source data, supplementary tables and reproducibility files for an open-data health informatics method study of self-supervised cardiotocography trajectory representation, calibrated neonatal risk enrichment and domain-shift assessment.",
   "creators": [
     {
       "name": "Gui, Xiaoqian",
@@ -22,12 +22,10 @@
   ],
   "keywords": [
     "cardiotocography",
-    "fetal heart rate",
-    "self-supervised learning",
-    "PatchTST",
-    "dynamic phenotyping",
-    "calibration",
-    "neonatal risk"
+    "medical informatics",
+    "machine learning",
+    "clinical decision support",
+    "calibration"
   ],
   "license": "mit",
   "access_right": "open",

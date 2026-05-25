@@ -1,10 +1,10 @@
-# CTG Foundation Trajectory - BMC MIDD / Springer Nature Overleaf final package
+# CTG Foundation Trajectory - Methods of Information in Medicine oriented source package
 
-This folder is a clean Overleaf-ready package built from the final manuscript state on 2026-05-24 and revised for BMC Medical Informatics and Decision Making positioning.
+This folder is a clean LaTeX source package built from the final manuscript state on 2026-05-24 and revised for Methods of Information in Medicine positioning.
 
 ## Main file
 
-- `main.tex` is the Springer Nature `sn-jnl` version of the manuscript, with double spacing, line numbering, and BMC-oriented decision-modelling language.
+- `main.tex` is the current LaTeX source version of the manuscript, with double spacing, line numbering, and Methods of Information in Medicine oriented health-informatics language.
 - Upload the source zip to Overleaf and set `main.tex` as the main document if Overleaf does not detect it automatically. The local compile-check PDF is for audit only and does not need to be uploaded.
 
 ## Final figure set
@@ -30,7 +30,7 @@ The supplementary figures are also in `figures/` and are numbered in first-citat
 
 ## Preview
 
-- `BMC_MIDD_COMPILED_CHECK_REVIEW_READY.pdf` is the final local compile check generated from this Springer Nature package. It is included for audit only and is not required by `main.tex`.
+- `BMC_MIDD_COMPILED_CHECK_REVIEW_READY.pdf` is the local compile check generated from this package. It is included for audit only and is not required by `main.tex`.
 
 ## Final audit notes
 

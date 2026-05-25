@@ -2,11 +2,11 @@
 
 Code and manuscript package for:
 
-Self-supervised dynamic cardiotocography phenotyping for calibrated neonatal risk enrichment: an open-data decision-modelling study
+Self-supervised cardiotocography trajectory representation for calibrated neonatal risk enrichment: an open-data health informatics method study
 
 ## Overview
 
-This repository contains the reproducible analysis scripts and manuscript source files for an open-data intrapartum cardiotocography (CTG) study. The analysis evaluates whether self-supervised fetal heart rate (FHR) and uterine contraction (UC) representations can support calibrated neonatal risk enrichment and clinically interpretable dynamic phenotypes.
+This repository contains the reproducible analysis scripts and manuscript source files for an open-data intrapartum cardiotocography (CTG) health informatics method study. The analysis evaluates whether self-supervised fetal heart rate (FHR) and uterine contraction (UC) trajectory representations can support calibrated neonatal risk enrichment, clinically interpretable dynamic phenotypes and explicit domain-shift assessment.
 
 The repository is intended as a code and source-data archive, not as a deployable clinical device. It does not include raw public datasets, generated model weights, Python virtual environments, or large intermediate tensors.
 
@@ -35,7 +35,7 @@ The repository is intended as a code and source-data archive, not as a deployabl
 ```text
 config/                  Pipeline configuration
 scripts/                 Data download, preprocessing, modelling and reporting scripts
-manuscript_overleaf/     Final Springer Nature / BMC-ready LaTeX package and figure source data
+manuscript_overleaf/     Journal-targeted LaTeX manuscript source, figures and source data
 reproducibility/         Fixed split files and reviewer-facing sensitivity tables
 requirements.txt         Minimal Python package list
 run_pipeline.ps1         Synthetic smoke-test pipeline
