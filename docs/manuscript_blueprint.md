@@ -42,7 +42,6 @@ Realistic public-data target:
 - Computer Methods and Programs in Biomedicine.
 - Biomedical Signal Processing and Control.
 - Artificial Intelligence in Medicine.
-- BMC Medicine or BMC Pregnancy and Childbirth depending on clinical strength.
+- Current retargeting: Methods of Information in Medicine as a health-informatics method study; prior BMC options are no longer the active target.
 
 Higher target usually requires local hospital validation or prospective expert review.
-

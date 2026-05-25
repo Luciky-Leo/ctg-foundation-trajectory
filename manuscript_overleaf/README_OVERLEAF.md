@@ -30,7 +30,7 @@ The supplementary figures are also in `figures/` and are numbered in first-citat
 
 ## Preview
 
-- `BMC_MIDD_COMPILED_CHECK_REVIEW_READY.pdf` is the local compile check generated from this package. It is included for audit only and is not required by `main.tex`.
+- `METHODS_INFO_MED_COMPILED_CHECK_REVIEW_READY.pdf` is the local compile check generated from this package. It is included for audit only and is not required by `main.tex`.
 
 ## Final audit notes
 
