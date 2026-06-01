@@ -42,6 +42,6 @@ Realistic public-data target:
 - Computer Methods and Programs in Biomedicine.
 - Biomedical Signal Processing and Control.
 - Artificial Intelligence in Medicine.
-- Current retargeting: Methods of Information in Medicine as a health-informatics method study; prior BMC options are no longer the active target.
+- Current retargeting: Frontiers in Signal Processing, Biomedical Signal Processing specialty, as a biomedical signal representation learning study.
 
 Higher target usually requires local hospital validation or prospective expert review.

@@ -1,10 +1,10 @@
-# CTG Foundation Trajectory - Methods of Information in Medicine oriented source package
+# CTG Foundation Trajectory - Frontiers-oriented source package
 
-This folder is a clean LaTeX source package built from the final manuscript state on 2026-05-24 and revised for Methods of Information in Medicine positioning.
+This folder is a clean LaTeX source package built from the final manuscript state and later retargeted to Frontiers in Signal Processing positioning.
 
 ## Main file
 
-- `main.tex` is the current LaTeX source version of the manuscript, with double spacing, line numbering, and Methods of Information in Medicine oriented health-informatics language.
+- `main.tex` is the current LaTeX source version of the manuscript, with double spacing, line numbering, and biomedical signal representation learning language.
 - Upload the source zip to Overleaf and set `main.tex` as the main document if Overleaf does not detect it automatically. The local compile-check PDF is for audit only and does not need to be uploaded.
 
 ## Final figure set

@@ -1,6 +1,6 @@
 ﻿item,topic,status,reported_location,comment
 1,Title,Reported,Title,Identifies self-supervised CTG trajectory representation and calibrated neonatal risk enrichment in the target intrapartum CTG population.
-2,Abstract,Reported,Structured abstract,Structured Background Objectives Methods Results Conclusions abstract aligned with Methods of Information in Medicine positioning.
+2,Abstract,Reported,Structured abstract,Structured Background Objectives Methods Results Conclusions abstract aligned with Frontiers in Signal Processing positioning.
 3a,Healthcare context and rationale,Reported,Introduction,Explains intrapartum CTG decision-support context and limitations of static or subjective interpretation.
 3b,Target population and intended purpose,Reported,Introduction and Discussion,Target population is intrapartum CTG records; intended use is risk enrichment and phenotype interpretation rather than autonomous diagnosis.
 3c,Known health inequalities,Partially reported,Discussion limitations,No protected sociodemographic fairness analysis was possible beyond available CTU-UHB metadata; this is treated as a limitation.
