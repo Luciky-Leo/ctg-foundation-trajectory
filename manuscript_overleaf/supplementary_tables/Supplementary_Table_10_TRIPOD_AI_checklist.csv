@@ -25,7 +25,7 @@
 12d,Heterogeneity across clusters,Partially reported,Results and Discussion,Domain-shift analysis compares CTU-UHB with CTGDL-FHRMA; formal multi-centre heterogeneity was not possible.
 12e,Performance measures,Reported,Methods and Results,"AUROC, AUPRC, Brier score, calibration, decision curve and bootstrap CIs are reported with rationale."
 12f,Model updating or recalibration,Reported,Methods and Results,Cross-fitted Platt and isotonic recalibration are described; Platt scaling is emphasized.
-12g,Prediction calculation,Reported,Methods and Code availability,Pipeline scripts are named and the versioned repository archive is available at https://doi.org/10.5281/zenodo.20484443.
+12g,Prediction calculation,Reported,Methods and Code availability,Pipeline scripts are named and the versioned repository archive is available at https://doi.org/10.5281/zenodo.20485068.
 13,Class imbalance,Reported,Methods and Results,Class-balanced logistic regression and AUPRC emphasis are justified under event imbalance.
 14,Fairness,Partially reported,Discussion limitations,Available public metadata did not support a full fairness assessment; age and clinical stratification were limited.
 15,Model output,Reported,Methods and Discussion,Outputs are risk-enrichment scores and calibrated probabilities; not intended as definitive diagnosis.
