@@ -1,4 +1,4 @@
-# CTG Foundation Trajectory
+﻿# CTG Foundation Trajectory
 
 Code, manuscript source, and submission package for:
 
@@ -169,7 +169,7 @@ The manuscript source package is in `manuscript_overleaf/`. The current target-j
 
 Repository URL: https://github.com/Luciky-Leo/ctg-foundation-trajectory
 
-Versioned Zenodo release DOI: https://doi.org/10.5281/zenodo.20376424
+Versioned Zenodo release DOI: https://doi.org/10.5281/zenodo.20484443
 
 This repository includes `.zenodo.json` and `CITATION.cff` metadata for Zenodo/GitHub release archiving.
 

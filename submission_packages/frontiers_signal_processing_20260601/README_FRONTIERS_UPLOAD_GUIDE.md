@@ -27,14 +27,6 @@ Article type: Original Research
 6. Paste-ready text:
    - 06_upload_text/frontiers_upload_text.md
 
-7. Official Frontiers LaTeX template package:
-   - 07_official_frontiers_latex/frontiers_ctg_manuscript.tex
-   - 07_official_frontiers_latex/frontiers_ctg_manuscript.pdf
-   - 07_official_frontiers_latex/frontiers_ctg_supplementary_material.tex
-   - 07_official_frontiers_latex/frontiers_ctg_supplementary_material.pdf
-   - 07_official_frontiers_latex/references.bib
-   - 07_official_frontiers_latex/figures/*.jpg
-
 ## Retargeting decisions
 
 - The title, abstract, keywords and cover letter now emphasize biomedical signal representation learning.
