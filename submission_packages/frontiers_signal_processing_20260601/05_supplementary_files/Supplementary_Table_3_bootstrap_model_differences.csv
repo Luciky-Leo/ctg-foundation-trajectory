@@ -1,0 +1,10 @@
+comparison,metric,bootstrap_mean_difference,ci_2_5,ci_97_5,n_bootstrap_valid,ci_excludes_zero
+signal_plus_ssl minus signal_features,auroc,0.0177946774873922,-0.0648795817669172,0.0939095671353735,2000,False
+signal_plus_ssl minus signal_features,auprc,0.0978328316183011,0.0147921687665013,0.1864484277507418,2000,True
+signal_plus_ssl minus signal_features,brier,0.0029559039169011,-0.0184311261951511,0.0241227560388449,2000,False
+signal_plus_ssl_plus_signal_phenotype minus signal_features,auroc,0.0257712592025066,-0.0589333593912861,0.0981768634444946,2000,False
+signal_plus_ssl_plus_signal_phenotype minus signal_features,auprc,0.0890887605685599,0.0073043136483794,0.1766181937710389,2000,True
+signal_plus_ssl_plus_signal_phenotype minus signal_features,brier,-0.0008222729089196,-0.0228116638201394,0.0211818811370584,2000,False
+signal_plus_ssl minus signal_plus_signal_phenotype,auroc,0.0150542065768365,-0.0671512682327255,0.0918675997746928,2000,False
+signal_plus_ssl minus signal_plus_signal_phenotype,auprc,0.0881483428429075,0.0084169820309538,0.1785800661137637,2000,True
+signal_plus_ssl minus signal_plus_signal_phenotype,brier,0.0051095095558995,-0.0169602381800052,0.0271272558712922,2000,False

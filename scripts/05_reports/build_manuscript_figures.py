@@ -355,11 +355,11 @@ def figure_1():
 
     draw_ai_architecture(ax_a)
     if not AI_ARCHITECTURE_IMAGE.exists():
-        ax_a.set_title("PatchTST-style self-supervised CTG representation learning", loc="left", fontsize=8, fontweight="bold")
-    add_panel_label(ax_a, "A", x=-0.02, y=1.06)
+        ax_a.set_title("AI architecture", loc="left", fontsize=8, fontweight="bold")
+    add_panel_label(ax_a, "A", x=-0.065, y=1.06)
 
     draw_workflow(ax_b)
-    ax_b.set_title("Study design and evidence chain", loc="left", fontsize=8, fontweight="bold")
+    ax_b.set_title("Study workflow", loc="left", fontsize=8, fontweight="bold")
     add_panel_label(ax_b, "B")
 
     bar_items = counts[counts["item"].isin([
@@ -446,10 +446,10 @@ def figure_2():
     ax_a.set_ylabel("Precision")
     ax_a.set_xlim(0, 1)
     ax_a.set_ylim(0, 1)
-    ax_a.set_title("Classical and SSL model precision-recall", loc="left", fontsize=8, fontweight="bold")
+    ax_a.set_title("Precision-recall", loc="left", fontsize=8, fontweight="bold")
     ax_a.legend(fontsize=5.3, loc="upper right")
     ax_a.grid(alpha=0.25)
-    add_panel_label(ax_a, "A")
+    add_panel_label(ax_a, "A", x=-0.12, y=1.16)
 
     for model in models:
         sub_roc = curves[(curves["model"] == model) & (curves["curve"] == "roc")]
@@ -459,9 +459,9 @@ def figure_2():
     ax_b.set_ylabel("True-positive rate")
     ax_b.set_xlim(0, 1)
     ax_b.set_ylim(0, 1)
-    ax_b.set_title("Classical and SSL model ROC", loc="left", fontsize=8, fontweight="bold")
+    ax_b.set_title("ROC", loc="left", fontsize=8, fontweight="bold")
     ax_b.grid(alpha=0.25)
-    add_panel_label(ax_b, "B")
+    add_panel_label(ax_b, "B", x=-0.12, y=1.16)
 
     plot = boot[boot["model"].isin(models) & boot["metric"].isin(["auroc", "auprc"])].copy()
     y_base = np.arange(len(models))
@@ -482,7 +482,7 @@ def figure_2():
     ax_c.set_yticks(y_base)
     ax_c.set_yticklabels([model_label(m) for m in models])
     ax_c.set_xlabel("Held-out performance")
-    ax_c.set_title("Bootstrap validation by AI feature set", loc="left", fontsize=8, fontweight="bold")
+    ax_c.set_title("Bootstrap metrics", loc="left", fontsize=8, fontweight="bold")
     ax_c.grid(axis="x", alpha=0.25)
     ax_c.legend(
         frameon=False,
@@ -520,7 +520,7 @@ def figure_2():
     ax_d.set_yticks(y)
     ax_d.set_yticklabels(labels, fontsize=6)
     ax_d.set_xlabel("AUPRC difference")
-    ax_d.set_title("Incremental SSL enrichment", loc="left", fontsize=8, fontweight="bold")
+    ax_d.set_title("AUPRC enrichment", loc="left", fontsize=8, fontweight="bold")
     ax_d.grid(axis="x", alpha=0.25)
     add_panel_label(ax_d, "D")
 
@@ -533,7 +533,7 @@ def figure_2():
     ax_e.set_xticks(np.arange(len(missing_models)))
     ax_e.set_xticklabels([model_label(m) for m in missing_models], rotation=25, ha="right")
     ax_e.set_ylabel("AUPRC")
-    ax_e.set_title("Missingness sensitivity", loc="left", fontsize=8, fontweight="bold")
+    ax_e.set_title("Missingness", loc="left", fontsize=8, fontweight="bold")
     ax_e.legend(frameon=False, fontsize=6)
     ax_e.grid(axis="y", alpha=0.25)
     add_panel_label(ax_e, "E")
@@ -555,11 +555,11 @@ def figure_2():
             bbox=dict(boxstyle="round,pad=0.2", facecolor="white", edgecolor="#dddddd", linewidth=0.4),
         )
     ax_f.set_xlabel("AUPRC importance")
-    ax_f.set_title("AI embedding contribution", loc="left", fontsize=8, fontweight="bold")
+    ax_f.set_title("Feature contribution", loc="left", fontsize=8, fontweight="bold")
     ax_f.grid(axis="x", alpha=0.25)
     add_panel_label(ax_f, "F")
 
-    fig.tight_layout(h_pad=1.4, w_pad=1.4)
+    fig.tight_layout(h_pad=1.7, w_pad=1.6, pad=1.5)
     save_pub(fig, "Figure_2_model_validation_and_explanation")
     plt.close(fig)
 
@@ -609,7 +609,7 @@ def figure_3():
     ax_b2 = ax_b.twinx()
     ax_b2.plot(phenos, signal["apgar5_mean"], marker="s", color="#8a6bb8", label="Apgar5")
     ax_b2.set_ylabel("Mean Apgar5")
-    ax_b.set_title("Clinical outcome profile", loc="left", fontsize=8, fontweight="bold")
+    ax_b.set_title("Outcome profile", loc="left", fontsize=8, fontweight="bold")
     ax_b.grid(axis="y", alpha=0.25)
     ax_b.legend(loc="lower left", fontsize=6, frameon=False)
     ax_b2.legend(loc="lower right", fontsize=6, frameon=False)
@@ -621,7 +621,7 @@ def figure_3():
     ax_c.set_xticks(np.arange(len(metrics)))
     ax_c.set_xticklabels([m[1] for m in metrics], rotation=45, ha="right", fontsize=6)
     ax_c.set_ylabel("Signal phenotype")
-    ax_c.set_title("Standardized phenotype profile", loc="left", fontsize=8, fontweight="bold")
+    ax_c.set_title("Phenotype profile", loc="left", fontsize=8, fontweight="bold")
     plt.colorbar(im, ax=ax_c, fraction=0.046, pad=0.02, label="z")
     add_panel_label(ax_c, "C")
 
@@ -631,7 +631,7 @@ def figure_3():
     ax_d2 = ax_d.twinx()
     ax_d2.plot(phenos, signal["deceleration_proxy_count_mean"], marker="s", color="#8a6bb8", label="Decel proxy")
     ax_d2.set_ylabel("Decel proxy")
-    ax_d.set_title("Physiological signal burden", loc="left", fontsize=8, fontweight="bold")
+    ax_d.set_title("Signal burden", loc="left", fontsize=8, fontweight="bold")
     ax_d.grid(axis="y", alpha=0.25)
     ax_d.legend(loc="upper left", fontsize=6)
     ax_d2.legend(loc="upper right", fontsize=6)
@@ -645,7 +645,7 @@ def figure_3():
         img = crop_white(plt.imread(image_path), pad=10)
         ax.imshow(img, aspect="auto")
         ax.axis("off")
-        ax.set_title(f"Phenotype {row['phenotype']} prototype, record {row['record_id']}", fontsize=7)
+        ax.set_title(f"Phenotype {row['phenotype']}", fontsize=7)
         add_panel_label(ax, label)
     fig.tight_layout(h_pad=1.0, w_pad=1.3)
     save_pub(fig, "Figure_3_dynamic_phenotype_prototypes")
@@ -684,7 +684,7 @@ def figure_4():
     ax_a.plot([0, 1], [0, 1], color="black", linestyle="--", linewidth=1)
     ax_a.set_xlabel("Mean predicted risk")
     ax_a.set_ylabel("Observed event rate")
-    ax_a.set_title("Cross-fitted recalibration", loc="left", fontsize=8, fontweight="bold")
+    ax_a.set_title("Calibration", loc="left", fontsize=8, fontweight="bold")
     ax_a.grid(alpha=0.25)
     ax_a.legend(frameon=False, fontsize=6)
     add_panel_label(ax_a, "A")
@@ -713,7 +713,7 @@ def figure_4():
     ax_b.set_xticks(x)
     ax_b.set_xticklabels(methods)
     ax_b.set_ylabel("Metric value")
-    ax_b.set_title("Calibration metrics: point vs bootstrap", loc="left", fontsize=8, fontweight="bold")
+    ax_b.set_title("Calibration metrics", loc="left", fontsize=8, fontweight="bold")
     ax_b.legend(frameon=False, fontsize=5.5)
     ax_b.grid(axis="y", alpha=0.25)
     add_panel_label(ax_b, "B")
@@ -733,7 +733,7 @@ def figure_4():
         patch.set_alpha(0.75)
     ax_c.set_xticklabels(box_labels, fontsize=6)
     ax_c.set_ylabel("Predicted risk")
-    ax_c.set_title("Risk score compression", loc="left", fontsize=8, fontweight="bold")
+    ax_c.set_title("Risk scores", loc="left", fontsize=8, fontweight="bold")
     ax_c.grid(axis="y", alpha=0.25)
     add_panel_label(ax_c, "C")
 
@@ -746,7 +746,7 @@ def figure_4():
     ax_d.set_xticklabels([str(i) for i in range(1, 6)])
     ax_d.set_xlabel("Calibration bin")
     ax_d.set_ylabel("Absolute error")
-    ax_d.set_title("Bin-level calibration error", loc="left", fontsize=8, fontweight="bold")
+    ax_d.set_title("Bin error", loc="left", fontsize=8, fontweight="bold")
     ax_d.legend(fontsize=6, frameon=False)
     ax_d.grid(axis="y", alpha=0.25)
     add_panel_label(ax_d, "D")
@@ -776,7 +776,7 @@ def figure_4():
     summary["label"] = summary["strategy"].str.replace(f"{model}_", "", regex=False)
     ax_f.bar(summary["label"], summary["mean_net_benefit"], color=[PALETTE.get(x) for x in summary["label"]])
     ax_f.set_ylabel("Mean net benefit")
-    ax_f.set_title("Threshold range 0.10-0.30", loc="left", fontsize=8, fontweight="bold")
+    ax_f.set_title("Net benefit", loc="left", fontsize=8, fontweight="bold")
     ax_f.grid(axis="y", alpha=0.25)
     add_panel_label(ax_f, "F")
 
@@ -805,7 +805,7 @@ def figure_s2_external_domain_shift():
     img = plt.imread("results/figures/ctgdl_external_embedding_pca.png")
     ax_a.imshow(crop_white(img, pad=5), aspect="auto")
     ax_a.axis("off")
-    ax_a.set_title("External representation space", fontsize=8, fontweight="bold")
+    ax_a.set_title("Representation space", fontsize=8, fontweight="bold")
     add_panel_label(ax_a, "A")
 
     domain_auroc = float(ext_map["domain_classifier_auroc_ctgdl_vs_ctu"])
@@ -818,19 +818,19 @@ def figure_s2_external_domain_shift():
     ax_b.set_ylim(-0.32, 0.32)
     ax_b.set_yticks([])
     ax_b.set_xlabel("Domain-classifier AUROC")
-    ax_b.set_title("Domain separability", loc="left", fontsize=8, fontweight="bold")
+    ax_b.set_title("Domain shift", loc="left", fontsize=8, fontweight="bold")
     ax_b.grid(axis="x", alpha=0.25)
     add_panel_label(ax_b, "B")
 
     ax_c.bar(counts["assigned_ctu_ssl_phenotype"].astype(str), counts["n_records"], color="#8a6bb8")
     ax_c.set_xlabel("Assigned CTU SSL phenotype")
     ax_c.set_ylabel("CTGDL-FHRMA records")
-    ax_c.set_title("External phenotype assignment", loc="left", fontsize=8, fontweight="bold")
+    ax_c.set_title("Phenotype assignment", loc="left", fontsize=8, fontweight="bold")
     ax_c.grid(axis="y", alpha=0.25)
     add_panel_label(ax_c, "C")
 
     ax_d.plot(ssl_summary["ssl_phenotype"].astype(str), ssl_summary["neonatal_risk_mean"], marker="o", color="#c45a3d")
-    ax_d.set_title("CTU SSL risk gradient", loc="left", fontsize=8, fontweight="bold")
+    ax_d.set_title("Risk gradient", loc="left", fontsize=8, fontweight="bold")
     ax_d.set_xlabel("SSL phenotype")
     ax_d.set_ylabel("Risk rate")
     ax_d.grid(axis="y", alpha=0.25)
@@ -866,7 +866,7 @@ def figure_s1_model_selection_and_sensitivity():
     ax_a.set_yticklabels(top["label"], fontsize=5.5)
     ax_a.invert_yaxis()
     ax_a.set_xlabel("AUPRC")
-    ax_a.set_title("Transformer sweep ranking", loc="left", fontsize=8, fontweight="bold")
+    ax_a.set_title("Model ranking", loc="left", fontsize=8, fontweight="bold")
     ax_a.grid(axis="x", alpha=0.25)
     add_panel_label(ax_a, "A")
 
@@ -897,7 +897,7 @@ def figure_s1_model_selection_and_sensitivity():
     ax_b.set_yticklabels(sweep_summary["variable"] + ": " + sweep_summary["level"], fontsize=5.6)
     ax_b.invert_yaxis()
     ax_b.set_xlabel("Best AUPRC within setting")
-    ax_b.set_title("Mask/patch/model-size sensitivity", loc="left", fontsize=8, fontweight="bold")
+    ax_b.set_title("Sensitivity", loc="left", fontsize=8, fontweight="bold")
     ax_b.grid(axis="x", alpha=0.25)
     add_panel_label(ax_b, "B")
 
@@ -910,7 +910,7 @@ def figure_s1_model_selection_and_sensitivity():
         ax_c.legend(frameon=False, fontsize=6, loc="upper left")
         ax_c2.legend(frameon=False, fontsize=6, loc="upper right")
     ax_c.set_xlabel("Epoch")
-    ax_c.set_title("Reconstruction vs contrastive objective", loc="left", fontsize=8, fontweight="bold")
+    ax_c.set_title("SSL objectives", loc="left", fontsize=8, fontweight="bold")
     ax_c.grid(alpha=0.25)
     add_panel_label(ax_c, "C")
 
@@ -929,7 +929,7 @@ def figure_s1_model_selection_and_sensitivity():
     ax_d.set_xticks(x)
     ax_d.set_xticklabels(pivot.index)
     ax_d.set_ylabel("Mean positive AUPRC importance")
-    ax_d.set_title("Feature-family contribution", loc="left", fontsize=8, fontweight="bold")
+    ax_d.set_title("Feature families", loc="left", fontsize=8, fontweight="bold")
     ax_d.set_ylim(0, float(pivot.to_numpy().max()) * 1.55)
     ax_d.legend(fontsize=5.4, frameon=False, loc="upper left", bbox_to_anchor=(0.02, 0.98), ncol=1)
     ax_d.grid(axis="y", alpha=0.25)

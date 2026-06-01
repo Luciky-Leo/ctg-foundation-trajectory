@@ -1,7 +1,7 @@
 {
-  "title": "Self-supervised cardiotocography trajectory representation for calibrated neonatal risk enrichment",
+  "title": "Self-supervised biomedical signal representation learning from intrapartum cardiotocography for neonatal risk enrichment",
   "upload_type": "software",
-  "description": "Code, manuscript source files, figure source data, supplementary tables and reproducibility files for an open-data health informatics method study of self-supervised cardiotocography trajectory representation, calibrated neonatal risk enrichment and domain-shift assessment.",
+  "description": "Code, manuscript source files, Frontiers official LaTeX submission package, figure source data, supplementary tables and reproducibility files for an open-data biomedical signal representation-learning study of self-supervised cardiotocography trajectories, calibrated neonatal risk enrichment and domain-shift assessment.",
   "creators": [
     {
       "name": "Gui, Xiaoqian",
@@ -22,14 +22,16 @@
   ],
   "keywords": [
     "cardiotocography",
-    "medical informatics",
-    "machine learning",
-    "clinical decision support",
+    "biomedical signal processing",
+    "self-supervised learning",
+    "time-series representation learning",
+    "fetal heart rate",
+    "uterine contraction",
     "calibration"
   ],
   "license": "mit",
   "access_right": "open",
-  "version": "1.0.0",
-  "publication_date": "2026-05-25",
+  "version": "1.1.0",
+  "publication_date": "2026-06-01",
   "language": "eng"
 }

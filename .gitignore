@@ -14,9 +14,12 @@ results/reports/*.md
 *.dat
 *.pdf
 !manuscript_overleaf/**/*.pdf
+!submission_packages/**/*.pdf
 __pycache__/
 *.pyc
 .venv/
 .venv312/
 .Rhistory
 .RData
+archive/deprecated_redraw_20260531/
+manuscript_overleaf/CLAUDE_REVIEW_REVISED_PREVIEW_20260530.pdf

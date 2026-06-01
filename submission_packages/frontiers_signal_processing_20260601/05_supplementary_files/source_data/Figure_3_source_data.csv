@@ -1,0 +1,13 @@
+source_panel,signal_phenotype,neonatal_risk_count,neonatal_risk_mean,neonatal_risk_median,cord_ph_count,cord_ph_mean,cord_ph_median,apgar5_count,apgar5_mean,apgar5_median,fhr_mean_count,fhr_mean_mean,fhr_mean_median,fhr_sd_count,fhr_sd_mean,fhr_sd_median,fhr_p05_count,fhr_p05_mean,fhr_p05_median,uc_mean_count,uc_mean_mean,uc_mean_median,uc_p95_count,uc_p95_mean,uc_p95_median,fhr_uc_corr_count,fhr_uc_corr_mean,fhr_uc_corr_median,deceleration_proxy_count_count,deceleration_proxy_count_mean,deceleration_proxy_count_median,phenotype_type,phenotype,record_id,distance_to_centroid,neonatal_risk,cord_ph,apgar5,n_records_in_phenotype,figure
+A_D,1.0,160.0,0.1438,0.0,160.0,7.2537,7.27,160.0,9.2188,9.0,160.0,125.1451,125.526,160.0,15.2524,15.508,160.0,96.1141,96.5,160.0,14.2554,14.1172,160.0,40.0844,38.5,159.0,0.0105,-0.0061,160.0,1976.325,1850.0,,,,,,,,,
+A_D,2.0,157.0,0.3439,0.0,157.0,7.1877,7.2,157.0,8.7834,9.0,157.0,134.6395,134.9183,157.0,22.2159,21.9162,157.0,88.2325,88.5,157.0,20.2231,19.1205,157.0,58.0191,56.0,156.0,-0.0139,-0.0237,157.0,3530.4777,3404.0,,,,,,,,,
+A_D,3.0,130.0,0.1923,0.0,130.0,7.2362,7.25,130.0,9.0769,9.0,130.0,148.3637,146.2834,130.0,14.3305,14.2614,130.0,122.6462,121.625,130.0,16.4504,16.0809,130.0,47.6154,46.0,130.0,0.0018,-0.0146,130.0,1475.1,1406.5,,,,,,,,,
+A_D,4.0,105.0,0.1048,0.0,105.0,7.2498,7.25,105.0,9.2571,9.0,105.0,132.7221,133.7539,105.0,15.0259,15.1263,105.0,103.6881,104.25,105.0,31.297,29.8435,105.0,90.4238,92.0,105.0,-0.0821,-0.0632,105.0,1894.7333,1905.0,,,,,,,,,
+E_H,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,signal_phenotype,1.0,1122.0,0.6891013019696767,0.0,7.25,10.0,160.0,results\figures\phenotype_prototypes\signal-phenotype_1_record_1122.png
+E_H,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,signal_phenotype,2.0,1016.0,0.5105431789647632,0.0,7.32,10.0,157.0,results\figures\phenotype_prototypes\signal-phenotype_2_record_1016.png
+E_H,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,signal_phenotype,3.0,1353.0,0.4050126661616189,0.0,7.2,10.0,130.0,results\figures\phenotype_prototypes\signal-phenotype_3_record_1353.png
+E_H,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,signal_phenotype,4.0,1271.0,1.0013762156102253,0.0,7.31,10.0,105.0,results\figures\phenotype_prototypes\signal-phenotype_4_record_1271.png
+C,1.0,,0.1438,,,7.2537,,,9.2188,,,125.1451,,,15.2524,,,96.1141,,,14.2554,,,40.0844,,,,,,1976.325,,,,,,,,,,
+C,2.0,,0.3439,,,7.1877,,,8.7834,,,134.6395,,,22.2159,,,88.2325,,,20.2231,,,58.0191,,,,,,3530.4777,,,,,,,,,,
+C,3.0,,0.1923,,,7.2362,,,9.0769,,,148.3637,,,14.3305,,,122.6462,,,16.4504,,,47.6154,,,,,,1475.1,,,,,,,,,,
+C,4.0,,0.1048,,,7.2498,,,9.2571,,,132.7221,,,15.0259,,,103.6881,,,31.297,,,90.4238,,,,,,1894.7333,,,,,,,,,,

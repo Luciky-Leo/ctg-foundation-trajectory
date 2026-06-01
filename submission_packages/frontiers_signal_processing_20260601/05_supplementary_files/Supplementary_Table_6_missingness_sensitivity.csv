@@ -1,0 +1,40 @@
+scenario,model,metric,point,bootstrap_mean,ci_2_5,ci_97_5,n_bootstrap_valid,table_block,comparison_type,comparison,bootstrap_mean_difference
+full_features,signal_features,auroc,0.6303475935828877,0.629339718513768,0.5254294992667086,0.728436582767078,2000,scenario_metrics,,,
+full_features,signal_features,auprc,0.3365609947521623,0.3521546875061651,0.2173340161299445,0.4941216453489944,2000,scenario_metrics,,,
+full_features,signal_features,brier,0.2524914255322518,0.2527901299044881,0.2234448724247188,0.2833741030882272,2000,scenario_metrics,,,
+full_features,signal_plus_ssl,auroc,0.6481729055258467,0.6471343960011603,0.538559340249914,0.749147465437788,2000,scenario_metrics,,,
+full_features,signal_plus_ssl,auprc,0.4432108930619304,0.4499875191244661,0.2974163626233831,0.5891492752788606,2000,scenario_metrics,,,
+full_features,signal_plus_ssl,brier,0.2553646593881311,0.2557460338213892,0.2199225917912409,0.2901248345455643,2000,scenario_metrics,,,
+full_features,signal_plus_ssl_plus_signal_phenotype,auroc,0.6559714795008913,0.6551109777162747,0.5490079365079366,0.757695895522388,2000,scenario_metrics,,,
+full_features,signal_plus_ssl_plus_signal_phenotype,auprc,0.4324439681648454,0.441243448074725,0.2866637175200281,0.5876589535043436,2000,scenario_metrics,,,
+full_features,signal_plus_ssl_plus_signal_phenotype,brier,0.2515696224334074,0.2519678569955685,0.2149571283779804,0.2863152171103807,2000,scenario_metrics,,,
+no_missingness_features,signal_features,auroc,0.642825311942959,0.6420422647137789,0.5348027304820783,0.7460925700399275,2000,scenario_metrics,,,
+no_missingness_features,signal_features,auprc,0.3764596373965813,0.3899750727013363,0.2417583255345687,0.5493038379768708,2000,scenario_metrics,,,
+no_missingness_features,signal_features,brier,0.2482316430404817,0.2482045322461512,0.2216355778816184,0.2754026774652546,2000,scenario_metrics,,,
+no_missingness_features,signal_plus_ssl,auroc,0.6312388591800356,0.6312890875474308,0.5225983373844738,0.7368669718073679,2000,scenario_metrics,,,
+no_missingness_features,signal_plus_ssl,auprc,0.4284440388960318,0.4348167108888431,0.2799681855375518,0.5822835250996184,2000,scenario_metrics,,,
+no_missingness_features,signal_plus_ssl,brier,0.2631625166412443,0.2631696931472399,0.2278127605073801,0.2970330655392794,2000,scenario_metrics,,,
+no_missingness_features,signal_plus_ssl_plus_signal_phenotype,auroc,0.6348039215686275,0.6348398732769085,0.526216220462544,0.7405061502562118,2000,scenario_metrics,,,
+no_missingness_features,signal_plus_ssl_plus_signal_phenotype,auprc,0.4319474565726369,0.4388601036222995,0.2858149775018123,0.5854890696414813,2000,scenario_metrics,,,
+no_missingness_features,signal_plus_ssl_plus_signal_phenotype,brier,0.2601443974427787,0.2601798315306702,0.2232348768417652,0.2939164973536815,2000,scenario_metrics,,,
+full_features,,auroc,,,-0.0648795817669172,0.0939095671353735,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl minus signal_features,0.0177946774873922
+full_features,,auprc,,,0.0147921687665013,0.1864484277507418,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl minus signal_features,0.0978328316183011
+full_features,,brier,,,-0.0184311261951511,0.0241227560388449,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl minus signal_features,0.0029559039169011
+full_features,,auroc,,,-0.0589333593912861,0.0981768634444946,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl_plus_signal_phenotype minus signal_features,0.0257712592025066
+full_features,,auprc,,,0.0073043136483794,0.1766181937710389,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl_plus_signal_phenotype minus signal_features,0.0890887605685599
+full_features,,brier,,,-0.0228116638201394,0.0211818811370584,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl_plus_signal_phenotype minus signal_features,-0.0008222729089196
+no_missingness_features,,auroc,,,-0.076264787314372,0.0543480433044867,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl minus signal_features,-0.0107531771663479
+no_missingness_features,,auprc,,,-0.0373073227774457,0.127461931106261,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl minus signal_features,0.0448416381875067
+no_missingness_features,,brier,,,-0.0042140458305653,0.0343364533282644,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl minus signal_features,0.0149651609010886
+no_missingness_features,,auroc,,,-0.0753134015678251,0.0590141529562372,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl_plus_signal_phenotype minus signal_features,-0.0072023914368704
+no_missingness_features,,auprc,,,-0.0307590493676202,0.1308700882445519,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl_plus_signal_phenotype minus signal_features,0.0488850309209631
+no_missingness_features,,brier,,,-0.0075360405434384,0.0319379585081189,2000,scenario_differences,model_difference_within_scenario,signal_plus_ssl_plus_signal_phenotype minus signal_features,0.0119752992845189
+no_missingness_features vs full_features,,auroc,,,-0.042036806038801,0.0628404299158568,2000,scenario_differences,no_missingness_minus_full,signal_features,0.0127025462000109
+no_missingness_features vs full_features,,auprc,,,-0.0379749437344173,0.1149107727906693,2000,scenario_differences,no_missingness_minus_full,signal_features,0.0378203851951712
+no_missingness_features vs full_features,,brier,,,-0.0194426803381451,0.0105467651976134,2000,scenario_differences,no_missingness_minus_full,signal_features,-0.0045855976583368
+no_missingness_features vs full_features,,auroc,,,-0.065986873319355,0.0344171033644716,2000,scenario_differences,no_missingness_minus_full,signal_plus_ssl,-0.0158453084537293
+no_missingness_features vs full_features,,auprc,,,-0.0658044648417312,0.0354935400894293,2000,scenario_differences,no_missingness_minus_full,signal_plus_ssl,-0.015170808235623
+no_missingness_features vs full_features,,brier,,,-0.0091076400248609,0.0257941471639925,2000,scenario_differences,no_missingness_minus_full,signal_plus_ssl,0.0074236593258506
+no_missingness_features vs full_features,,auroc,,,-0.068578312839773,0.0284670374467756,2000,scenario_differences,no_missingness_minus_full,signal_plus_ssl_plus_signal_phenotype,-0.0202711044393661
+no_missingness_features vs full_features,,auprc,,,-0.0586554867300895,0.0561721987637922,2000,scenario_differences,no_missingness_minus_full,signal_plus_ssl_plus_signal_phenotype,-0.0023833444524255
+no_missingness_features vs full_features,,brier,,,-0.0091519141532154,0.0268093838552496,2000,scenario_differences,no_missingness_minus_full,signal_plus_ssl_plus_signal_phenotype,0.0082119745351017

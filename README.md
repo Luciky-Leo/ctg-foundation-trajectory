@@ -1,12 +1,12 @@
 # CTG Foundation Trajectory
 
-Code and manuscript package for:
+Code, manuscript source, and submission package for:
 
-Self-supervised cardiotocography trajectory representation for calibrated neonatal risk enrichment: an open-data health informatics method study
+Self-supervised biomedical signal representation learning from intrapartum cardiotocography for neonatal risk enrichment
 
 ## Overview
 
-This repository contains the reproducible analysis scripts and manuscript source files for an open-data intrapartum cardiotocography (CTG) health informatics method study. The analysis evaluates whether self-supervised fetal heart rate (FHR) and uterine contraction (UC) trajectory representations can support calibrated neonatal risk enrichment, clinically interpretable dynamic phenotypes and explicit domain-shift assessment.
+This repository contains the reproducible analysis scripts, manuscript source files, and Frontiers submission package for an open-data intrapartum cardiotocography (CTG) biomedical signal representation-learning study. The analysis evaluates whether self-supervised fetal heart rate (FHR) and uterine contraction (UC) trajectory representations can support calibrated neonatal risk enrichment, clinically interpretable dynamic phenotypes and explicit domain-shift assessment.
 
 The repository is intended as a code and source-data archive, not as a deployable clinical device. It does not include raw public datasets, generated model weights, Python virtual environments, or large intermediate tensors.
 
@@ -35,8 +35,12 @@ The repository is intended as a code and source-data archive, not as a deployabl
 ```text
 config/                  Pipeline configuration
 scripts/                 Data download, preprocessing, modelling and reporting scripts
+results/                 Analysis tables, manuscript figures, source data and reports
 manuscript_overleaf/     Journal-targeted LaTeX manuscript source, figures and source data
+submission_packages/     Final journal submission packages, including the Frontiers official LaTeX package
 reproducibility/         Fixed split files and reviewer-facing sensitivity tables
+docs/PROJECT_STRUCTURE.md Detailed active/archive path guide
+archive/                 Deprecated experiments retained for traceability
 requirements.txt         Minimal Python package list
 run_pipeline.ps1         Synthetic smoke-test pipeline
 ```
@@ -157,7 +161,7 @@ Interpretation: external FHRMA data show substantial dataset shift, which is imp
 
 ## Manuscript and reporting files
 
-The final LaTeX source package is in `manuscript_overleaf/`. Supplementary tables include reviewer-facing sensitivity analyses and a TRIPOD+AI checklist mapping.
+The manuscript source package is in `manuscript_overleaf/`. The current target-journal package is `submission_packages/frontiers_signal_processing_20260601/`, including the official Frontiers LaTeX template version under `07_official_frontiers_latex/`. Supplementary tables include reviewer-facing sensitivity analyses and a TRIPOD+AI checklist mapping.
 
 ## Code archive
 

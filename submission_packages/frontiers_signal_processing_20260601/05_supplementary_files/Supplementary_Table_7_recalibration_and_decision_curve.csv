@@ -1,0 +1,127 @@
+model,calibration_method,metric,point,bootstrap_mean,ci_2_5,ci_97_5,n_bootstrap_valid,table_block,comparison,bootstrap_mean_difference,threshold_range,strategy,mean_net_benefit,mean_delta_vs_raw_signal_plus_ssl_plus_signal_phenotype
+signal_features,raw,auroc,0.6303475935828877,0.629339718513768,0.5254294992667086,0.728436582767078,2000.0,recalibration_metrics,,,,,,
+signal_features,raw,auprc,0.3365609947521623,0.3521546875061651,0.2173340161299445,0.4941216453489944,2000.0,recalibration_metrics,,,,,,
+signal_features,raw,brier,0.2524914255322518,0.2527901299044881,0.2234448724247188,0.2833741030882272,2000.0,recalibration_metrics,,,,,,
+signal_features,raw,calibration_intercept,-1.3837556277052283,-1.400476067848488,-1.828973585831798,-1.013569132637273,2000.0,recalibration_metrics,,,,,,
+signal_features,raw,calibration_slope,0.4876152392048818,0.492349805883656,0.1338308867497668,0.8749781709542355,2000.0,recalibration_metrics,,,,,,
+signal_features,raw,expected_calibration_error,0.2744673774378349,0.2745235969226992,0.2102211072199279,0.3376286368957895,2000.0,recalibration_metrics,,,,,,
+signal_features,raw,mean_prediction_error,0.2744673774378349,0.2734646592143415,0.2085931215989629,0.3370632738857171,2000.0,recalibration_metrics,,,,,,
+signal_features,platt,auroc,0.6303475935828877,0.629339718513768,0.5254294992667086,0.728436582767078,2000.0,recalibration_metrics,,,,,,
+signal_features,platt,auprc,0.3365609947521623,0.3521546875061651,0.2173340161299445,0.4941216453489944,2000.0,recalibration_metrics,,,,,,
+signal_features,platt,brier,0.1584640378402505,0.1590803562698069,0.1266213706182523,0.1944954927286915,2000.0,recalibration_metrics,,,,,,
+signal_features,platt,calibration_intercept,-0.4845099870284178,-0.4922626014890092,-1.2889728550115291,0.1957781193244078,2000.0,recalibration_metrics,,,,,,
+signal_features,platt,calibration_slope,0.6906302867488596,0.6972218967311367,0.1895541544791635,1.239158463997326,2000.0,recalibration_metrics,,,,,,
+signal_features,platt,expected_calibration_error,0.0526871175318515,0.0739752338262261,0.034144624756423,0.1217781503809344,2000.0,recalibration_metrics,,,,,,
+signal_features,platt,mean_prediction_error,0.0212193271877439,0.0202793997779189,-0.0427308679877617,0.0792079010731895,2000.0,recalibration_metrics,,,,,,
+signal_features,isotonic,auroc,0.6390374331550802,0.6382052199298048,0.5356651018686419,0.7316229452307238,2000.0,recalibration_metrics,,,,,,
+signal_features,isotonic,auprc,0.3064286231041741,0.3175155502978105,0.2023040213806077,0.4411479100505425,2000.0,recalibration_metrics,,,,,,
+signal_features,isotonic,brier,0.165929708864137,0.1663895866827416,0.1300716864801197,0.2044388145029709,2000.0,recalibration_metrics,,,,,,
+signal_features,isotonic,calibration_intercept,-0.7159523426639345,-0.723233314769466,-1.395436069053431,-0.1361587441336461,2000.0,recalibration_metrics,,,,,,
+signal_features,isotonic,calibration_slope,0.4983219977373278,0.5031300870240892,0.1281283603653444,0.9123792109551088,2000.0,recalibration_metrics,,,,,,
+signal_features,isotonic,expected_calibration_error,0.062539238326453,0.084534993455179,0.0377770243432831,0.1341500546944422,2000.0,recalibration_metrics,,,,,,
+signal_features,isotonic,mean_prediction_error,0.0236831758220357,0.0228331720651841,-0.0418845123894266,0.0848796215833456,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,raw,auroc,0.6481729055258467,0.6471343960011603,0.538559340249914,0.749147465437788,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,raw,auprc,0.4432108930619304,0.4499875191244661,0.2974163626233831,0.5891492752788606,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,raw,brier,0.2553646593881311,0.2557460338213892,0.2199225917912409,0.2901248345455643,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,raw,calibration_intercept,-1.4050109522616443,-1.4237622003417327,-1.8754370949925947,-1.0262835954670115,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,raw,calibration_slope,0.4519704801862288,0.4555507654438577,0.1744637499754461,0.7691328994597083,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,raw,expected_calibration_error,0.2662120320856512,0.2709525775635024,0.2080189441501426,0.3332737556841159,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,raw,mean_prediction_error,0.2662120320856511,0.2653306515780078,0.1968392873958228,0.3314056783851167,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,platt,auroc,0.6481729055258467,0.6471343960011603,0.538559340249914,0.749147465437788,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,platt,auprc,0.4432108930619304,0.4499875191244661,0.2974163626233831,0.5891492752788606,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,platt,brier,0.1529748296283068,0.1535073271413258,0.1227332785567714,0.1872597411663451,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,platt,calibration_intercept,0.099839309751791,0.0931826753684526,-0.8779197528040553,1.0152923457382363,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,platt,calibration_slope,1.2360472982735422,1.2460057999980998,0.4759620287595293,2.1032855688146896,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,platt,expected_calibration_error,0.0265619125977407,0.0619074453760056,0.027755585611916,0.105959631236473,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,platt,mean_prediction_error,0.0265619125977407,0.0256092547577142,-0.0375021508517442,0.0822015017650347,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,isotonic,auroc,0.624777183600713,0.6245909418391402,0.5279555369818398,0.7247254224270353,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,isotonic,auprc,0.2758092532713662,0.2840896777144496,0.1826302362857751,0.3966481653943844,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,isotonic,brier,0.1614952089603887,0.1621050422460013,0.1287506100801826,0.1979402734853198,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,isotonic,calibration_intercept,-0.6176013152268364,-0.6306786173013149,-1.4424677405270308,0.0650022343287995,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,isotonic,calibration_slope,0.5722175948579237,0.5759544234119407,0.0627122809591829,1.1261687728291283,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,isotonic,expected_calibration_error,0.0616378074155048,0.0672055612912119,0.0243004462550401,0.1179507779010493,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl,isotonic,mean_prediction_error,0.0199236452722894,0.0190402417848045,-0.0453827254731137,0.0774278580760272,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,raw,auroc,0.6559714795008913,0.6551109777162747,0.5490079365079366,0.757695895522388,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,raw,auprc,0.4324439681648454,0.441243448074725,0.2866637175200281,0.5876589535043436,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,raw,brier,0.2515696224334074,0.2519678569955685,0.2149571283779804,0.2863152171103807,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,raw,calibration_intercept,-1.4044988004010317,-1.4232653219089888,-1.87383459596434,-1.019851217619642,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,raw,calibration_slope,0.4731855410006625,0.4781875741579066,0.1993092362565353,0.7837896666763434,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,raw,expected_calibration_error,0.26290188002291,0.2676262120156966,0.2044170523553473,0.3313440042029752,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,raw,mean_prediction_error,0.26290188002291,0.2621525098758482,0.193855176040177,0.3288015112445737,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,platt,auroc,0.6559714795008913,0.6551109777162747,0.5490079365079366,0.757695895522388,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,platt,auprc,0.4324439681648454,0.441243448074725,0.2866637175200281,0.5876589535043436,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,platt,brier,0.1523941454074386,0.1529136119960595,0.1222691966257039,0.1863249305986315,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,platt,calibration_intercept,0.2689353566023377,0.2676728513530503,-0.7511125808807309,1.2399361128316635,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,platt,calibration_slope,1.374363484539331,1.3888147811703948,0.5785468103547368,2.2764321067733304,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,platt,expected_calibration_error,0.0248457307751858,0.062384340926989,0.0261409251612279,0.1084189973297074,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,platt,mean_prediction_error,0.0248457307751858,0.0239287484409756,-0.038890496871659,0.0811814099347831,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,isotonic,auroc,0.6389260249554367,0.6378784977063351,0.5364463522110973,0.7376130081300813,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,isotonic,auprc,0.28661485749788,0.2933904712449994,0.1861597895270991,0.4088481345051797,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,isotonic,brier,0.1607536564849528,0.161380862728582,0.1267382177099592,0.1981758765014283,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,isotonic,calibration_intercept,-0.5793550832761867,-0.5936723392400499,-1.374924120005265,0.120697387132569,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,isotonic,calibration_slope,0.5816417940573918,0.5841451211050194,0.061873442773991,1.110486325166227,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,isotonic,expected_calibration_error,0.0538635170220835,0.0631637595174888,0.0205367444353686,0.1174657498030864,2000.0,recalibration_metrics,,,,,,
+signal_plus_ssl_plus_signal_phenotype,isotonic,mean_prediction_error,0.0130287493800869,0.012256895256571,-0.0523055478572887,0.0712931568890574,2000.0,recalibration_metrics,,,,,,
+signal_features,,brier,,,-0.1318444308036309,-0.0545360139209007,2000.0,recalibration_differences,platt minus raw,-0.0937097736346811,,,,
+signal_features,,calibration_slope,,,0.0557232677293967,0.3638720422711409,2000.0,recalibration_differences,platt minus raw,0.2048720908474805,,,,
+signal_features,,expected_calibration_error,,,-0.257289982668784,-0.1231618986374251,2000.0,recalibration_differences,platt minus raw,-0.200548363096473,,,,
+signal_features,,auprc,,,0.0,0.0,2000.0,recalibration_differences,platt minus raw,0.0,,,,
+signal_features,,auroc,,,0.0,0.0,2000.0,recalibration_differences,platt minus raw,0.0,,,,
+signal_features,,brier,,,-0.1228478459747595,-0.0474442322481245,2000.0,recalibration_differences,isotonic minus raw,-0.0864005432217465,,,,
+signal_features,,calibration_slope,,,-0.1545991161794524,0.1817452656251853,2000.0,recalibration_differences,isotonic minus raw,0.010780281140433,,,,
+signal_features,,expected_calibration_error,,,-0.2543387552890676,-0.104194602447478,2000.0,recalibration_differences,isotonic minus raw,-0.1899886034675202,,,,
+signal_features,,auprc,,,-0.0801266947153704,-0.000269240756613,2000.0,recalibration_differences,isotonic minus raw,-0.0346391372083546,,,,
+signal_features,,auroc,,,-0.0106908994159864,0.0310937499999999,2000.0,recalibration_differences,isotonic minus raw,0.0088655014160367,,,,
+signal_plus_ssl,,brier,,,-0.1431609937559136,-0.0597689597160766,2000.0,recalibration_differences,platt minus raw,-0.1022387066800633,,,,
+signal_plus_ssl,,calibration_slope,,,0.3014982787840832,1.3341526693549817,2000.0,recalibration_differences,platt minus raw,0.790455034554242,,,,
+signal_plus_ssl,,expected_calibration_error,,,-0.2548569731671434,-0.1351984760620756,2000.0,recalibration_differences,platt minus raw,-0.2090451321874967,,,,
+signal_plus_ssl,,auprc,,,0.0,0.0,2000.0,recalibration_differences,platt minus raw,0.0,,,,
+signal_plus_ssl,,auroc,,,0.0,0.0,2000.0,recalibration_differences,platt minus raw,0.0,,,,
+signal_plus_ssl,,brier,,,-0.1330356732242206,-0.052134342864067,2000.0,recalibration_differences,isotonic minus raw,-0.0936409915753878,,,,
+signal_plus_ssl,,calibration_slope,,,-0.1838779905278295,0.4427074882297142,2000.0,recalibration_differences,isotonic minus raw,0.120403657968083,,,,
+signal_plus_ssl,,expected_calibration_error,,,-0.2579919342372609,-0.1227832102331549,2000.0,recalibration_differences,isotonic minus raw,-0.2037470162722904,,,,
+signal_plus_ssl,,auprc,,,-0.2438704686642492,-0.0884142737151673,2000.0,recalibration_differences,isotonic minus raw,-0.1658978414100166,,,,
+signal_plus_ssl,,auroc,,,-0.0695113160052367,0.0231742808157267,2000.0,recalibration_differences,isotonic minus raw,-0.02254345416202,,,,
+signal_plus_ssl_plus_signal_phenotype,,brier,,,-0.1409702670243439,-0.056571389890611,2000.0,recalibration_differences,platt minus raw,-0.0990542449995089,,,,
+signal_plus_ssl_plus_signal_phenotype,,calibration_slope,,,0.3792375740982014,1.4926424400969869,2000.0,recalibration_differences,platt minus raw,0.9106272070124882,,,,
+signal_plus_ssl_plus_signal_phenotype,,expected_calibration_error,,,-0.2554470612196645,-0.1293808460602244,2000.0,recalibration_differences,platt minus raw,-0.2052418710887075,,,,
+signal_plus_ssl_plus_signal_phenotype,,auprc,,,0.0,0.0,2000.0,recalibration_differences,platt minus raw,0.0,,,,
+signal_plus_ssl_plus_signal_phenotype,,auroc,,,0.0,0.0,2000.0,recalibration_differences,platt minus raw,0.0,,,,
+signal_plus_ssl_plus_signal_phenotype,,brier,,,-0.1308294074604928,-0.0491917730818751,2000.0,recalibration_differences,isotonic minus raw,-0.0905869942669864,,,,
+signal_plus_ssl_plus_signal_phenotype,,calibration_slope,,,-0.2023866731230674,0.4139732500749841,2000.0,recalibration_differences,isotonic minus raw,0.1059575469471127,,,,
+signal_plus_ssl_plus_signal_phenotype,,expected_calibration_error,,,-0.2643711461683697,-0.1144406584235237,2000.0,recalibration_differences,isotonic minus raw,-0.2044624524982078,,,,
+signal_plus_ssl_plus_signal_phenotype,,auprc,,,-0.2317235359105727,-0.0647861013784724,2000.0,recalibration_differences,isotonic minus raw,-0.1478529768297257,,,,
+signal_plus_ssl_plus_signal_phenotype,,auroc,,,-0.0526167582417581,0.0175651004343703,2000.0,recalibration_differences,isotonic minus raw,-0.0172324800099395,,,,
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_features_isotonic,0.0955345185388483,-0.0040442187831631
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_features_platt,0.0991865435882348,-0.0003921937337765
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_features_raw,0.0943832325800975,-0.0051955047419139
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_plus_ssl_isotonic,0.0931846594026912,-0.0063940779193202
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_plus_ssl_platt,0.0990576904339589,-0.0005210468880524
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_plus_ssl_plus_signal_phenotype_isotonic,0.0930883708995693,-0.0064903664224421
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_plus_ssl_plus_signal_phenotype_platt,0.0993249531564985,-0.0002537841655128
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_plus_ssl_plus_signal_phenotype_raw,0.0995787373220114,
+,,,,,,,,decision_curve_summary,,,0.05-0.20,signal_plus_ssl_raw,0.0953432730637355,-0.0042354642582759
+,,,,,,,,decision_curve_summary,,,0.05-0.20,treat_all,0.0886870987759746,-0.0108916385460368
+,,,,,,,,decision_curve_summary,,,0.05-0.20,treat_none,0.0,-0.0995787373220114
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_features_isotonic,0.0483358854558436,0.016359493055537
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_features_platt,0.0450434456223796,0.013067053222073
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_features_raw,0.0261861897672137,-0.0057902026330928
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_plus_ssl_isotonic,0.0440178652608097,0.0120414728605031
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_plus_ssl_platt,0.0482454497795715,0.0162690573792648
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_plus_ssl_plus_signal_phenotype_isotonic,0.0467051590439931,0.0147287666436865
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_plus_ssl_plus_signal_phenotype_platt,0.0513011106642398,0.0193247182639332
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_plus_ssl_plus_signal_phenotype_raw,0.0319763924003066,
+,,,,,,,,decision_curve_summary,,,0.10-0.30,signal_plus_ssl_raw,0.0306919641576684,-0.0012844282426381
+,,,,,,,,decision_curve_summary,,,0.10-0.30,treat_all,0.000270170582534,-0.0317062218177725
+,,,,,,,,decision_curve_summary,,,0.10-0.30,treat_none,0.0,-0.0319763924003066
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_features_isotonic,0.0325834616881525,0.059067229846109
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_features_platt,0.0362477367491491,0.0627315049071056
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_features_raw,-0.0396507971311579,-0.0131670289732013
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_plus_ssl_isotonic,0.0316223937392959,0.0581061618972524
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_plus_ssl_platt,0.0462218926472367,0.0727056608051932
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_plus_ssl_plus_signal_phenotype_isotonic,0.0330715568764692,0.0595553250344258
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_plus_ssl_plus_signal_phenotype_platt,0.0471510645713676,0.0736348327293241
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_plus_ssl_plus_signal_phenotype_raw,-0.0264837681579565,
+,,,,,,,,decision_curve_summary,,,0.05-0.50,signal_plus_ssl_raw,-0.0297568597890214,-0.0032730916310649
+,,,,,,,,decision_curve_summary,,,0.05-0.50,treat_all,-0.1359694973524645,-0.1094857291945079
+,,,,,,,,decision_curve_summary,,,0.05-0.50,treat_none,0.0,0.0264837681579565

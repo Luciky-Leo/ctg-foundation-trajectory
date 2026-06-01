@@ -111,12 +111,7 @@ def plot_record(indir, row, outdir):
     axes[1].set_xlabel("Minutes from record start")
     axes[1].set_ylim(0, 110)
     axes[1].grid(alpha=0.2)
-    title = (
-        f"{row['phenotype_type']} {row['phenotype']} prototype: record {row['record_id']} "
-        f"(pH={row['cord_ph']}, Apgar5={row['apgar5']})"
-    )
-    fig.suptitle(title, fontsize=11)
-    fig.tight_layout()
+    fig.tight_layout(pad=0.8)
     safe_type = str(row["phenotype_type"]).replace("_", "-")
     out_path = Path(outdir) / f"{safe_type}_{row['phenotype']}_record_{row['record_id']}.png"
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -163,4 +158,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

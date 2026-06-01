@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the archived Zenodo release DOI."
-title: "Self-supervised cardiotocography trajectory representation for calibrated neonatal risk enrichment"
-version: "1.0.0"
-date-released: "2026-05-25"
+title: "Self-supervised biomedical signal representation learning from intrapartum cardiotocography for neonatal risk enrichment"
+version: "1.1.0"
+date-released: "2026-06-01"
 repository-code: "https://github.com/Luciky-Leo/ctg-foundation-trajectory"
 doi: "10.5281/zenodo.20376424"
 license: MIT
@@ -25,7 +25,9 @@ authors:
     email: "luff94@163.com"
 keywords:
   - cardiotocography
-  - medical informatics
-  - machine learning
-  - clinical decision support
+  - biomedical signal processing
+  - self-supervised learning
+  - time-series representation learning
+  - fetal heart rate
+  - uterine contraction
   - calibration

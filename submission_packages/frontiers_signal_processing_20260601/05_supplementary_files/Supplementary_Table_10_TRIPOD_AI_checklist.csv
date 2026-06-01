@@ -1,0 +1,53 @@
+item,topic,status,reported_location,comment
+1,Title,Reported,Title,Identifies self-supervised CTG trajectory representation and calibrated neonatal risk enrichment in the target intrapartum CTG population.
+2,Abstract,Reported,Structured abstract,Single-paragraph abstract aligned with Frontiers in Signal Processing biomedical signal-processing positioning.
+3a,Healthcare context and rationale,Reported,Introduction,Explains intrapartum CTG decision-support context and limitations of static or subjective interpretation.
+3b,Target population and intended purpose,Reported,Introduction and Discussion,Target population is intrapartum CTG records; intended use is risk enrichment and phenotype interpretation rather than autonomous diagnosis.
+3c,Known health inequalities,Partially reported,Discussion limitations,No protected sociodemographic fairness analysis was possible beyond available CTU-UHB metadata; this is treated as a limitation.
+4,Objectives,Reported,Introduction,Objective is evaluation of an open-data self-supervised CTG trajectory-representation workflow for calibrated neonatal risk enrichment.
+5a,Data sources,Reported,Methods and Supplementary Table 1,CTU-UHB/CTU-CHB is primary raw-signal cohort; CTGDL-FHRMA is external representation/domain-shift resource; UCI CTG is feature-level reference.
+5b,Data dates,Partially reported,Supplementary Table 1,Public datasets are cited with access information; detailed original accrual dates depend on source metadata.
+6a,Study setting,Reported,Methods and Supplementary Table 1,Intrapartum cardiotocography public data from hospital-based CTG resources.
+6b,Eligibility criteria,Reported,Methods and Supplementary Table 1,Records included when raw FHR/UC and required metadata were available for the analysis pipeline.
+6c,Treatments received,Not applicable,Methods,No treatment-effect modelling was performed; delivery process variables were not used as intervention exposures.
+7,Data preparation and quality checking,Reported,Methods,"Signal windowing, missingness, feature extraction, train-only scaling and source-data generation are described."
+8a,Outcome definition and time horizon,Reported,Methods outcome definition,Primary endpoint is cord pH <7.15 or 5-minute Apgar <7 at record level.
+8b,Subjective outcome assessment,Not applicable,Methods outcome definition,Outcome uses recorded pH and Apgar metadata from the public dataset rather than new subjective adjudication.
+8c,Outcome blinding,Not applicable,Methods,Retrospective public-data analysis; outcome labels were withheld from SSL pretraining.
+9a,Initial predictor choice,Reported,Methods outcome and prediction models,Classical signal features and SSL embeddings were prespecified from CTG physiology and self-supervised representation design.
+9b,Predictor definitions,Reported,Methods and supplementary tables,"Signal features, SSL embedding dimensions and phenotype variables are described; source-data tables are included."
+9c,Subjective predictor assessment,Not applicable,Methods,Predictors were algorithmically extracted from public CTG signals and metadata.
+10,Sample size,Reported,Methods and Results,"Record counts, event counts and window counts are reported; limitations discuss small event count and high-dimensional model risk."
+11,Missing data,Reported,Methods and Results,"Median imputation, missingness features and no-missingness sensitivity are reported."
+12a,Data partitioning and analysis use,Reported,Methods record split,"Record-level training/test split, train-only SSL pretraining and held-out validation are stated."
+12b,Predictor handling,Reported,Methods,Numeric predictors were median-imputed and standardized; categorical phenotypes were one-hot encoded.
+12c,Model type and tuning,Reported,Methods and Supplementary Table 9,"Transformer SSL, logistic pipelines, exploratory compact sweep and development-only selection sensitivity are described."
+12d,Heterogeneity across clusters,Partially reported,Results and Discussion,Domain-shift analysis compares CTU-UHB with CTGDL-FHRMA; formal multi-centre heterogeneity was not possible.
+12e,Performance measures,Reported,Methods and Results,"AUROC, AUPRC, Brier score, calibration, decision curve and bootstrap CIs are reported with rationale."
+12f,Model updating or recalibration,Reported,Methods and Results,Cross-fitted Platt and isotonic recalibration are described; Platt scaling is emphasized.
+12g,Prediction calculation,Reported,Methods and Code availability,Pipeline scripts are named and the versioned repository archive is available at https://doi.org/10.5281/zenodo.20376424.
+13,Class imbalance,Reported,Methods and Results,Class-balanced logistic regression and AUPRC emphasis are justified under event imbalance.
+14,Fairness,Partially reported,Discussion limitations,Available public metadata did not support a full fairness assessment; age and clinical stratification were limited.
+15,Model output,Reported,Methods and Discussion,Outputs are risk-enrichment scores and calibrated probabilities; not intended as definitive diagnosis.
+16,Training versus evaluation differences,Reported,Methods and Results,CTU train/test split and CTGDL representation-domain differences are explicitly described.
+17,Ethical approval,Reported,Declarations,Public de-identified datasets; ethics approval not applicable.
+18a,Funding,Reported,Declarations,No specific funding.
+18b,Conflicts of interest,Reported,Declarations,No competing interests declared.
+18c,Protocol,Reported,Code availability and limitations,No formal protocol was registered; analysis scripts and source data are included for reproducibility.
+18d,Registration,Reported,Code availability and limitations,Study was not registered.
+18e,Data sharing,Reported,Availability of data and materials,Public data sources and derived source-data tables are listed.
+18f,Code sharing,Reported,Code availability,Local scripts are identified; the GitHub repository and versioned Zenodo archive are reported in Code availability.
+19,Patient and public involvement,Not applicable,Methods/Declarations,No patient or public involvement in this retrospective public-data analysis.
+20a,Participant flow,Reported,Results and Figure 1,Cohort scale and train/test records are shown.
+20b,Participant characteristics,Reported,Supplementary Table 1,Dataset scale and available record-level characteristics are summarized in supplementary files.
+20c,Development versus evaluation comparison,Reported,Figure 1 and Supplementary Table 1,Train/test event balance and external domain-shift analysis are reported.
+21,Number of participants and events per analysis,Reported,Results and Supplementary Table 9,Events are reported for primary and sensitivity analyses.
+22,Model specification,Reported,Methods and Code availability,"Architecture, feature dimensions and logistic models are described; implementation scripts are included in the GitHub repository and versioned Zenodo archive."
+23a,Model performance with uncertainty,Reported,Results and Supplementary Tables 2-3,Performance estimates include bootstrap confidence intervals and model differences.
+23b,Heterogeneity in performance,Partially reported,Results and Discussion,Domain-shift and missingness sensitivity are reported; subgroup fairness analysis remains limited.
+24,Model updating results,Reported,Results and Supplementary Table 7,Platt and isotonic recalibration results are reported.
+25,Interpretation,Reported,Discussion,"Interprets risk enrichment, phenotype physiology, calibration and external-domain boundaries."
+26,Limitations,Reported,Discussion,"Discusses retrospective design, model-selection sensitivity, event count, dimensionality, missingness and lack of external outcome validation."
+27a,Handling poor quality or unavailable inputs,Partially reported,Methods and Discussion,Missingness sensitivity and signal-quality features are reported; deployment handling is future work.
+27b,User interaction and expertise,Reported,Discussion,Model is positioned for clinician-facing decision support rather than autonomous use.
+27c,Future research,Reported,Discussion,"Calls for larger locked train/development/test designs, external outcome validation and prospective evaluation."

@@ -1,0 +1,49 @@
+model,feature_family,positive_importance_sum_auprc,positive_importance_mean_auprc,positive_importance_sum_auroc,positive_importance_mean_auroc,n_features,table_block,feature,importance_mean_auprc,importance_std_auprc,importance_mean_auroc,importance_std_auroc,feature_label,rank_auprc,rank_auroc
+signal_features,clinical_signal,0.1751835463754814,0.0145986288646234,0.1750519904931671,0.0145876658744305,12.0,feature_family_importance,,,,,,,,
+signal_plus_ssl,clinical_signal,0.4874028125153057,0.0406169010429421,0.2016488413547238,0.0168040701128936,12.0,feature_family_importance,,,,,,,,
+signal_plus_ssl,ssl_embedding,2.600260933096987,0.0406290770796404,0.7786616161616171,0.0121665877525252,64.0,feature_family_importance,,,,,,,,
+signal_plus_ssl_plus_signal_phenotype,clinical_signal,0.3687638743753214,0.0307303228646101,0.1920603089720739,0.0160050257476728,12.0,feature_family_importance,,,,,,,,
+signal_plus_ssl_plus_signal_phenotype,phenotype,0.023480728265159,0.023480728265159,0.0159313725490196,0.0159313725490196,1.0,feature_family_importance,,,,,,,,
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,1.893348554509958,0.029583571164218,0.7694741532976842,0.0120230336452763,64.0,feature_family_importance,,,,,,,,
+signal_features,clinical_signal,,,,,,top_feature_importance,fhr_mean,0.0578685231078877,0.0329101251068821,0.0735888294711824,0.0203754548073345,Mean FHR,1.0,1.0
+signal_features,clinical_signal,,,,,,top_feature_importance,fhr_missing_fraction,0.0466341437624105,0.025815313006617,0.034365715983363,0.0287990337343898,FHR missing fraction,2.0,3.0
+signal_features,clinical_signal,,,,,,top_feature_importance,deceleration_proxy_count,0.0327990910910376,0.0490813636134322,0.0507947118241236,0.0365364764249606,Deceleration-proxy burden,3.0,2.0
+signal_features,clinical_signal,,,,,,top_feature_importance,fhr_p05,0.0190299627293173,0.0199197308027554,0.0144459298871063,0.0137576070683413,FHR 5th percentile,4.0,4.0
+signal_features,clinical_signal,,,,,,top_feature_importance,fhr_uc_corr,0.0188518256848282,0.023236924667938,-0.0044043374925727,0.0182006752846061,FHR-UC correlation,5.0,11.0
+signal_features,clinical_signal,,,,,,top_feature_importance,uc_missing_fraction,0.0,0.0,0.0,0.0,UC missing fraction,6.0,8.0
+signal_features,clinical_signal,,,,,,top_feature_importance,uc_sd,-9.851836120883251e-06,0.0002105863309009,0.0001039809863339,0.0001794867197503,UC variability (SD),7.0,6.0
+signal_features,clinical_signal,,,,,,top_feature_importance,fhr_sd,-0.0007017331427904,0.0028528397727917,0.0017231134878194,0.0015056557027229,FHR variability (SD),8.0,5.0
+signal_features,clinical_signal,,,,,,top_feature_importance,uc_mean,-0.0016820828811581,0.0078162353851509,-0.00017082590612,0.0057524282526008,Mean uterine contraction,9.0,9.0
+signal_features,clinical_signal,,,,,,top_feature_importance,fhr_p95,-0.0018822528332649,0.0024187635933319,2.9708853238267587e-05,0.000291843177427,FHR 95th percentile,10.0,7.0
+signal_features,clinical_signal,,,,,,top_feature_importance,uc_p95,-0.0061488306425474,0.0077959438345368,-0.0010695187165775,0.0059428103665488,UC 95th percentile,11.0,10.0
+signal_features,clinical_signal,,,,,,top_feature_importance,fhr_p50,-0.0275011930712083,0.0310223436290963,-0.0102866904337492,0.0167568285927023,Median FHR,12.0,12.0
+signal_plus_ssl,clinical_signal,,,,,,top_feature_importance,fhr_missing_fraction,0.1641882777364192,0.0342731480821225,0.0846256684491979,0.0327393247620843,FHR missing fraction,1.0,1.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_55,0.1584054472068349,0.0345524267025417,0.0701500297088532,0.0246388384419617,SSL dimension 55,2.0,2.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_32,0.1386933428112158,0.0273146106136179,0.05034165181224,0.0223851527049176,SSL dimension 32,3.0,6.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_17,0.1179445283238231,0.0317987186659372,0.0186720142602495,0.0239016956209698,SSL dimension 17,4.0,18.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_19,0.1178064519157563,0.026570118550196,0.0118612596553773,0.0315649758760622,SSL dimension 19,5.0,31.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_43,0.1004000607861992,0.0316892730709607,0.0334967320261438,0.0220725733428328,SSL dimension 43,6.0,10.0
+signal_plus_ssl,clinical_signal,,,,,,top_feature_importance,fhr_mean,0.0989320030496457,0.0313842607924868,0.0507501485442662,0.0162309354974694,Mean FHR,7.0,5.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_18,0.088603766077886,0.0270526554569924,0.0249925727866904,0.0173943448769013,SSL dimension 18,8.0,13.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_63,0.0817781078996896,0.0321198271642438,0.0358288770053476,0.0305851201206767,SSL dimension 63,9.0,8.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_52,0.0782852792747735,0.0192552937380987,0.0111928104575163,0.0184948065884853,SSL dimension 52,10.0,32.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_26,0.0775384902155795,0.0202950638557194,0.01284165181224,0.0193730270784903,SSL dimension 26,11.0,29.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_25,0.0768601952363549,0.0222999775681126,0.0647281639928698,0.0237054554644417,SSL dimension 25,12.0,3.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_42,0.0709134585338068,0.024658945884818,-0.0051024955436719,0.0203554173295352,SSL dimension 42,13.0,58.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_44,0.0699043999316928,0.0323042216839014,-0.0277703505644681,0.021032301028684,SSL dimension 44,14.0,76.0
+signal_plus_ssl,ssl_embedding,,,,,,top_feature_importance,emb_29,0.0679716474782002,0.024822133725295,0.0140151515151515,0.0151489317901816,SSL dimension 29,15.0,26.0
+signal_plus_ssl_plus_signal_phenotype,clinical_signal,,,,,,top_feature_importance,fhr_missing_fraction,0.1507708711046302,0.0353708177986889,0.0867795603089721,0.032737471285709,FHR missing fraction,1.0,1.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_55,0.1403690330422778,0.0369669242622934,0.0721330956625074,0.0240925520161722,SSL dimension 55,2.0,2.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_32,0.126283513040247,0.0276343942300037,0.0523321449792038,0.0224392622490708,SSL dimension 32,3.0,5.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_17,0.1102373709085491,0.0306758423990168,0.0213829471182412,0.0232808118923783,SSL dimension 17,4.0,17.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_19,0.0894579587531258,0.0259298871283773,0.0090389185977421,0.0294690269816918,SSL dimension 19,5.0,35.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_43,0.0802701904049614,0.0308345673052387,0.0331996434937611,0.0214187491292051,SSL dimension 43,6.0,9.0
+signal_plus_ssl_plus_signal_phenotype,clinical_signal,,,,,,top_feature_importance,fhr_mean,0.0800723469417028,0.030432291736789,0.0499702911467617,0.0156148500398943,Mean FHR,7.0,6.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_63,0.0682782397906146,0.0323147647666314,0.0372103386809269,0.0310069388398202,SSL dimension 63,8.0,8.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_52,0.0672626810493434,0.0227353362673246,0.0137403446226976,0.0188849952166553,SSL dimension 52,9.0,23.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_26,0.0626590469168533,0.0205737405151273,0.0117498514557338,0.0187995019993198,SSL dimension 26,10.0,29.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_25,0.0619741526354676,0.0233910547017238,0.0637923351158645,0.0243291395589279,SSL dimension 25,11.0,3.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_18,0.0613024733714552,0.0290520066276614,0.0230095068330362,0.0156396303432636,SSL dimension 18,12.0,15.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_42,0.0553538154276584,0.0233593261280776,-0.0048796791443849,0.0197008299572905,SSL dimension 42,13.0,58.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_53,0.0534471749554854,0.0222750017520715,0.0537878787878788,0.0191715007394832,SSL dimension 53,14.0,4.0
+signal_plus_ssl_plus_signal_phenotype,ssl_embedding,,,,,,top_feature_importance,emb_44,0.0527179252817355,0.030447047041163,-0.0268493761140819,0.0202386111446536,SSL dimension 44,15.0,77.0
