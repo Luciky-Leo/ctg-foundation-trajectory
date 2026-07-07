@@ -3,7 +3,7 @@
 - Status: `PASS`
 - Manuscript: `/mnt/e/Reserch/CTG_Trajectory_Frontiers_Signal_Processing_R1_Revision_20260705/R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/frontiers_ctg_manuscript.tex`
 - Package: `/mnt/e/Reserch/CTG_Trajectory_Frontiers_Signal_Processing_R1_Revision_20260705/R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707`
-- URL check: `disabled`
+- URL check: `enabled`
 
 ## Detected Package Items
 
@@ -37,7 +37,10 @@
 
 ## URL/DOI Checks
 
-No URLs checked.
+| URL | Status | Code | Note |
+|---|---|---:|---|
+| https://doi.org/10.5281/zenodo.21242760 | PASS | 200 | URL resolved. |
+| https://github.com/Luciky-Leo/ctg-foundation-trajectory | PASS | 200 | URL resolved. |
 
 ## Submission Gate
 
