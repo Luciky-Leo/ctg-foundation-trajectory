@@ -1,0 +1,467 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage{booktabs,longtable,array,pdflscape}
+\usepackage{url,hyperref,microtype}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\emergencystretch=3em
+\sloppy
+
+\title{Supplementary Table 9. Reviewer-requested sensitivity analyses for development-only model selection, SSL PCA dimensionality reduction, elastic-net regularization and pH-threshold outcome definitions}
+\author{Frontiers in Signal Processing R1 supplementary table}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Table 9. Reviewer-requested sensitivity analyses for development-only model selection, SSL PCA dimensionality reduction, elastic-net regularization and pH-threshold outcome definitions}
+
+Standalone display version for LaTeX upload/review. Machine-readable source: source\_\allowbreak{}tables/\allowbreak{}Supplementary\_\allowbreak{}Table\_\allowbreak{}9\_\allowbreak{}reviewer\_\allowbreak{}sensitivity\_\allowbreak{}analyses.\allowbreak{}csv. Rows: 24; columns: 24. The source table is split below into source-defined sections and column blocks so that all non-empty cells remain readable.
+
+\subsection*{analysis type: Development model selection}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, Development model selection, column block 1 of 3}\label{tab:standalone_s9_g1_block1}\\
+\toprule
+config & model & selection split & Development train records & Development validation records \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, Development model selection, column block 1 of 3.}}\\
+\toprule
+config & model & selection split & Development train records & Development validation records \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+p80 d64 l3 channel cw02 & Signal + SSL & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+p80 d64 l3 channel cw02 & Signal + SSL + phenotype & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+p60 d64 l2 mixed cw02 & Signal + SSL & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+p60 d64 l2 mixed cw02 & Signal + SSL + phenotype & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+p80 d48 l2 mixed cw01 & Signal + SSL & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+p80 d48 l2 mixed cw01 & Signal + SSL + phenotype & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+p120 d64 l2 block cw02 & Signal + SSL & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+p120 d64 l2 block cw02 & Signal + SSL + phenotype & 75\% original-\allowbreak{}training records fit /\allowbreak{} 25\% original-\allowbreak{}training records validation & 289 & 97 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, Development model selection, column block 2 of 3}\label{tab:standalone_s9_g1_block2}\\
+\toprule
+config & model & Development train events & Development validation events & AUROC \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, Development model selection, column block 2 of 3.}}\\
+\toprule
+config & model & Development train events & Development validation events & AUROC \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+p80 d64 l3 channel cw02 & Signal + SSL & 59 & 20 & 0.\allowbreak{}7078 \\
+p80 d64 l3 channel cw02 & Signal + SSL + phenotype & 59 & 20 & 0.\allowbreak{}7045 \\
+p60 d64 l2 mixed cw02 & Signal + SSL & 59 & 20 & 0.\allowbreak{}6942 \\
+p60 d64 l2 mixed cw02 & Signal + SSL + phenotype & 59 & 20 & 0.\allowbreak{}6981 \\
+p80 d48 l2 mixed cw01 & Signal + SSL & 59 & 20 & 0.\allowbreak{}7396 \\
+p80 d48 l2 mixed cw01 & Signal + SSL + phenotype & 59 & 20 & 0.\allowbreak{}75 \\
+p120 d64 l2 block cw02 & Signal + SSL & 59 & 20 & 0.\allowbreak{}6519 \\
+p120 d64 l2 block cw02 & Signal + SSL + phenotype & 59 & 20 & 0.\allowbreak{}6597 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, Development model selection, column block 3 of 3}\label{tab:standalone_s9_g1_block3}\\
+\toprule
+config & model & AUPRC & Brier score & event prevalence \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, Development model selection, column block 3 of 3.}}\\
+\toprule
+config & model & AUPRC & Brier score & event prevalence \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+p80 d64 l3 channel cw02 & Signal + SSL & 0.\allowbreak{}3569 & 0.\allowbreak{}2411 & 0.\allowbreak{}2062 \\
+p80 d64 l3 channel cw02 & Signal + SSL + phenotype & 0.\allowbreak{}3569 & 0.\allowbreak{}2414 & 0.\allowbreak{}2062 \\
+p60 d64 l2 mixed cw02 & Signal + SSL & 0.\allowbreak{}3415 & 0.\allowbreak{}2282 & 0.\allowbreak{}2062 \\
+p60 d64 l2 mixed cw02 & Signal + SSL + phenotype & 0.\allowbreak{}3564 & 0.\allowbreak{}2287 & 0.\allowbreak{}2062 \\
+p80 d48 l2 mixed cw01 & Signal + SSL & 0.\allowbreak{}4291 & 0.\allowbreak{}2277 & 0.\allowbreak{}2062 \\
+p80 d48 l2 mixed cw01 & Signal + SSL + phenotype & 0.\allowbreak{}4482 & 0.\allowbreak{}2267 & 0.\allowbreak{}2062 \\
+p120 d64 l2 block cw02 & Signal + SSL & 0.\allowbreak{}2925 & 0.\allowbreak{}2495 & 0.\allowbreak{}2062 \\
+p120 d64 l2 block cw02 & Signal + SSL + phenotype & 0.\allowbreak{}3 & 0.\allowbreak{}2467 & 0.\allowbreak{}2062 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\subsection*{analysis type: development selected test evaluation}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, development selected test evaluation, column block 1 of 3}\label{tab:standalone_s9_g2_block1}\\
+\toprule
+config & model & selection split & AUROC & AUPRC \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, development selected test evaluation, column block 1 of 3.}}\\
+\toprule
+config & model & selection split & AUROC & AUPRC \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+p80 d48 l2 mixed cw01 & Signal + SSL + phenotype & selected by original-\allowbreak{}training internal validation;\allowbreak{} original held-\allowbreak{}out test evaluated once & 0.\allowbreak{}6348 & 0.\allowbreak{}3872 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, development selected test evaluation, column block 2 of 3}\label{tab:standalone_s9_g2_block2}\\
+\toprule
+config & model & Brier score & event prevalence & Train records \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, development selected test evaluation, column block 2 of 3.}}\\
+\toprule
+config & model & Brier score & event prevalence & Train records \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+p80 d48 l2 mixed cw01 & Signal + SSL + phenotype & 0.\allowbreak{}2542 & 0.\allowbreak{}2048 & 386 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, development selected test evaluation, column block 3 of 3}\label{tab:standalone_s9_g2_block3}\\
+\toprule
+config & model & Held-out test records & Train events & Held-out test events \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, development selected test evaluation, column block 3 of 3.}}\\
+\toprule
+config & model & Held-out test records & Train events & Held-out test events \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+p80 d48 l2 mixed cw01 & Signal + SSL + phenotype & 166 & 79 & 34 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\subsection*{analysis type: dimensionality regularization}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, dimensionality regularization, column block 1 of 4}\label{tab:standalone_s9_g3_block1}\\
+\toprule
+model & AUROC & AUPRC & Brier score & event prevalence \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, dimensionality regularization, column block 1 of 4.}}\\
+\toprule
+model & AUROC & AUPRC & Brier score & event prevalence \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+signal + ssl64 + signal phenotype l2 & 0.\allowbreak{}6168 & 0.\allowbreak{}4016 & 0.\allowbreak{}2652 & 0.\allowbreak{}2048 \\
+Signal + SSL pca5 + signal phenotype l2 & 0.\allowbreak{}6286 & 0.\allowbreak{}3863 & 0.\allowbreak{}2547 & 0.\allowbreak{}2048 \\
+Signal + SSL pca5 + signal phenotype elasticnet & 0.\allowbreak{}6279 & 0.\allowbreak{}3801 & 0.\allowbreak{}2548 & 0.\allowbreak{}2048 \\
+Signal + SSL pca10 + signal phenotype l2 & 0.\allowbreak{}6212 & 0.\allowbreak{}4241 & 0.\allowbreak{}2588 & 0.\allowbreak{}2048 \\
+Signal + SSL pca10 + signal phenotype elasticnet & 0.\allowbreak{}6194 & 0.\allowbreak{}4026 & 0.\allowbreak{}2584 & 0.\allowbreak{}2048 \\
+Signal + SSL pca20 + signal phenotype l2 & 0.\allowbreak{}6535 & 0.\allowbreak{}4256 & 0.\allowbreak{}2566 & 0.\allowbreak{}2048 \\
+Signal + SSL pca20 + signal phenotype elasticnet & 0.\allowbreak{}6549 & 0.\allowbreak{}4172 & 0.\allowbreak{}2557 & 0.\allowbreak{}2048 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, dimensionality regularization, column block 2 of 4}\label{tab:standalone_s9_g3_block2}\\
+\toprule
+model & AUROC & Train records & Held-out test records & Train events \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, dimensionality regularization, column block 2 of 4.}}\\
+\toprule
+model & AUROC & Train records & Held-out test records & Train events \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+signal + ssl64 + signal phenotype l2 & 0.\allowbreak{}6168 & 386 & 166 & 79 \\
+Signal + SSL pca5 + signal phenotype l2 & 0.\allowbreak{}6286 & 386 & 166 & 79 \\
+Signal + SSL pca5 + signal phenotype elasticnet & 0.\allowbreak{}6279 & 386 & 166 & 79 \\
+Signal + SSL pca10 + signal phenotype l2 & 0.\allowbreak{}6212 & 386 & 166 & 79 \\
+Signal + SSL pca10 + signal phenotype elasticnet & 0.\allowbreak{}6194 & 386 & 166 & 79 \\
+Signal + SSL pca20 + signal phenotype l2 & 0.\allowbreak{}6535 & 386 & 166 & 79 \\
+Signal + SSL pca20 + signal phenotype elasticnet & 0.\allowbreak{}6549 & 386 & 166 & 79 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, dimensionality regularization, column block 3 of 4}\label{tab:standalone_s9_g3_block3}\\
+\toprule
+model & AUROC & Held-out test events & SSL dimensions & penalty \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, dimensionality regularization, column block 3 of 4.}}\\
+\toprule
+model & AUROC & Held-out test events & SSL dimensions & penalty \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+signal + ssl64 + signal phenotype l2 & 0.\allowbreak{}6168 & 34 & 64 & l2 \\
+Signal + SSL pca5 + signal phenotype l2 & 0.\allowbreak{}6286 & 34 & 5 & l2 \\
+Signal + SSL pca5 + signal phenotype elasticnet & 0.\allowbreak{}6279 & 34 & 5 & elasticnet \\
+Signal + SSL pca10 + signal phenotype l2 & 0.\allowbreak{}6212 & 34 & 10 & l2 \\
+Signal + SSL pca10 + signal phenotype elasticnet & 0.\allowbreak{}6194 & 34 & 10 & elasticnet \\
+Signal + SSL pca20 + signal phenotype l2 & 0.\allowbreak{}6535 & 34 & 20 & l2 \\
+Signal + SSL pca20 + signal phenotype elasticnet & 0.\allowbreak{}6549 & 34 & 20 & elasticnet \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, dimensionality regularization, column block 4 of 4}\label{tab:standalone_s9_g3_block4}\\
+\toprule
+model & AUROC & n predictors before one hot & events per predictor before one hot & PCA explained variance ratio \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, dimensionality regularization, column block 4 of 4.}}\\
+\toprule
+model & AUROC & n predictors before one hot & events per predictor before one hot & PCA explained variance ratio \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+signal + ssl64 + signal phenotype l2 & 0.\allowbreak{}6168 & 77 & 1.\allowbreak{}026 &  \\
+Signal + SSL pca5 + signal phenotype l2 & 0.\allowbreak{}6286 & 18 & 4.\allowbreak{}389 & 0.\allowbreak{}84 \\
+Signal + SSL pca5 + signal phenotype elasticnet & 0.\allowbreak{}6279 & 18 & 4.\allowbreak{}389 & 0.\allowbreak{}84 \\
+Signal + SSL pca10 + signal phenotype l2 & 0.\allowbreak{}6212 & 23 & 3.\allowbreak{}435 & 0.\allowbreak{}9567 \\
+Signal + SSL pca10 + signal phenotype elasticnet & 0.\allowbreak{}6194 & 23 & 3.\allowbreak{}435 & 0.\allowbreak{}9567 \\
+Signal + SSL pca20 + signal phenotype l2 & 0.\allowbreak{}6535 & 33 & 2.\allowbreak{}394 & 0.\allowbreak{}9953 \\
+Signal + SSL pca20 + signal phenotype elasticnet & 0.\allowbreak{}6549 & 33 & 2.\allowbreak{}394 & 0.\allowbreak{}9953 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\subsection*{analysis type: outcome sensitivity}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, outcome sensitivity, column block 1 of 4}\label{tab:standalone_s9_g4_block1}\\
+\toprule
+model & AUROC & AUPRC & Brier score & event prevalence \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, outcome sensitivity, column block 1 of 4.}}\\
+\toprule
+model & AUROC & AUPRC & Brier score & event prevalence \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & 0.\allowbreak{}6303 & 0.\allowbreak{}3366 & 0.\allowbreak{}2525 & 0.\allowbreak{}2048 \\
+Signal + SSL + phenotype & 0.\allowbreak{}6168 & 0.\allowbreak{}4016 & 0.\allowbreak{}2652 & 0.\allowbreak{}2048 \\
+Classical signal features & 0.\allowbreak{}6398 & 0.\allowbreak{}3882 & 0.\allowbreak{}2525 & 0.\allowbreak{}1988 \\
+Signal + SSL + phenotype & 0.\allowbreak{}6744 & 0.\allowbreak{}4432 & 0.\allowbreak{}2489 & 0.\allowbreak{}1988 \\
+Classical signal features & 0.\allowbreak{}7809 & 0.\allowbreak{}4773 & 0.\allowbreak{}2183 & 0.\allowbreak{}1145 \\
+Signal + SSL + phenotype & 0.\allowbreak{}8006 & 0.\allowbreak{}487 & 0.\allowbreak{}1941 & 0.\allowbreak{}1145 \\
+Classical signal features & 0.\allowbreak{}8181 & 0.\allowbreak{}5409 & 0.\allowbreak{}207 & 0.\allowbreak{}0904 \\
+Signal + SSL + phenotype & 0.\allowbreak{}8631 & 0.\allowbreak{}526 & 0.\allowbreak{}1726 & 0.\allowbreak{}0904 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, outcome sensitivity, column block 2 of 4}\label{tab:standalone_s9_g4_block2}\\
+\toprule
+model & AUROC & Train records & Held-out test records & Train events \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, outcome sensitivity, column block 2 of 4.}}\\
+\toprule
+model & AUROC & Train records & Held-out test records & Train events \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & 0.\allowbreak{}6303 & 386 & 166 & 79 \\
+Signal + SSL + phenotype & 0.\allowbreak{}6168 & 386 & 166 & 79 \\
+Classical signal features & 0.\allowbreak{}6398 & 386 & 166 & 72 \\
+Signal + SSL + phenotype & 0.\allowbreak{}6744 & 386 & 166 & 72 \\
+Classical signal features & 0.\allowbreak{}7809 & 386 & 166 & 37 \\
+Signal + SSL + phenotype & 0.\allowbreak{}8006 & 386 & 166 & 37 \\
+Classical signal features & 0.\allowbreak{}8181 & 386 & 166 & 25 \\
+Signal + SSL + phenotype & 0.\allowbreak{}8631 & 386 & 166 & 25 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 9, outcome sensitivity, column block 3 of 4}\label{tab:standalone_s9_g4_block3}\\
+\toprule
+model & AUROC & Held-out test events & outcome & outcome definition \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 9, outcome sensitivity, column block 3 of 4.}}\\
+\toprule
+model & AUROC & Held-out test events & outcome & outcome definition \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & 0.\allowbreak{}6303 & 34 & neonatal risk & primary composite:\allowbreak{} cord pH <7.\allowbreak{}15 or 5-\allowbreak{}minute Apgar <7 \\
+Signal + SSL + phenotype & 0.\allowbreak{}6168 & 34 & neonatal risk & primary composite:\allowbreak{} cord pH <7.\allowbreak{}15 or 5-\allowbreak{}minute Apgar <7 \\
+Classical signal features & 0.\allowbreak{}6398 & 33 & cord ph lt 7 15 & cord pH <7.\allowbreak{}15 only \\
+Signal + SSL + phenotype & 0.\allowbreak{}6744 & 33 & cord ph lt 7 15 & cord pH <7.\allowbreak{}15 only \\
+Classical signal features & 0.\allowbreak{}7809 & 19 & cord ph lt 7 10 & cord pH <7.\allowbreak{}10 only \\
+Signal + SSL + phenotype & 0.\allowbreak{}8006 & 19 & cord ph lt 7 10 & cord pH <7.\allowbreak{}10 only \\
+Classical signal features & 0.\allowbreak{}8181 & 15 & cord ph lt 7 05 & cord pH <7.\allowbreak{}05 only \\
+Signal + SSL + phenotype & 0.\allowbreak{}8631 & 15 & cord ph lt 7 05 & cord pH <7.\allowbreak{}05 only \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.3\linewidth} L{0.3\linewidth} L{0.3\linewidth}}
+\caption{Supplementary Table 9, outcome sensitivity, column block 4 of 4}\label{tab:standalone_s9_g4_block4}\\
+\toprule
+model & AUROC & AUPRC / test prevalence \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\textit{Continued from Supplementary Table 9, outcome sensitivity, column block 4 of 4.}}\\
+\toprule
+model & AUROC & AUPRC / test prevalence \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & 0.\allowbreak{}6303 & 1.\allowbreak{}643 \\
+Signal + SSL + phenotype & 0.\allowbreak{}6168 & 1.\allowbreak{}961 \\
+Classical signal features & 0.\allowbreak{}6398 & 1.\allowbreak{}953 \\
+Signal + SSL + phenotype & 0.\allowbreak{}6744 & 2.\allowbreak{}229 \\
+Classical signal features & 0.\allowbreak{}7809 & 4.\allowbreak{}17 \\
+Signal + SSL + phenotype & 0.\allowbreak{}8006 & 4.\allowbreak{}255 \\
+Classical signal features & 0.\allowbreak{}8181 & 5.\allowbreak{}985 \\
+Signal + SSL + phenotype & 0.\allowbreak{}8631 & 5.\allowbreak{}821 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\end{document}

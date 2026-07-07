@@ -1,0 +1,289 @@
+{
+  "boundary_rows": [
+    {
+      "check": "external outcome validation boundary",
+      "observed": "boundary phrase present",
+      "status": "PASS"
+    },
+    {
+      "check": "supplementary figures S1-S3 embedded",
+      "observed": "Supplementary_Figure_S1_model_selection_and_sensitivity.png, Supplementary_Figure_S2_external_domain_shift.png, Supplementary_Figure_S3_endpoint_threshold_and_sample_size.png",
+      "status": "PASS"
+    },
+    {
+      "check": "supplementary tables 1-11 embedded",
+      "observed": "S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11",
+      "status": "PASS"
+    },
+    {
+      "check": "standalone supplementary table TeX files",
+      "observed": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/standalone_supplementary_tables",
+      "status": "PASS"
+    },
+    {
+      "check": "original Frontiers template files copied",
+      "observed": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template",
+      "status": "PASS"
+    },
+    {
+      "check": "shared submission preflight",
+      "observed": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/SUBMISSION_PRECHECK_REPORT.md",
+      "status": "PASS"
+    }
+  ],
+  "compile_counts": {
+    "PASS": 4
+  },
+  "figures": [
+    {
+      "exists": true,
+      "figure": "Figure_1_study_design_pipeline.png",
+      "package_copy": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/figures/Figure_1_study_design_pipeline.png",
+      "sha256_match": false,
+      "source": "R1_FINAL_MAIN_FIG_SVG_PERSIST_20260707/04_figures_svg_sources/Figure_1_study_design_pipeline.png"
+    },
+    {
+      "exists": true,
+      "figure": "Figure_2_model_validation_and_explanation.png",
+      "package_copy": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/figures/Figure_2_model_validation_and_explanation.png",
+      "sha256_match": true,
+      "source": "R1_FINAL_MAIN_FIG_SVG_PERSIST_20260707/04_figures_svg_sources/Figure_2_model_validation_and_explanation.png"
+    },
+    {
+      "exists": true,
+      "figure": "Figure_3_dynamic_phenotype_prototypes.png",
+      "package_copy": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/figures/Figure_3_dynamic_phenotype_prototypes.png",
+      "sha256_match": true,
+      "source": "R1_FINAL_MAIN_FIG_SVG_PERSIST_20260707/04_figures_svg_sources/Figure_3_dynamic_phenotype_prototypes.png"
+    },
+    {
+      "exists": true,
+      "figure": "Figure_4_recalibration_and_clinical_utility.png",
+      "package_copy": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/figures/Figure_4_recalibration_and_clinical_utility.png",
+      "sha256_match": false,
+      "source": "R1_FINAL_MAIN_FIG_SVG_PERSIST_20260707/04_figures_svg_sources/Figure_4_recalibration_and_clinical_utility.png"
+    },
+    {
+      "exists": true,
+      "figure": "Supplementary_Figure_S1_model_selection_and_sensitivity.png",
+      "package_copy": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/figures/Supplementary_Figure_S1_model_selection_and_sensitivity.png",
+      "sha256_match": true,
+      "source": "R1_FINAL_MAIN_FIG_SVG_PERSIST_20260707/04_figures_svg_sources/Supplementary_Figure_S1_model_selection_and_sensitivity.png"
+    },
+    {
+      "exists": true,
+      "figure": "Supplementary_Figure_S2_external_domain_shift.png",
+      "package_copy": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/figures/Supplementary_Figure_S2_external_domain_shift.png",
+      "sha256_match": true,
+      "source": "R1_FINAL_MAIN_FIG_SVG_PERSIST_20260707/04_figures_svg_sources/Supplementary_Figure_S2_external_domain_shift.png"
+    },
+    {
+      "exists": true,
+      "figure": "Supplementary_Figure_S3_endpoint_threshold_and_sample_size.png",
+      "package_copy": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template/figures/Supplementary_Figure_S3_endpoint_threshold_and_sample_size.png",
+      "sha256_match": true,
+      "source": "R1_FINAL_MAIN_FIG_SVG_PERSIST_20260707/04_figures_svg_sources/Supplementary_Figure_S3_endpoint_threshold_and_sample_size.png"
+    }
+  ],
+  "latex_dir": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707/latex_original_frontiers_template",
+  "output_root": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707",
+  "reviewer_coverage_rows": [
+    {
+      "expectation": "complete result chain with SSL, recalibration, domain-shift boundary and conclusion",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-1",
+      "response_section_present": true,
+      "topic": "Abstract completion"
+    },
+    {
+      "expectation": "10-minute windows and channel masking",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-2",
+      "response_section_present": true,
+      "topic": "Figure 1 workflow labels"
+    },
+    {
+      "expectation": "S1/S2/S3 naming separated from main Figures 1-4",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-3",
+      "response_section_present": true,
+      "topic": "Supplementary figure naming"
+    },
+    {
+      "expectation": "interpretability rationale and SSL-alone ablation boundary",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-4",
+      "response_section_present": true,
+      "topic": "Final-model rationale"
+    },
+    {
+      "expectation": "pH <7.15 rationale plus stricter sensitivity analyses",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-5",
+      "response_section_present": true,
+      "topic": "pH endpoint rationale"
+    },
+    {
+      "expectation": "training trace is inspection-only, not representation-quality proof",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-6",
+      "response_section_present": true,
+      "topic": "Reconstruction-loss instability"
+    },
+    {
+      "expectation": "S2D gradient included with representation-only boundary",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-7",
+      "response_section_present": true,
+      "topic": "CTU SSL phenotype risk gradient"
+    },
+    {
+      "expectation": "targeted text audit and repetition cleanup",
+      "matrix_status": "READY_TO_POST",
+      "request": "R1-8",
+      "response_section_present": true,
+      "topic": "AI text artifacts"
+    },
+    {
+      "expectation": "552-record limit and generalization boundary",
+      "matrix_status": "READY_TO_POST",
+      "request": "R2-1",
+      "response_section_present": true,
+      "topic": "Sample size and generalization"
+    },
+    {
+      "expectation": "risk-enrichment, calibration and interpretability boundary",
+      "matrix_status": "READY_TO_POST",
+      "request": "R2-2",
+      "response_section_present": true,
+      "topic": "Practical significance"
+    },
+    {
+      "expectation": "bounded context, not direct head-to-head benchmark",
+      "matrix_status": "READY_WITH_CURRENT_CONTEXT_ONLY",
+      "request": "R2-3",
+      "response_section_present": true,
+      "topic": "Recent CTG comparison"
+    },
+    {
+      "expectation": "condensed discussion",
+      "matrix_status": "READY_TO_POST",
+      "request": "R2-4",
+      "response_section_present": true,
+      "topic": "Discussion length"
+    },
+    {
+      "expectation": "CTG, FHR, UC, SSL, AUPRC, AUROC and ECE first-use definitions",
+      "matrix_status": "READY_TO_POST",
+      "request": "R2-5",
+      "response_section_present": true,
+      "topic": "Abbreviations"
+    },
+    {
+      "expectation": "Supplementary Table 11",
+      "matrix_status": "READY_TO_POST",
+      "request": "R2-6",
+      "response_section_present": true,
+      "topic": "Transformer hyperparameters"
+    },
+    {
+      "expectation": "PatchTST selected pragmatically for long two-channel CTG windows",
+      "matrix_status": "READY_TO_POST",
+      "request": "R2-7",
+      "response_section_present": true,
+      "topic": "PatchTST rationale"
+    }
+  ],
+  "run_date": "20260707",
+  "supplementary_tables": [
+    {
+      "columns": "10",
+      "description": "Dataset sources, cohort scale, record-level split, window counts, and external assessment role",
+      "display_blocks": "3",
+      "file": "Supplementary_Table_1_datasets_and_cohort_scale.csv",
+      "rows": "8",
+      "table": "Supplementary Table 1"
+    },
+    {
+      "columns": "8",
+      "description": "Held-out model performance with 2000-bootstrap confidence intervals",
+      "display_blocks": "2",
+      "file": "Supplementary_Table_2_model_performance_bootstrap.csv",
+      "rows": "40",
+      "table": "Supplementary Table 2"
+    },
+    {
+      "columns": "7",
+      "description": "Bootstrap pairwise model differences and zero-crossing flags",
+      "display_blocks": "2",
+      "file": "Supplementary_Table_3_bootstrap_model_differences.csv",
+      "rows": "9",
+      "table": "Supplementary Table 3"
+    },
+    {
+      "columns": "39",
+      "description": "Signal and SSL phenotype summaries with representative prototype records",
+      "display_blocks": "24",
+      "file": "Supplementary_Table_4_dynamic_phenotype_summary_and_prototypes.csv",
+      "rows": "8",
+      "table": "Supplementary Table 4"
+    },
+    {
+      "columns": "16",
+      "description": "Permutation importance by feature family and top individual predictors",
+      "display_blocks": "5",
+      "file": "Supplementary_Table_5_prediction_explainability.csv",
+      "rows": "48",
+      "table": "Supplementary Table 5"
+    },
+    {
+      "columns": "12",
+      "description": "Performance and model-difference sensitivity after removing missingness features",
+      "display_blocks": "4",
+      "file": "Supplementary_Table_6_missingness_sensitivity.csv",
+      "rows": "39",
+      "table": "Supplementary Table 6"
+    },
+    {
+      "columns": "15",
+      "description": "Cross-fitted recalibration metrics, recalibration differences, and decision curve summaries",
+      "display_blocks": "5",
+      "file": "Supplementary_Table_7_recalibration_and_decision_curve.csv",
+      "rows": "126",
+      "table": "Supplementary Table 7"
+    },
+    {
+      "columns": "5",
+      "description": "CTGDL-FHRMA domain-shift and phenotype-assignment assessment",
+      "display_blocks": "2",
+      "file": "Supplementary_Table_8_external_representation_validation.csv",
+      "rows": "12",
+      "table": "Supplementary Table 8"
+    },
+    {
+      "columns": "24",
+      "description": "Reviewer-requested sensitivity analyses for development-only model selection, SSL PCA dimensionality reduction, elastic-net regularization and pH-threshold outcome definitions",
+      "display_blocks": "14",
+      "file": "Supplementary_Table_9_reviewer_sensitivity_analyses.csv",
+      "rows": "24",
+      "table": "Supplementary Table 9"
+    },
+    {
+      "columns": "5",
+      "description": "TRIPOD+AI reporting checklist mapping for the manuscript",
+      "display_blocks": "1",
+      "file": "Supplementary_Table_10_TRIPOD_AI_checklist.csv",
+      "rows": "52",
+      "table": "Supplementary Table 10"
+    },
+    {
+      "columns": "5",
+      "description": "Transformer input, tokenization, masking, objective, optimizer and training hyperparameters",
+      "display_blocks": "1",
+      "file": "Supplementary_Table_11_transformer_hyperparameters.csv",
+      "rows": "28",
+      "table": "Supplementary Table 11"
+    }
+  ],
+  "zip_path": "R1_FRONTIERS_ORIGINAL_TEMPLATE_REVIEW_20260707.zip"
+}

@@ -1,0 +1,46 @@
+source_panel,outcome,outcome_definition,endpoint_label,n_train,n_test,n_train_events,n_test_events,event_prevalence,held_out_prevalence_percent,model,model_label,auprc,enrichment,n_predictors_before_one_hot,events_per_predictor_before_one_hot,ssl_dimensions,pca_variance_percent
+A,neonatal_risk,primary composite: cord pH <7.15 or 5-minute Apgar <7,"Primary
+composite",386.0,166.0,79.0,34.0,0.2048192771084337,20.48192771084337,,,,,,,,
+A,cord_ph_lt_7_15,cord pH <7.15 only,pH <7.15,386.0,166.0,72.0,33.0,0.1987951807228915,19.87951807228915,,,,,,,,
+A,cord_ph_lt_7_10,cord pH <7.10 only,pH <7.10,386.0,166.0,37.0,19.0,0.1144578313253012,11.44578313253012,,,,,,,,
+A,cord_ph_lt_7_05,cord pH <7.05 only,pH <7.05,386.0,166.0,25.0,15.0,0.0903614457831325,9.03614457831325,,,,,,,,
+B,neonatal_risk,,"Primary
+composite",,,,,0.2048192771084337,,signal_features,"Classical signal
+features",0.3365609947521623,,,,,
+B,neonatal_risk,,"Primary
+composite",,,,,0.2048192771084337,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",0.4016008491533219,,,,,
+B,cord_ph_lt_7_15,,pH <7.15,,,,,0.1987951807228915,,signal_features,"Classical signal
+features",0.3882327938103536,,,,,
+B,cord_ph_lt_7_15,,pH <7.15,,,,,0.1987951807228915,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",0.443180321691432,,,,,
+B,cord_ph_lt_7_10,,pH <7.10,,,,,0.1144578313253012,,signal_features,"Classical signal
+features",0.4773171269361607,,,,,
+B,cord_ph_lt_7_10,,pH <7.10,,,,,0.1144578313253012,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",0.4869848012953808,,,,,
+B,cord_ph_lt_7_05,,pH <7.05,,,,,0.0903614457831325,,signal_features,"Classical signal
+features",0.5408553480277896,,,,,
+B,cord_ph_lt_7_05,,pH <7.05,,,,,0.0903614457831325,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",0.5259623532385409,,,,,
+C,neonatal_risk,,"Primary
+composite",,,,,,,signal_features,"Classical signal
+features",,1.6432095626134982,,,,
+C,neonatal_risk,,"Primary
+composite",,,,,,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",,1.9607570870426891,,,,
+C,cord_ph_lt_7_15,,pH <7.15,,,,,,,signal_features,"Classical signal
+features",,1.9529285991672332,,,,
+C,cord_ph_lt_7_15,,pH <7.15,,,,,,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",,2.2293313151750827,,,,
+C,cord_ph_lt_7_10,,pH <7.10,,,,,,,signal_features,"Classical signal
+features",,4.170244372179089,,,,
+C,cord_ph_lt_7_10,,pH <7.10,,,,,,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",,4.254709316580696,,,,
+C,cord_ph_lt_7_05,,pH <7.05,,,,,,,signal_features,"Classical signal
+features",,5.985465851507538,,,,
+C,cord_ph_lt_7_05,,pH <7.05,,,,,,,signal_plus_ssl_plus_signal_phenotype,"Signal + SSL
++ phenotype",,5.82065004250652,,,,
+D,,,,,,79.0,,,,signal_plus_ssl64_plus_signal_phenotype_l2,64-dim SSL,0.4016008491533219,,77.0,1.025974025974026,64.0,
+D,,,,,,79.0,,,,signal_plus_ssl_pca5_plus_signal_phenotype_l2,PCA 5,0.3863465087321692,,18.0,4.388888888888889,5.0,84.00092079149172
+D,,,,,,79.0,,,,signal_plus_ssl_pca10_plus_signal_phenotype_l2,PCA 10,0.4240711803762064,,23.0,3.4347826086956523,10.0,95.67100820987596
+D,,,,,,79.0,,,,signal_plus_ssl_pca20_plus_signal_phenotype_l2,PCA 20,0.4255996807471599,,33.0,2.393939393939394,20.0,99.53479552477951

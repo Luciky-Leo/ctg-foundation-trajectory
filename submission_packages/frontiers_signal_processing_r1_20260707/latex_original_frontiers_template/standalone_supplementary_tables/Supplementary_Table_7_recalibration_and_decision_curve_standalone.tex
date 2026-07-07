@@ -1,0 +1,372 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage{booktabs,longtable,array,pdflscape}
+\usepackage{url,hyperref,microtype}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\emergencystretch=3em
+\sloppy
+
+\title{Supplementary Table 7. Cross-fitted recalibration metrics, recalibration differences, and decision curve summaries}
+\author{Frontiers in Signal Processing R1 supplementary table}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Table 7. Cross-fitted recalibration metrics, recalibration differences, and decision curve summaries}
+
+Standalone display version for LaTeX upload/review. Machine-readable source: source\_\allowbreak{}tables/\allowbreak{}Supplementary\_\allowbreak{}Table\_\allowbreak{}7\_\allowbreak{}recalibration\_\allowbreak{}and\_\allowbreak{}decision\_\allowbreak{}curve.\allowbreak{}csv. Rows: 126; columns: 15. The source table is split below into source-defined sections and column blocks so that all non-empty cells remain readable.
+
+\subsection*{table block: Recalibration metrics}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 7, Recalibration metrics, column block 1 of 2}\label{tab:standalone_s7_g1_block1}\\
+\toprule
+model & calibration method & metric & point & bootstrap mean \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 7, Recalibration metrics, column block 1 of 2.}}\\
+\toprule
+model & calibration method & metric & point & bootstrap mean \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & raw & auroc & 0.\allowbreak{}6303 & 0.\allowbreak{}6293 \\
+Classical signal features & raw & auprc & 0.\allowbreak{}3366 & 0.\allowbreak{}3522 \\
+Classical signal features & raw & brier & 0.\allowbreak{}2525 & 0.\allowbreak{}2528 \\
+Classical signal features & raw & Calibration intercept & -\allowbreak{}1.\allowbreak{}384 & -\allowbreak{}1.\allowbreak{}4 \\
+Classical signal features & raw & Calibration slope & 0.\allowbreak{}4876 & 0.\allowbreak{}4923 \\
+Classical signal features & raw & Expected calibration error & 0.\allowbreak{}2745 & 0.\allowbreak{}2745 \\
+Classical signal features & raw & Mean prediction error & 0.\allowbreak{}2745 & 0.\allowbreak{}2735 \\
+Classical signal features & platt & auroc & 0.\allowbreak{}6303 & 0.\allowbreak{}6293 \\
+Classical signal features & platt & auprc & 0.\allowbreak{}3366 & 0.\allowbreak{}3522 \\
+Classical signal features & platt & brier & 0.\allowbreak{}1585 & 0.\allowbreak{}1591 \\
+Classical signal features & platt & Calibration intercept & -\allowbreak{}0.\allowbreak{}4845 & -\allowbreak{}0.\allowbreak{}4923 \\
+Classical signal features & platt & Calibration slope & 0.\allowbreak{}6906 & 0.\allowbreak{}6972 \\
+Classical signal features & platt & Expected calibration error & 0.\allowbreak{}0527 & 0.\allowbreak{}074 \\
+Classical signal features & platt & Mean prediction error & 0.\allowbreak{}0212 & 0.\allowbreak{}0203 \\
+Classical signal features & isotonic & auroc & 0.\allowbreak{}639 & 0.\allowbreak{}6382 \\
+Classical signal features & isotonic & auprc & 0.\allowbreak{}3064 & 0.\allowbreak{}3175 \\
+Classical signal features & isotonic & brier & 0.\allowbreak{}1659 & 0.\allowbreak{}1664 \\
+Classical signal features & isotonic & Calibration intercept & -\allowbreak{}0.\allowbreak{}716 & -\allowbreak{}0.\allowbreak{}7232 \\
+Classical signal features & isotonic & Calibration slope & 0.\allowbreak{}4983 & 0.\allowbreak{}5031 \\
+Classical signal features & isotonic & Expected calibration error & 0.\allowbreak{}0625 & 0.\allowbreak{}0845 \\
+Classical signal features & isotonic & Mean prediction error & 0.\allowbreak{}0237 & 0.\allowbreak{}0228 \\
+Signal + SSL & raw & auroc & 0.\allowbreak{}6025 & 0.\allowbreak{}6007 \\
+Signal + SSL & raw & auprc & 0.\allowbreak{}3765 & 0.\allowbreak{}3832 \\
+Signal + SSL & raw & brier & 0.\allowbreak{}2701 & 0.\allowbreak{}2707 \\
+Signal + SSL & raw & Calibration intercept & -\allowbreak{}1.\allowbreak{}36 & -\allowbreak{}1.\allowbreak{}377 \\
+Signal + SSL & raw & Calibration slope & 0.\allowbreak{}3136 & 0.\allowbreak{}3132 \\
+Signal + SSL & raw & Expected calibration error & 0.\allowbreak{}2601 & 0.\allowbreak{}2754 \\
+Signal + SSL & raw & Mean prediction error & 0.\allowbreak{}2601 & 0.\allowbreak{}2593 \\
+Signal + SSL & platt & auroc & 0.\allowbreak{}6025 & 0.\allowbreak{}6007 \\
+Signal + SSL & platt & auprc & 0.\allowbreak{}3765 & 0.\allowbreak{}3832 \\
+Signal + SSL & platt & brier & 0.\allowbreak{}1576 & 0.\allowbreak{}1583 \\
+Signal + SSL & platt & Calibration intercept & -\allowbreak{}0.\allowbreak{}1999 & -\allowbreak{}0.\allowbreak{}2188 \\
+Signal + SSL & platt & Calibration slope & 0.\allowbreak{}947 & 0.\allowbreak{}9458 \\
+Signal + SSL & platt & Expected calibration error & 0.\allowbreak{}0491 & 0.\allowbreak{}0701 \\
+Signal + SSL & platt & Mean prediction error & 0.\allowbreak{}0226 & 0.\allowbreak{}0216 \\
+Signal + SSL & isotonic & auroc & 0.\allowbreak{}5916 & 0.\allowbreak{}5902 \\
+Signal + SSL & isotonic & auprc & 0.\allowbreak{}254 & 0.\allowbreak{}2607 \\
+Signal + SSL & isotonic & brier & 0.\allowbreak{}1658 & 0.\allowbreak{}1665 \\
+Signal + SSL & isotonic & Calibration intercept & -\allowbreak{}0.\allowbreak{}8159 & -\allowbreak{}0.\allowbreak{}8166 \\
+Signal + SSL & isotonic & Calibration slope & 0.\allowbreak{}4215 & 0.\allowbreak{}433 \\
+Signal + SSL & isotonic & Expected calibration error & 0.\allowbreak{}0644 & 0.\allowbreak{}0772 \\
+Signal + SSL & isotonic & Mean prediction error & 0.\allowbreak{}0236 & 0.\allowbreak{}0227 \\
+Signal + SSL + phenotype & raw & auroc & 0.\allowbreak{}6168 & 0.\allowbreak{}6151 \\
+Signal + SSL + phenotype & raw & auprc & 0.\allowbreak{}4016 & 0.\allowbreak{}4069 \\
+Signal + SSL + phenotype & raw & brier & 0.\allowbreak{}2652 & 0.\allowbreak{}2657 \\
+Signal + SSL + phenotype & raw & Calibration intercept & -\allowbreak{}1.\allowbreak{}359 & -\allowbreak{}1.\allowbreak{}376 \\
+Signal + SSL + phenotype & raw & Calibration slope & 0.\allowbreak{}3448 & 0.\allowbreak{}3461 \\
+Signal + SSL + phenotype & raw & Expected calibration error & 0.\allowbreak{}2568 & 0.\allowbreak{}2699 \\
+Signal + SSL + phenotype & raw & Mean prediction error & 0.\allowbreak{}2568 & 0.\allowbreak{}2562 \\
+Signal + SSL + phenotype & platt & auroc & 0.\allowbreak{}6168 & 0.\allowbreak{}6151 \\
+Signal + SSL + phenotype & platt & auprc & 0.\allowbreak{}4016 & 0.\allowbreak{}4069 \\
+Signal + SSL + phenotype & platt & brier & 0.\allowbreak{}1566 & 0.\allowbreak{}1572 \\
+Signal + SSL + phenotype & platt & Calibration intercept & 0.\allowbreak{}077 & 0.\allowbreak{}0641 \\
+Signal + SSL + phenotype & platt & Calibration slope & 1.\allowbreak{}165 & 1.\allowbreak{}169 \\
+Signal + SSL + phenotype & platt & Expected calibration error & 0.\allowbreak{}0322 & 0.\allowbreak{}0648 \\
+Signal + SSL + phenotype & platt & Mean prediction error & 0.\allowbreak{}0192 & 0.\allowbreak{}0183 \\
+Signal + SSL + phenotype & isotonic & auroc & 0.\allowbreak{}5896 & 0.\allowbreak{}5888 \\
+Signal + SSL + phenotype & isotonic & auprc & 0.\allowbreak{}2672 & 0.\allowbreak{}2718 \\
+Signal + SSL + phenotype & isotonic & brier & 0.\allowbreak{}1623 & 0.\allowbreak{}163 \\
+Signal + SSL + phenotype & isotonic & Calibration intercept & -\allowbreak{}0.\allowbreak{}6669 & -\allowbreak{}0.\allowbreak{}6662 \\
+Signal + SSL + phenotype & isotonic & Calibration slope & 0.\allowbreak{}5354 & 0.\allowbreak{}5495 \\
+Signal + SSL + phenotype & isotonic & Expected calibration error & 0.\allowbreak{}0544 & 0.\allowbreak{}0634 \\
+Signal + SSL + phenotype & isotonic & Mean prediction error & 0.\allowbreak{}0198 & 0.\allowbreak{}019 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 7, Recalibration metrics, column block 2 of 2}\label{tab:standalone_s7_g1_block2}\\
+\toprule
+model & calibration method & 95\% CI lower & 95\% CI upper & Valid bootstrap resamples \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 7, Recalibration metrics, column block 2 of 2.}}\\
+\toprule
+model & calibration method & 95\% CI lower & 95\% CI upper & Valid bootstrap resamples \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & raw & 0.\allowbreak{}5254 & 0.\allowbreak{}7284 & 2000 \\
+Classical signal features & raw & 0.\allowbreak{}2173 & 0.\allowbreak{}4941 & 2000 \\
+Classical signal features & raw & 0.\allowbreak{}2234 & 0.\allowbreak{}2834 & 2000 \\
+Classical signal features & raw & -\allowbreak{}1.\allowbreak{}829 & -\allowbreak{}1.\allowbreak{}014 & 2000 \\
+Classical signal features & raw & 0.\allowbreak{}1338 & 0.\allowbreak{}875 & 2000 \\
+Classical signal features & raw & 0.\allowbreak{}2102 & 0.\allowbreak{}3376 & 2000 \\
+Classical signal features & raw & 0.\allowbreak{}2086 & 0.\allowbreak{}3371 & 2000 \\
+Classical signal features & platt & 0.\allowbreak{}5254 & 0.\allowbreak{}7284 & 2000 \\
+Classical signal features & platt & 0.\allowbreak{}2173 & 0.\allowbreak{}4941 & 2000 \\
+Classical signal features & platt & 0.\allowbreak{}1266 & 0.\allowbreak{}1945 & 2000 \\
+Classical signal features & platt & -\allowbreak{}1.\allowbreak{}289 & 0.\allowbreak{}1958 & 2000 \\
+Classical signal features & platt & 0.\allowbreak{}1896 & 1.\allowbreak{}239 & 2000 \\
+Classical signal features & platt & 0.\allowbreak{}0341 & 0.\allowbreak{}1218 & 2000 \\
+Classical signal features & platt & -\allowbreak{}0.\allowbreak{}0427 & 0.\allowbreak{}0792 & 2000 \\
+Classical signal features & isotonic & 0.\allowbreak{}5357 & 0.\allowbreak{}7316 & 2000 \\
+Classical signal features & isotonic & 0.\allowbreak{}2023 & 0.\allowbreak{}4411 & 2000 \\
+Classical signal features & isotonic & 0.\allowbreak{}1301 & 0.\allowbreak{}2044 & 2000 \\
+Classical signal features & isotonic & -\allowbreak{}1.\allowbreak{}395 & -\allowbreak{}0.\allowbreak{}1362 & 2000 \\
+Classical signal features & isotonic & 0.\allowbreak{}1281 & 0.\allowbreak{}9124 & 2000 \\
+Classical signal features & isotonic & 0.\allowbreak{}0378 & 0.\allowbreak{}1342 & 2000 \\
+Classical signal features & isotonic & -\allowbreak{}0.\allowbreak{}0419 & 0.\allowbreak{}0849 & 2000 \\
+Signal + SSL & raw & 0.\allowbreak{}4927 & 0.\allowbreak{}7045 & 2000 \\
+Signal + SSL & raw & 0.\allowbreak{}2399 & 0.\allowbreak{}5243 & 2000 \\
+Signal + SSL & raw & 0.\allowbreak{}2315 & 0.\allowbreak{}3066 & 2000 \\
+Signal + SSL & raw & -\allowbreak{}1.\allowbreak{}806 & -\allowbreak{}0.\allowbreak{}9946 & 2000 \\
+Signal + SSL & raw & 0.\allowbreak{}0476 & 0.\allowbreak{}5935 & 2000 \\
+Signal + SSL & raw & 0.\allowbreak{}2175 & 0.\allowbreak{}3365 & 2000 \\
+Signal + SSL & raw & 0.\allowbreak{}1892 & 0.\allowbreak{}3275 & 2000 \\
+Signal + SSL & platt & 0.\allowbreak{}4927 & 0.\allowbreak{}7045 & 2000 \\
+Signal + SSL & platt & 0.\allowbreak{}2399 & 0.\allowbreak{}5243 & 2000 \\
+Signal + SSL & platt & 0.\allowbreak{}1265 & 0.\allowbreak{}1923 & 2000 \\
+Signal + SSL & platt & -\allowbreak{}1.\allowbreak{}242 & 0.\allowbreak{}7797 & 2000 \\
+Signal + SSL & platt & 0.\allowbreak{}144 & 1.\allowbreak{}793 & 2000 \\
+Signal + SSL & platt & 0.\allowbreak{}0298 & 0.\allowbreak{}1184 & 2000 \\
+Signal + SSL & platt & -\allowbreak{}0.\allowbreak{}0419 & 0.\allowbreak{}0803 & 2000 \\
+Signal + SSL & isotonic & 0.\allowbreak{}4884 & 0.\allowbreak{}6902 & 2000 \\
+Signal + SSL & isotonic & 0.\allowbreak{}17 & 0.\allowbreak{}3664 & 2000 \\
+Signal + SSL & isotonic & 0.\allowbreak{}1332 & 0.\allowbreak{}2028 & 2000 \\
+Signal + SSL & isotonic & -\allowbreak{}1.\allowbreak{}577 & -\allowbreak{}0.\allowbreak{}0402 & 2000 \\
+Signal + SSL & isotonic & -\allowbreak{}0.\allowbreak{}0321 & 1.\allowbreak{}026 & 2000 \\
+Signal + SSL & isotonic & 0.\allowbreak{}027 & 0.\allowbreak{}1366 & 2000 \\
+Signal + SSL & isotonic & -\allowbreak{}0.\allowbreak{}0418 & 0.\allowbreak{}0828 & 2000 \\
+Signal + SSL + phenotype & raw & 0.\allowbreak{}5111 & 0.\allowbreak{}7191 & 2000 \\
+Signal + SSL + phenotype & raw & 0.\allowbreak{}2605 & 0.\allowbreak{}5471 & 2000 \\
+Signal + SSL + phenotype & raw & 0.\allowbreak{}226 & 0.\allowbreak{}302 & 2000 \\
+Signal + SSL + phenotype & raw & -\allowbreak{}1.\allowbreak{}809 & -\allowbreak{}0.\allowbreak{}9874 & 2000 \\
+Signal + SSL + phenotype & raw & 0.\allowbreak{}0861 & 0.\allowbreak{}6295 & 2000 \\
+Signal + SSL + phenotype & raw & 0.\allowbreak{}2083 & 0.\allowbreak{}3374 & 2000 \\
+Signal + SSL + phenotype & raw & 0.\allowbreak{}1869 & 0.\allowbreak{}3227 & 2000 \\
+Signal + SSL + phenotype & platt & 0.\allowbreak{}5111 & 0.\allowbreak{}7191 & 2000 \\
+Signal + SSL + phenotype & platt & 0.\allowbreak{}2605 & 0.\allowbreak{}5471 & 2000 \\
+Signal + SSL + phenotype & platt & 0.\allowbreak{}1254 & 0.\allowbreak{}1916 & 2000 \\
+Signal + SSL + phenotype & platt & -\allowbreak{}1.\allowbreak{}04 & 1.\allowbreak{}144 & 2000 \\
+Signal + SSL + phenotype & platt & 0.\allowbreak{}2914 & 2.\allowbreak{}125 & 2000 \\
+Signal + SSL + phenotype & platt & 0.\allowbreak{}0284 & 0.\allowbreak{}1098 & 2000 \\
+Signal + SSL + phenotype & platt & -\allowbreak{}0.\allowbreak{}0446 & 0.\allowbreak{}0769 & 2000 \\
+Signal + SSL + phenotype & isotonic & 0.\allowbreak{}4914 & 0.\allowbreak{}6892 & 2000 \\
+Signal + SSL + phenotype & isotonic & 0.\allowbreak{}1762 & 0.\allowbreak{}3749 & 2000 \\
+Signal + SSL + phenotype & isotonic & 0.\allowbreak{}1293 & 0.\allowbreak{}199 & 2000 \\
+Signal + SSL + phenotype & isotonic & -\allowbreak{}1.\allowbreak{}459 & 0.\allowbreak{}161 & 2000 \\
+Signal + SSL + phenotype & isotonic & 0.\allowbreak{}0309 & 1.\allowbreak{}193 & 2000 \\
+Signal + SSL + phenotype & isotonic & 0.\allowbreak{}0199 & 0.\allowbreak{}113 & 2000 \\
+Signal + SSL + phenotype & isotonic & -\allowbreak{}0.\allowbreak{}0453 & 0.\allowbreak{}0784 & 2000 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\subsection*{table block: recalibration differences}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 7, recalibration differences, column block 1 of 2}\label{tab:standalone_s7_g2_block1}\\
+\toprule
+model & metric & 95\% CI lower & 95\% CI upper & Valid bootstrap resamples \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 7, recalibration differences, column block 1 of 2.}}\\
+\toprule
+model & metric & 95\% CI lower & 95\% CI upper & Valid bootstrap resamples \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & brier & -\allowbreak{}0.\allowbreak{}1318 & -\allowbreak{}0.\allowbreak{}0545 & 2000 \\
+Classical signal features & Calibration slope & 0.\allowbreak{}0557 & 0.\allowbreak{}3639 & 2000 \\
+Classical signal features & Expected calibration error & -\allowbreak{}0.\allowbreak{}2573 & -\allowbreak{}0.\allowbreak{}1232 & 2000 \\
+Classical signal features & auprc & 0 & 0 & 2000 \\
+Classical signal features & auroc & 0 & 0 & 2000 \\
+Classical signal features & brier & -\allowbreak{}0.\allowbreak{}1228 & -\allowbreak{}0.\allowbreak{}0474 & 2000 \\
+Classical signal features & Calibration slope & -\allowbreak{}0.\allowbreak{}1546 & 0.\allowbreak{}1817 & 2000 \\
+Classical signal features & Expected calibration error & -\allowbreak{}0.\allowbreak{}2543 & -\allowbreak{}0.\allowbreak{}1042 & 2000 \\
+Classical signal features & auprc & -\allowbreak{}0.\allowbreak{}0801 & -\allowbreak{}0.\allowbreak{}0003 & 2000 \\
+Classical signal features & auroc & -\allowbreak{}0.\allowbreak{}0107 & 0.\allowbreak{}0311 & 2000 \\
+Signal + SSL & brier & -\allowbreak{}0.\allowbreak{}1551 & -\allowbreak{}0.\allowbreak{}0689 & 2000 \\
+Signal + SSL & Calibration slope & 0.\allowbreak{}0965 & 1.\allowbreak{}199 & 2000 \\
+Signal + SSL & Expected calibration error & -\allowbreak{}0.\allowbreak{}2551 & -\allowbreak{}0.\allowbreak{}1422 & 2000 \\
+Signal + SSL & auprc & 0 & 0 & 2000 \\
+Signal + SSL & auroc & 0 & 0 & 2000 \\
+Signal + SSL & brier & -\allowbreak{}0.\allowbreak{}1447 & -\allowbreak{}0.\allowbreak{}0631 & 2000 \\
+Signal + SSL & Calibration slope & -\allowbreak{}0.\allowbreak{}1522 & 0.\allowbreak{}4647 & 2000 \\
+Signal + SSL & Expected calibration error & -\allowbreak{}0.\allowbreak{}256 & -\allowbreak{}0.\allowbreak{}131 & 2000 \\
+Signal + SSL & auprc & -\allowbreak{}0.\allowbreak{}2113 & -\allowbreak{}0.\allowbreak{}0423 & 2000 \\
+Signal + SSL & auroc & -\allowbreak{}0.\allowbreak{}0351 & 0.\allowbreak{}0141 & 2000 \\
+Signal + SSL + phenotype & brier & -\allowbreak{}0.\allowbreak{}1516 & -\allowbreak{}0.\allowbreak{}0643 & 2000 \\
+Signal + SSL + phenotype & Calibration slope & 0.\allowbreak{}2053 & 1.\allowbreak{}496 & 2000 \\
+Signal + SSL + phenotype & Expected calibration error & -\allowbreak{}0.\allowbreak{}2588 & -\allowbreak{}0.\allowbreak{}1294 & 2000 \\
+Signal + SSL + phenotype & auprc & 0 & 0 & 2000 \\
+Signal + SSL + phenotype & auroc & 0 & 0 & 2000 \\
+Signal + SSL + phenotype & brier & -\allowbreak{}0.\allowbreak{}1434 & -\allowbreak{}0.\allowbreak{}0608 & 2000 \\
+Signal + SSL + phenotype & Calibration slope & -\allowbreak{}0.\allowbreak{}0976 & 0.\allowbreak{}6107 & 2000 \\
+Signal + SSL + phenotype & Expected calibration error & -\allowbreak{}0.\allowbreak{}263 & -\allowbreak{}0.\allowbreak{}1326 & 2000 \\
+Signal + SSL + phenotype & auprc & -\allowbreak{}0.\allowbreak{}2366 & -\allowbreak{}0.\allowbreak{}0471 & 2000 \\
+Signal + SSL + phenotype & auroc & -\allowbreak{}0.\allowbreak{}0606 & 0.\allowbreak{}01 & 2000 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth}}
+\caption{Supplementary Table 7, recalibration differences, column block 2 of 2}\label{tab:standalone_s7_g2_block2}\\
+\toprule
+model & metric & comparison & bootstrap mean difference \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{Continued from Supplementary Table 7, recalibration differences, column block 2 of 2.}}\\
+\toprule
+model & metric & comparison & bootstrap mean difference \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & brier & platt minus raw & -\allowbreak{}0.\allowbreak{}0937 \\
+Classical signal features & Calibration slope & platt minus raw & 0.\allowbreak{}2049 \\
+Classical signal features & Expected calibration error & platt minus raw & -\allowbreak{}0.\allowbreak{}2005 \\
+Classical signal features & auprc & platt minus raw & 0 \\
+Classical signal features & auroc & platt minus raw & 0 \\
+Classical signal features & brier & isotonic minus raw & -\allowbreak{}0.\allowbreak{}0864 \\
+Classical signal features & Calibration slope & isotonic minus raw & 0.\allowbreak{}0108 \\
+Classical signal features & Expected calibration error & isotonic minus raw & -\allowbreak{}0.\allowbreak{}19 \\
+Classical signal features & auprc & isotonic minus raw & -\allowbreak{}0.\allowbreak{}0346 \\
+Classical signal features & auroc & isotonic minus raw & 0.\allowbreak{}0089 \\
+Signal + SSL & brier & platt minus raw & -\allowbreak{}0.\allowbreak{}1124 \\
+Signal + SSL & Calibration slope & platt minus raw & 0.\allowbreak{}6327 \\
+Signal + SSL & Expected calibration error & platt minus raw & -\allowbreak{}0.\allowbreak{}2053 \\
+Signal + SSL & auprc & platt minus raw & 0 \\
+Signal + SSL & auroc & platt minus raw & 0 \\
+Signal + SSL & brier & isotonic minus raw & -\allowbreak{}0.\allowbreak{}1042 \\
+Signal + SSL & Calibration slope & isotonic minus raw & 0.\allowbreak{}1199 \\
+Signal + SSL & Expected calibration error & isotonic minus raw & -\allowbreak{}0.\allowbreak{}1982 \\
+Signal + SSL & auprc & isotonic minus raw & -\allowbreak{}0.\allowbreak{}1225 \\
+Signal + SSL & auroc & isotonic minus raw & -\allowbreak{}0.\allowbreak{}0105 \\
+Signal + SSL + phenotype & brier & platt minus raw & -\allowbreak{}0.\allowbreak{}1085 \\
+Signal + SSL + phenotype & Calibration slope & platt minus raw & 0.\allowbreak{}8225 \\
+Signal + SSL + phenotype & Expected calibration error & platt minus raw & -\allowbreak{}0.\allowbreak{}205 \\
+Signal + SSL + phenotype & auprc & platt minus raw & 0 \\
+Signal + SSL + phenotype & auroc & platt minus raw & 0 \\
+Signal + SSL + phenotype & brier & isotonic minus raw & -\allowbreak{}0.\allowbreak{}1027 \\
+Signal + SSL + phenotype & Calibration slope & isotonic minus raw & 0.\allowbreak{}2035 \\
+Signal + SSL + phenotype & Expected calibration error & isotonic minus raw & -\allowbreak{}0.\allowbreak{}2065 \\
+Signal + SSL + phenotype & auprc & isotonic minus raw & -\allowbreak{}0.\allowbreak{}1351 \\
+Signal + SSL + phenotype & auroc & isotonic minus raw & -\allowbreak{}0.\allowbreak{}0263 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\subsection*{table block: Decision curve summary}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth}}
+\caption{Supplementary Table 7, Decision curve summary}\label{tab:standalone_s7_g3_block1}\\
+\toprule
+threshold range & strategy & mean net benefit & Mean delta vs raw final model \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{Continued from Supplementary Table 7, Decision curve summary.}}\\
+\toprule
+threshold range & strategy & mean net benefit & Mean delta vs raw final model \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Classical signal features Isotonic & 0.\allowbreak{}0955 & -\allowbreak{}0.\allowbreak{}0056 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Classical signal features Platt & 0.\allowbreak{}0992 & -\allowbreak{}0.\allowbreak{}002 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Classical signal features Raw & 0.\allowbreak{}0944 & -\allowbreak{}0.\allowbreak{}0068 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Signal + SSL Isotonic & 0.\allowbreak{}0885 & -\allowbreak{}0.\allowbreak{}0127 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Signal + SSL Platt & 0.\allowbreak{}0939 & -\allowbreak{}0.\allowbreak{}0073 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Signal + SSL + phenotype Isotonic & 0.\allowbreak{}0914 & -\allowbreak{}0.\allowbreak{}0098 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Signal + SSL + phenotype Platt & 0.\allowbreak{}0961 & -\allowbreak{}0.\allowbreak{}0051 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Signal + SSL + phenotype Raw & 0.\allowbreak{}1012 &  \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Signal + SSL Raw & 0.\allowbreak{}097 & -\allowbreak{}0.\allowbreak{}0042 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Treat all & 0.\allowbreak{}0887 & -\allowbreak{}0.\allowbreak{}0125 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}20 & Treat none & 0 & -\allowbreak{}0.\allowbreak{}1012 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Classical signal features Isotonic & 0.\allowbreak{}0483 & 0.\allowbreak{}0223 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Classical signal features Platt & 0.\allowbreak{}045 & 0.\allowbreak{}019 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Classical signal features Raw & 0.\allowbreak{}0262 & 0.\allowbreak{}0001 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Signal + SSL Isotonic & 0.\allowbreak{}0376 & 0.\allowbreak{}0115 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Signal + SSL Platt & 0.\allowbreak{}0405 & 0.\allowbreak{}0144 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Signal + SSL + phenotype Isotonic & 0.\allowbreak{}0389 & 0.\allowbreak{}0128 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Signal + SSL + phenotype Platt & 0.\allowbreak{}0442 & 0.\allowbreak{}0181 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Signal + SSL + phenotype Raw & 0.\allowbreak{}0261 &  \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Signal + SSL Raw & 0.\allowbreak{}0263 & 0.\allowbreak{}0002 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Treat all & 0.\allowbreak{}0003 & -\allowbreak{}0.\allowbreak{}0258 \\
+0.\allowbreak{}10-\allowbreak{}0.\allowbreak{}30 & Treat none & 0 & -\allowbreak{}0.\allowbreak{}0261 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Classical signal features Isotonic & 0.\allowbreak{}0326 & 0.\allowbreak{}0671 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Classical signal features Platt & 0.\allowbreak{}0362 & 0.\allowbreak{}0708 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Classical signal features Raw & -\allowbreak{}0.\allowbreak{}0397 & -\allowbreak{}0.\allowbreak{}0051 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Signal + SSL Isotonic & 0.\allowbreak{}0254 & 0.\allowbreak{}0599 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Signal + SSL Platt & 0.\allowbreak{}0389 & 0.\allowbreak{}0734 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Signal + SSL + phenotype Isotonic & 0.\allowbreak{}0311 & 0.\allowbreak{}0656 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Signal + SSL + phenotype Platt & 0.\allowbreak{}0405 & 0.\allowbreak{}075 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Signal + SSL + phenotype Raw & -\allowbreak{}0.\allowbreak{}0345 &  \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Signal + SSL Raw & -\allowbreak{}0.\allowbreak{}0385 & -\allowbreak{}0.\allowbreak{}004 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Treat all & -\allowbreak{}0.\allowbreak{}136 & -\allowbreak{}0.\allowbreak{}1015 \\
+0.\allowbreak{}05-\allowbreak{}0.\allowbreak{}50 & Treat none & 0 & 0.\allowbreak{}0345 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\end{document}

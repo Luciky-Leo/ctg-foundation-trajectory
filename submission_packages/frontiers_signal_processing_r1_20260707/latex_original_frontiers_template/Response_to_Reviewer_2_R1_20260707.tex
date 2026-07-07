@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage{hyperref}
+\usepackage{setspace}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setstretch{1.08}
+\emergencystretch=3em
+\sloppy
+
+\title{Response to Reviewer 2 - R1}
+\author{Frontiers in Signal Processing R1 revision}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Response to Reviewer 2 - R1}
+
+Manuscript: Self-supervised biomedical signal representation learning from intrapartum cardiotocography for neonatal risk enrichment
+
+
+Journal: Frontiers in Signal Processing
+
+
+Revision date: 07 July 2026
+
+
+We thank Reviewer 2 for the constructive comments. Point-by-point responses are provided below.
+
+
+\subsection*{Reviewer 2}
+
+\subsubsection*{R2-1. Limited sample size and generalization}
+
+\textbf{Reviewer request.} Discuss the impact of 552 records on model generalization.
+
+
+\textbf{Response.} Added and strengthened. The manuscript now states the 552-record cohort size, limited event count and resulting generalization boundary. The revised framing describes the study as open-data retrospective risk enrichment and representation analysis rather than a deployable clinical prediction system.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/01_manuscript_frontiers_full/Frontiers_Original_Research_Manuscript.docx}.
+
+
+\subsubsection*{R2-2. Practical clinical significance}
+
+\textbf{Reviewer request.} Clarify practical significance and novelty of AUPRC gain.
+
+
+\textbf{Response.} Revised and bounded. The manuscript now interprets AUPRC in terms of retrospective risk enrichment over event prevalence and explicitly states that local recalibration and external outcome validation would be required before clinical use. Under the locked replay, the SSL-containing AUPRC-difference confidence intervals cross zero, so the practical contribution is framed as an open-data signal-processing workflow for interpretable representation learning, phenotype enrichment, calibration and domain-shift assessment, not as a deployable screening tool or a stable AUPRC-gain claim.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/01_manuscript_frontiers_full/Frontiers_Original_Research_Manuscript.docx}.
+
+
+\subsubsection*{R2-3. Recent CTG deep-learning/foundation-model comparison}
+
+\textbf{Reviewer request.} Add quantitative comparison with recent CTG models.
+
+
+\textbf{Response.} Added as bounded context. The revision includes quantitative source-reported context from recent CTG deep-learning and foundation/pretraining work, including Park et al.'s peer-reviewed supervised CTG interpretation study and emerging CTG pretraining resources. We do not present these as direct head-to-head benchmarks because cohorts, labels, windows and validation designs differ. A same-CTU CTGDL technical pilot was run after revision QA, but it is negative/boundary evidence only and is not promoted to active head-to-head SOTA wording unless Claude/user explicitly approves that scientific language.
+
+
+\textbf{Verification.} Status \texttt{READY\_WITH\_CURRENT\_CONTEXT\_ONLY}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/06_upload_text/Response_to_Reviewers_R1_20260707_route_pending.md}.
+
+
+\subsubsection*{R2-4. Discussion length}
+
+\textbf{Reviewer request.} Condense the Discussion.
+
+
+\textbf{Response.} Condensed. We tightened the Discussion and removed repeated framing while preserving the reviewer-relevant limitations, PatchTST rationale, clinical boundary and external validation boundary.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/06_upload_text/Response_to_Reviewers_R1_20260707_route_pending.md}.
+
+
+\subsubsection*{R2-5. Abbreviations}
+
+\textbf{Reviewer request.} Define ECE, SSL, CTG, FHR, UC, AUPRC and AUROC at first appearance.
+
+
+\textbf{Response.} Corrected and audited. The active manuscript, official LaTeX and upload text now define CTG, FHR, UC and SSL at first use, and the Methods/metric sections define AUPRC, AUROC and ECE at first use. The text-compliance audit reports zero abbreviation definition failures.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/06_upload_text/Response_to_Reviewers_R1_20260707_route_pending.md}.
+
+
+\subsubsection*{R2-6. Transformer hyperparameter table}
+
+\textbf{Reviewer request.} Add a summary table of transformer hyperparameters.
+
+
+\textbf{Response.} Added. Supplementary Table 11 summarizes the transformer and SSL configuration, including input contract, tokenization, patch length, embedding size, encoder depth, masking mode, objectives, optimizer and training settings. The hyperparameter table contains 28 rows and is included in the supplementary file set.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/05_supplementary_files/Supplementary_Table_11_transformer_hyperparameters.csv}.
+
+
+\subsubsection*{R2-7. PatchTST rationale}
+
+\textbf{Reviewer request.} Explain why PatchTST was selected over alternative transformers.
+
+
+\textbf{Response.} Added. The revised text links PatchTST to the signal structure: two-channel FHR/UC windows are long and non-stationary, patch tokenization reduces sequence length while preserving local morphology, and channel masking plus masked reconstruction/contrastive consistency match common CTG degradation patterns. We therefore present PatchTST as a pragmatic representation-learning architecture for this open CTG setting rather than as an intrinsically superior transformer.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/01_manuscript_frontiers_full/Frontiers_Original_Research_Manuscript.tex}.
+
+
+\end{document}

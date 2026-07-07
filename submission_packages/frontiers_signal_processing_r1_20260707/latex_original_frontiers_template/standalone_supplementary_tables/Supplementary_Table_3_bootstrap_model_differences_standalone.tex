@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage{booktabs,longtable,array,pdflscape}
+\usepackage{url,hyperref,microtype}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\emergencystretch=3em
+\sloppy
+
+\title{Supplementary Table 3. Bootstrap pairwise model differences and zero-crossing flags}
+\author{Frontiers in Signal Processing R1 supplementary table}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Table 3. Bootstrap pairwise model differences and zero-crossing flags}
+
+Standalone display version for LaTeX upload/review. Machine-readable source: source\_\allowbreak{}tables/\allowbreak{}Supplementary\_\allowbreak{}Table\_\allowbreak{}3\_\allowbreak{}bootstrap\_\allowbreak{}model\_\allowbreak{}differences.\allowbreak{}csv. Rows: 9; columns: 7. The source table is split below into source-defined sections and column blocks so that all non-empty cells remain readable.
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 3, column block 1 of 2}\label{tab:standalone_s3_g1_block1}\\
+\toprule
+comparison & metric & bootstrap mean difference & 95\% CI lower & 95\% CI upper \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 3, column block 1 of 2.}}\\
+\toprule
+comparison & metric & bootstrap mean difference & 95\% CI lower & 95\% CI upper \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Signal + SSL minus Classical signal features & auroc & -\allowbreak{}0.\allowbreak{}0286 & -\allowbreak{}0.\allowbreak{}1153 & 0.\allowbreak{}0541 \\
+Signal + SSL minus Classical signal features & auprc & 0.\allowbreak{}031 & -\allowbreak{}0.\allowbreak{}0527 & 0.\allowbreak{}1077 \\
+Signal + SSL minus Classical signal features & brier & 0.\allowbreak{}0179 & -\allowbreak{}0.\allowbreak{}0067 & 0.\allowbreak{}0434 \\
+Signal + SSL + phenotype minus Classical signal features & auroc & -\allowbreak{}0.\allowbreak{}0142 & -\allowbreak{}0.\allowbreak{}1012 & 0.\allowbreak{}0679 \\
+Signal + SSL + phenotype minus Classical signal features & auprc & 0.\allowbreak{}0548 & -\allowbreak{}0.\allowbreak{}0354 & 0.\allowbreak{}1519 \\
+Signal + SSL + phenotype minus Classical signal features & brier & 0.\allowbreak{}013 & -\allowbreak{}0.\allowbreak{}0129 & 0.\allowbreak{}0386 \\
+Signal + SSL minus signal + signal phenotype & auroc & -\allowbreak{}0.\allowbreak{}0313 & -\allowbreak{}0.\allowbreak{}114 & 0.\allowbreak{}0509 \\
+Signal + SSL minus signal + signal phenotype & auprc & 0.\allowbreak{}0213 & -\allowbreak{}0.\allowbreak{}0613 & 0.\allowbreak{}1056 \\
+Signal + SSL minus signal + signal phenotype & brier & 0.\allowbreak{}0201 & -\allowbreak{}0.\allowbreak{}0046 & 0.\allowbreak{}0447 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth}}
+\caption{Supplementary Table 3, column block 2 of 2}\label{tab:standalone_s3_g1_block2}\\
+\toprule
+comparison & metric & Valid bootstrap resamples & CI excludes zero \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{Continued from Supplementary Table 3, column block 2 of 2.}}\\
+\toprule
+comparison & metric & Valid bootstrap resamples & CI excludes zero \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Signal + SSL minus Classical signal features & auroc & 2000 & False \\
+Signal + SSL minus Classical signal features & auprc & 2000 & False \\
+Signal + SSL minus Classical signal features & brier & 2000 & False \\
+Signal + SSL + phenotype minus Classical signal features & auroc & 2000 & False \\
+Signal + SSL + phenotype minus Classical signal features & auprc & 2000 & False \\
+Signal + SSL + phenotype minus Classical signal features & brier & 2000 & False \\
+Signal + SSL minus signal + signal phenotype & auroc & 2000 & False \\
+Signal + SSL minus signal + signal phenotype & auprc & 2000 & False \\
+Signal + SSL minus signal + signal phenotype & brier & 2000 & False \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\end{document}

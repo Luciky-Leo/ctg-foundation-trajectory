@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage{booktabs,longtable,array,pdflscape}
+\usepackage{url,hyperref,microtype}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\emergencystretch=3em
+\sloppy
+
+\title{Supplementary Table 11. Transformer input, tokenization, masking, objective, optimizer and training hyperparameters}
+\author{Frontiers in Signal Processing R1 supplementary table}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Table 11. Transformer input, tokenization, masking, objective, optimizer and training hyperparameters}
+
+Standalone display version for LaTeX upload/review. Machine-readable source: source\_\allowbreak{}tables/\allowbreak{}Supplementary\_\allowbreak{}Table\_\allowbreak{}11\_\allowbreak{}transformer\_\allowbreak{}hyperparameters.\allowbreak{}csv. Rows: 28; columns: 5. The display below contains the complete source table.
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 11}\label{tab:standalone_s11_g1_block1}\\
+\toprule
+section & parameter & selected value & sweep or fixed values & notes \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 11.}}\\
+\toprule
+section & parameter & selected value & sweep or fixed values & notes \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Input & signal channels & FHR and UC & FHR and UC & Two-\allowbreak{}channel CTG windows were used for SSL pretraining.\allowbreak{} \\
+Input & window length & 10 minutes & Fixed & Each window contained 2400 samples per channel at 4 Hz.\allowbreak{} \\
+Input & sampling rate & 4 Hz & Fixed & Signals were resampled or represented at the project target sampling rate.\allowbreak{} \\
+Tokenization & patch length & 80 samples & 80, 120 & Non-\allowbreak{}overlapping patches were used in the selected model.\allowbreak{} \\
+Tokenization & patch stride & 80 samples & Equal to patch length & The selected configuration produced 30 temporal patches per channel.\allowbreak{} \\
+Tokenization & token count & 60 channel-\allowbreak{}time tokens & Derived & Thirty temporal patches by two channels.\allowbreak{} \\
+Encoder & model dimension & 64 & 48, 64 & Latent token dimension before transformer encoding.\allowbreak{} \\
+Encoder & transformer layers & 3 & 2, 3 & Compact encoder depth for the selected manuscript-\allowbreak{}candidate.\allowbreak{} \\
+Encoder & attention heads & 4 & Fixed & Multi-\allowbreak{}head self-\allowbreak{}attention heads.\allowbreak{} \\
+Encoder & feedforward width & 4 x model dimension & Fixed & Transformer feed-\allowbreak{}forward layer width.\allowbreak{} \\
+Encoder & activation & GELU & Fixed & Activation function in transformer feed-\allowbreak{}forward layers.\allowbreak{} \\
+Encoder & dropout & 0.\allowbreak{}1 & Fixed & Applied within the compact transformer encoder.\allowbreak{} \\
+Masking & masking strategy & Channel masking & Mixed, block, channel & Channel masking was used by the held-\allowbreak{}out manuscript-\allowbreak{}candidate;\allowbreak{} mixed and block masking were sensitivity configurations.\allowbreak{} \\
+Masking & mask fraction & 0.\allowbreak{}25 & Fixed & Fraction of patches or channel-\allowbreak{}time tokens masked in each view.\allowbreak{} \\
+Augmentation & jitter standard deviation & 0.\allowbreak{}02 & Fixed & Gaussian jitter applied to paired training views.\allowbreak{} \\
+Objective & reconstruction loss & Masked-\allowbreak{}patch mean squared error & Fixed & Computed only over masked patches.\allowbreak{} \\
+Objective & contrastive loss & NT-\allowbreak{}Xent & Fixed & Applied to projected pooled embeddings from paired views.\allowbreak{} \\
+Objective & contrastive temperature & 0.\allowbreak{}2 & Fixed & Temperature parameter for NT-\allowbreak{}Xent loss.\allowbreak{} \\
+Objective & contrastive weight & 0.\allowbreak{}2 & 0.\allowbreak{}0, 0.\allowbreak{}2 & Weight applied to the contrastive objective in the total loss.\allowbreak{} \\
+Projection & projection dimension & 64 & Fixed & Projection head output dimension for contrastive learning.\allowbreak{} \\
+Training & optimizer & AdamW & Fixed & Optimizer used for compact candidate training.\allowbreak{} \\
+Training & learning rate & 0.\allowbreak{}001 & Fixed & Learning rate for AdamW.\allowbreak{} \\
+Training & weight decay & 0.\allowbreak{}0001 & Fixed & Weight decay for AdamW.\allowbreak{} \\
+Training & batch size & 32 & Fixed & Mini-\allowbreak{}batch size for SSL training.\allowbreak{} \\
+Training & gradient norm clipping & 1 & Fixed & Maximum gradient norm.\allowbreak{} \\
+Training & candidate epochs & 4 & Fixed & Candidate configurations in the compact sweep were trained for four epochs.\allowbreak{} \\
+Training & selected architecture trace & 12 epochs & Inspection only & The 12-\allowbreak{}epoch trace was used for training-\allowbreak{}dynamics inspection and did not determine model selection.\allowbreak{} \\
+Downstream & record embedding & Mean pooled window embeddings & Fixed & Clean unmasked windows were encoded and averaged to record-\allowbreak{}level SSL representations.\allowbreak{} \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\end{document}

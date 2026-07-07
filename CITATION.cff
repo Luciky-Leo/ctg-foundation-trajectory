@@ -1,10 +1,10 @@
 ﻿cff-version: 1.2.0
-message: "If you use this repository, please cite the archived Zenodo release DOI."
+message: "If you use this repository, please cite the archived Zenodo release DOI. The DOI below is the Zenodo concept DOI until the R1 version DOI is minted."
 title: "Self-supervised biomedical signal representation learning from intrapartum cardiotocography for neonatal risk enrichment"
-version: "1.1.0"
-date-released: "2026-06-01"
+version: "1.3.0-r1"
+date-released: "2026-07-07"
 repository-code: "https://github.com/Luciky-Leo/ctg-foundation-trajectory"
-doi: "10.5281/zenodo.20485068"
+doi: "10.5281/zenodo.20364141"
 license: MIT
 authors:
   - family-names: Gui

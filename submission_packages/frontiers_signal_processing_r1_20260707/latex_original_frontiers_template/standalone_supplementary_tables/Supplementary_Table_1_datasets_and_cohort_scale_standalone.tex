@@ -1,0 +1,121 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage{booktabs,longtable,array,pdflscape}
+\usepackage{url,hyperref,microtype}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\emergencystretch=3em
+\sloppy
+
+\title{Supplementary Table 1. Dataset sources, cohort scale, record-level split, window counts, and external assessment role}
+\author{Frontiers in Signal Processing R1 supplementary table}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Table 1. Dataset sources, cohort scale, record-level split, window counts, and external assessment role}
+
+Standalone display version for LaTeX upload/review. Machine-readable source: source\_\allowbreak{}tables/\allowbreak{}Supplementary\_\allowbreak{}Table\_\allowbreak{}1\_\allowbreak{}datasets\_\allowbreak{}and\_\allowbreak{}cohort\_\allowbreak{}scale.\allowbreak{}csv. Rows: 8; columns: 10. The source table is split below into source-defined sections and column blocks so that all non-empty cells remain readable.
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 1, column block 1 of 3}\label{tab:standalone_s1_g1_block1}\\
+\toprule
+dataset or subset & role & records & windows & neonatal risk rate \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 1, column block 1 of 3.}}\\
+\toprule
+dataset or subset & role & records & windows & neonatal risk rate \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+CTU-\allowbreak{}UHB complete cohort & primary raw CTG cohort & 552 & 7602 & 0.\allowbreak{}2047 \\
+CTU-\allowbreak{}UHB training split & model development & 386 & 5301 & 0.\allowbreak{}2047 \\
+CTU-\allowbreak{}UHB held-\allowbreak{}out test split & internal validation & 166 & 2301 & 0.\allowbreak{}2048 \\
+CTGDL-\allowbreak{}FHRMA & external representation/\allowbreak{}domain-\allowbreak{}shift assessment & 135 & 2604 &  \\
+CTU-\allowbreak{}UHB /\allowbreak{} CTU-\allowbreak{}CHB Intrapartum CTG Database & primary raw signal cohort &  &  &  \\
+UCI Cardiotocography & feature-\allowbreak{}level baseline &  &  &  \\
+CTGDL & multi-\allowbreak{}source external/\allowbreak{}harmonized resource &  &  &  \\
+CTU-\allowbreak{}CHB annotation dataset & optional expert annotation layer &  &  &  \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 1, column block 2 of 3}\label{tab:standalone_s1_g1_block2}\\
+\toprule
+dataset or subset & role & notes & url & access \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 1, column block 2 of 3.}}\\
+\toprule
+dataset or subset & role & notes & url & access \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+CTU-\allowbreak{}UHB complete cohort & primary raw CTG cohort & Open intrapartum FHR and uterine contraction signals with clinical metadata.\allowbreak{} &  &  \\
+CTU-\allowbreak{}UHB training split & model development & Record-\allowbreak{}level split to avoid window leakage.\allowbreak{} &  &  \\
+CTU-\allowbreak{}UHB held-\allowbreak{}out test split & internal validation & Held-\allowbreak{}out record-\allowbreak{}level test set for manuscript metrics.\allowbreak{} &  &  \\
+CTGDL-\allowbreak{}FHRMA & external representation/\allowbreak{}domain-\allowbreak{}shift assessment & Used for embedding transport and phenotype assignment, not external outcome validation.\allowbreak{} &  &  \\
+CTU-\allowbreak{}UHB /\allowbreak{} CTU-\allowbreak{}CHB Intrapartum CTG Database & primary raw signal cohort & 552 intrapartum CTG records with FHR/\allowbreak{}UC signals and clinical metadata & https:\allowbreak{}/\allowbreak{}/\allowbreak{}physionet.\allowbreak{}org/\allowbreak{}content/\allowbreak{}ctu-\allowbreak{}uhb-\allowbreak{}ctgdb/\allowbreak{}1.\allowbreak{}0.\allowbreak{}0/\allowbreak{} & open access \\
+UCI Cardiotocography & feature-\allowbreak{}level baseline & 2126 CTG feature rows;\allowbreak{} no raw signal & https:\allowbreak{}/\allowbreak{}/\allowbreak{}archive-\allowbreak{}beta.\allowbreak{}ics.\allowbreak{}uci.\allowbreak{}edu/\allowbreak{}dataset/\allowbreak{}193/\allowbreak{}cardiotocography & open access \\
+CTGDL & multi-\allowbreak{}source external/\allowbreak{}harmonized resource & Includes CTU-\allowbreak{}UHB derived files and other sources;\allowbreak{} SPAM subset notes DUA requirement & https:\allowbreak{}/\allowbreak{}/\allowbreak{}zenodo.\allowbreak{}org/\allowbreak{}records/\allowbreak{}18023488 & open record with subset-\allowbreak{}specific caveats \\
+CTU-\allowbreak{}CHB annotation dataset & optional expert annotation layer & Useful for clinically interpretable event annotation if files are accessible & https:\allowbreak{}/\allowbreak{}/\allowbreak{}doi.\allowbreak{}org/\allowbreak{}10.\allowbreak{}1016/\allowbreak{}j.\allowbreak{}dib.\allowbreak{}2020.\allowbreak{}105690 & article/\allowbreak{}open supplementary source \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth}}
+\caption{Supplementary Table 1, column block 3 of 3}\label{tab:standalone_s1_g1_block3}\\
+\toprule
+dataset or subset & role & license or terms & status \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{Continued from Supplementary Table 1, column block 3 of 3.}}\\
+\toprule
+dataset or subset & role & license or terms & status \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+CTU-\allowbreak{}UHB complete cohort & primary raw CTG cohort &  &  \\
+CTU-\allowbreak{}UHB training split & model development &  &  \\
+CTU-\allowbreak{}UHB held-\allowbreak{}out test split & internal validation &  &  \\
+CTGDL-\allowbreak{}FHRMA & external representation/\allowbreak{}domain-\allowbreak{}shift assessment &  &  \\
+CTU-\allowbreak{}UHB /\allowbreak{} CTU-\allowbreak{}CHB Intrapartum CTG Database & primary raw signal cohort & Open Data Commons Attribution License v1.\allowbreak{}0 & verified \\
+UCI Cardiotocography & feature-\allowbreak{}level baseline & UCI repository terms & verified \\
+CTGDL & multi-\allowbreak{}source external/\allowbreak{}harmonized resource & mixed;\allowbreak{} check each subset & verified with caveats \\
+CTU-\allowbreak{}CHB annotation dataset & optional expert annotation layer & check publisher/\allowbreak{}data terms & identified \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\end{document}

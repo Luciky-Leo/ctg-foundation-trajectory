@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage{booktabs,longtable,array,pdflscape}
+\usepackage{url,hyperref,microtype}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\emergencystretch=3em
+\sloppy
+
+\title{Supplementary Table 5. Permutation importance by feature family and top individual predictors}
+\author{Frontiers in Signal Processing R1 supplementary table}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Table 5. Permutation importance by feature family and top individual predictors}
+
+Standalone display version for LaTeX upload/review. Machine-readable source: source\_\allowbreak{}tables/\allowbreak{}Supplementary\_\allowbreak{}Table\_\allowbreak{}5\_\allowbreak{}prediction\_\allowbreak{}explainability.\allowbreak{}csv. Rows: 48; columns: 16. The source table is split below into source-defined sections and column blocks so that all non-empty cells remain readable.
+
+\subsection*{table block: feature family importance}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 5, feature family importance, column block 1 of 2}\label{tab:standalone_s5_g1_block1}\\
+\toprule
+model & feature family & positive importance sum AUPRC & positive importance mean AUPRC & positive importance sum AUROC \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 5, feature family importance, column block 1 of 2.}}\\
+\toprule
+model & feature family & positive importance sum AUPRC & positive importance mean AUPRC & positive importance sum AUROC \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & clinical signal & 0.\allowbreak{}1752 & 0.\allowbreak{}0146 & 0.\allowbreak{}1751 \\
+Signal + SSL & clinical signal & 0.\allowbreak{}4874 & 0.\allowbreak{}0406 & 0.\allowbreak{}2016 \\
+Signal + SSL & SSL embedding & 2.\allowbreak{}6 & 0.\allowbreak{}0406 & 0.\allowbreak{}7787 \\
+Signal + SSL + phenotype & clinical signal & 0.\allowbreak{}3688 & 0.\allowbreak{}0307 & 0.\allowbreak{}1921 \\
+Signal + SSL + phenotype & phenotype & 0.\allowbreak{}0235 & 0.\allowbreak{}0235 & 0.\allowbreak{}0159 \\
+Signal + SSL + phenotype & SSL embedding & 1.\allowbreak{}893 & 0.\allowbreak{}0296 & 0.\allowbreak{}7695 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth}}
+\caption{Supplementary Table 5, feature family importance, column block 2 of 2}\label{tab:standalone_s5_g1_block2}\\
+\toprule
+model & feature family & positive importance mean AUROC & n features \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{Continued from Supplementary Table 5, feature family importance, column block 2 of 2.}}\\
+\toprule
+model & feature family & positive importance mean AUROC & n features \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & clinical signal & 0.\allowbreak{}0146 & 12 \\
+Signal + SSL & clinical signal & 0.\allowbreak{}0168 & 12 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0122 & 64 \\
+Signal + SSL + phenotype & clinical signal & 0.\allowbreak{}016 & 12 \\
+Signal + SSL + phenotype & phenotype & 0.\allowbreak{}0159 & 1 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}012 & 64 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\subsection*{table block: top feature importance}
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 5, top feature importance, column block 1 of 3}\label{tab:standalone_s5_g2_block1}\\
+\toprule
+model & feature family & feature & importance mean AUPRC & importance std AUPRC \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 5, top feature importance, column block 1 of 3.}}\\
+\toprule
+model & feature family & feature & importance mean AUPRC & importance std AUPRC \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & clinical signal & FHR mean & 0.\allowbreak{}0579 & 0.\allowbreak{}0329 \\
+Classical signal features & clinical signal & FHR missing fraction & 0.\allowbreak{}0466 & 0.\allowbreak{}0258 \\
+Classical signal features & clinical signal & deceleration proxy count & 0.\allowbreak{}0328 & 0.\allowbreak{}0491 \\
+Classical signal features & clinical signal & FHR p05 & 0.\allowbreak{}019 & 0.\allowbreak{}0199 \\
+Classical signal features & clinical signal & FHR UC corr & 0.\allowbreak{}0189 & 0.\allowbreak{}0232 \\
+Classical signal features & clinical signal & UC missing fraction & 0 & 0 \\
+Classical signal features & clinical signal & UC sd & -\allowbreak{}9.\allowbreak{}85e-\allowbreak{}06 & 0.\allowbreak{}0002 \\
+Classical signal features & clinical signal & FHR sd & -\allowbreak{}0.\allowbreak{}0007 & 0.\allowbreak{}0029 \\
+Classical signal features & clinical signal & UC mean & -\allowbreak{}0.\allowbreak{}0017 & 0.\allowbreak{}0078 \\
+Classical signal features & clinical signal & FHR p95 & -\allowbreak{}0.\allowbreak{}0019 & 0.\allowbreak{}0024 \\
+Classical signal features & clinical signal & UC p95 & -\allowbreak{}0.\allowbreak{}0061 & 0.\allowbreak{}0078 \\
+Classical signal features & clinical signal & FHR p50 & -\allowbreak{}0.\allowbreak{}0275 & 0.\allowbreak{}031 \\
+Signal + SSL & clinical signal & FHR missing fraction & 0.\allowbreak{}1642 & 0.\allowbreak{}0343 \\
+Signal + SSL & SSL embedding & emb 55 & 0.\allowbreak{}1584 & 0.\allowbreak{}0346 \\
+Signal + SSL & SSL embedding & emb 32 & 0.\allowbreak{}1387 & 0.\allowbreak{}0273 \\
+Signal + SSL & SSL embedding & emb 17 & 0.\allowbreak{}1179 & 0.\allowbreak{}0318 \\
+Signal + SSL & SSL embedding & emb 19 & 0.\allowbreak{}1178 & 0.\allowbreak{}0266 \\
+Signal + SSL & SSL embedding & emb 43 & 0.\allowbreak{}1004 & 0.\allowbreak{}0317 \\
+Signal + SSL & clinical signal & FHR mean & 0.\allowbreak{}0989 & 0.\allowbreak{}0314 \\
+Signal + SSL & SSL embedding & emb 18 & 0.\allowbreak{}0886 & 0.\allowbreak{}0271 \\
+Signal + SSL & SSL embedding & emb 63 & 0.\allowbreak{}0818 & 0.\allowbreak{}0321 \\
+Signal + SSL & SSL embedding & emb 52 & 0.\allowbreak{}0783 & 0.\allowbreak{}0193 \\
+Signal + SSL & SSL embedding & emb 26 & 0.\allowbreak{}0775 & 0.\allowbreak{}0203 \\
+Signal + SSL & SSL embedding & emb 25 & 0.\allowbreak{}0769 & 0.\allowbreak{}0223 \\
+Signal + SSL & SSL embedding & emb 42 & 0.\allowbreak{}0709 & 0.\allowbreak{}0247 \\
+Signal + SSL & SSL embedding & emb 44 & 0.\allowbreak{}0699 & 0.\allowbreak{}0323 \\
+Signal + SSL & SSL embedding & emb 29 & 0.\allowbreak{}068 & 0.\allowbreak{}0248 \\
+Signal + SSL + phenotype & clinical signal & FHR missing fraction & 0.\allowbreak{}1508 & 0.\allowbreak{}0354 \\
+Signal + SSL + phenotype & SSL embedding & emb 55 & 0.\allowbreak{}1404 & 0.\allowbreak{}037 \\
+Signal + SSL + phenotype & SSL embedding & emb 32 & 0.\allowbreak{}1263 & 0.\allowbreak{}0276 \\
+Signal + SSL + phenotype & SSL embedding & emb 17 & 0.\allowbreak{}1102 & 0.\allowbreak{}0307 \\
+Signal + SSL + phenotype & SSL embedding & emb 19 & 0.\allowbreak{}0895 & 0.\allowbreak{}0259 \\
+Signal + SSL + phenotype & SSL embedding & emb 43 & 0.\allowbreak{}0803 & 0.\allowbreak{}0308 \\
+Signal + SSL + phenotype & clinical signal & FHR mean & 0.\allowbreak{}0801 & 0.\allowbreak{}0304 \\
+Signal + SSL + phenotype & SSL embedding & emb 63 & 0.\allowbreak{}0683 & 0.\allowbreak{}0323 \\
+Signal + SSL + phenotype & SSL embedding & emb 52 & 0.\allowbreak{}0673 & 0.\allowbreak{}0227 \\
+Signal + SSL + phenotype & SSL embedding & emb 26 & 0.\allowbreak{}0627 & 0.\allowbreak{}0206 \\
+Signal + SSL + phenotype & SSL embedding & emb 25 & 0.\allowbreak{}062 & 0.\allowbreak{}0234 \\
+Signal + SSL + phenotype & SSL embedding & emb 18 & 0.\allowbreak{}0613 & 0.\allowbreak{}0291 \\
+Signal + SSL + phenotype & SSL embedding & emb 42 & 0.\allowbreak{}0554 & 0.\allowbreak{}0234 \\
+Signal + SSL + phenotype & SSL embedding & emb 53 & 0.\allowbreak{}0534 & 0.\allowbreak{}0223 \\
+Signal + SSL + phenotype & SSL embedding & emb 44 & 0.\allowbreak{}0527 & 0.\allowbreak{}0304 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 5, top feature importance, column block 2 of 3}\label{tab:standalone_s5_g2_block2}\\
+\toprule
+model & feature family & importance mean AUROC & importance std AUROC & feature label \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 5, top feature importance, column block 2 of 3.}}\\
+\toprule
+model & feature family & importance mean AUROC & importance std AUROC & feature label \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & clinical signal & 0.\allowbreak{}0736 & 0.\allowbreak{}0204 & Mean FHR \\
+Classical signal features & clinical signal & 0.\allowbreak{}0344 & 0.\allowbreak{}0288 & FHR missing fraction \\
+Classical signal features & clinical signal & 0.\allowbreak{}0508 & 0.\allowbreak{}0365 & Deceleration-\allowbreak{}proxy burden \\
+Classical signal features & clinical signal & 0.\allowbreak{}0144 & 0.\allowbreak{}0138 & FHR 5th percentile \\
+Classical signal features & clinical signal & -\allowbreak{}0.\allowbreak{}0044 & 0.\allowbreak{}0182 & FHR-\allowbreak{}UC correlation \\
+Classical signal features & clinical signal & 0 & 0 & UC missing fraction \\
+Classical signal features & clinical signal & 0.\allowbreak{}0001 & 0.\allowbreak{}0002 & UC variability (SD) \\
+Classical signal features & clinical signal & 0.\allowbreak{}0017 & 0.\allowbreak{}0015 & FHR variability (SD) \\
+Classical signal features & clinical signal & -\allowbreak{}0.\allowbreak{}0002 & 0.\allowbreak{}0058 & Mean uterine contraction \\
+Classical signal features & clinical signal & 2.\allowbreak{}97e-\allowbreak{}05 & 0.\allowbreak{}0003 & FHR 95th percentile \\
+Classical signal features & clinical signal & -\allowbreak{}0.\allowbreak{}0011 & 0.\allowbreak{}0059 & UC 95th percentile \\
+Classical signal features & clinical signal & -\allowbreak{}0.\allowbreak{}0103 & 0.\allowbreak{}0168 & Median FHR \\
+Signal + SSL & clinical signal & 0.\allowbreak{}0846 & 0.\allowbreak{}0327 & FHR missing fraction \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0702 & 0.\allowbreak{}0246 & SSL dimension 55 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0503 & 0.\allowbreak{}0224 & SSL dimension 32 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0187 & 0.\allowbreak{}0239 & SSL dimension 17 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0119 & 0.\allowbreak{}0316 & SSL dimension 19 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0335 & 0.\allowbreak{}0221 & SSL dimension 43 \\
+Signal + SSL & clinical signal & 0.\allowbreak{}0508 & 0.\allowbreak{}0162 & Mean FHR \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}025 & 0.\allowbreak{}0174 & SSL dimension 18 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0358 & 0.\allowbreak{}0306 & SSL dimension 63 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0112 & 0.\allowbreak{}0185 & SSL dimension 52 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0128 & 0.\allowbreak{}0194 & SSL dimension 26 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}0647 & 0.\allowbreak{}0237 & SSL dimension 25 \\
+Signal + SSL & SSL embedding & -\allowbreak{}0.\allowbreak{}0051 & 0.\allowbreak{}0204 & SSL dimension 42 \\
+Signal + SSL & SSL embedding & -\allowbreak{}0.\allowbreak{}0278 & 0.\allowbreak{}021 & SSL dimension 44 \\
+Signal + SSL & SSL embedding & 0.\allowbreak{}014 & 0.\allowbreak{}0151 & SSL dimension 29 \\
+Signal + SSL + phenotype & clinical signal & 0.\allowbreak{}0868 & 0.\allowbreak{}0327 & FHR missing fraction \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0721 & 0.\allowbreak{}0241 & SSL dimension 55 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0523 & 0.\allowbreak{}0224 & SSL dimension 32 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0214 & 0.\allowbreak{}0233 & SSL dimension 17 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}009 & 0.\allowbreak{}0295 & SSL dimension 19 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0332 & 0.\allowbreak{}0214 & SSL dimension 43 \\
+Signal + SSL + phenotype & clinical signal & 0.\allowbreak{}05 & 0.\allowbreak{}0156 & Mean FHR \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0372 & 0.\allowbreak{}031 & SSL dimension 63 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0137 & 0.\allowbreak{}0189 & SSL dimension 52 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0117 & 0.\allowbreak{}0188 & SSL dimension 26 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0638 & 0.\allowbreak{}0243 & SSL dimension 25 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}023 & 0.\allowbreak{}0156 & SSL dimension 18 \\
+Signal + SSL + phenotype & SSL embedding & -\allowbreak{}0.\allowbreak{}0049 & 0.\allowbreak{}0197 & SSL dimension 42 \\
+Signal + SSL + phenotype & SSL embedding & 0.\allowbreak{}0538 & 0.\allowbreak{}0192 & SSL dimension 53 \\
+Signal + SSL + phenotype & SSL embedding & -\allowbreak{}0.\allowbreak{}0268 & 0.\allowbreak{}0202 & SSL dimension 44 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth} L{0.225\linewidth}}
+\caption{Supplementary Table 5, top feature importance, column block 3 of 3}\label{tab:standalone_s5_g2_block3}\\
+\toprule
+model & feature family & rank AUPRC & rank AUROC \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{Continued from Supplementary Table 5, top feature importance, column block 3 of 3.}}\\
+\toprule
+model & feature family & rank AUPRC & rank AUROC \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & clinical signal & 1 & 1 \\
+Classical signal features & clinical signal & 2 & 3 \\
+Classical signal features & clinical signal & 3 & 2 \\
+Classical signal features & clinical signal & 4 & 4 \\
+Classical signal features & clinical signal & 5 & 11 \\
+Classical signal features & clinical signal & 6 & 8 \\
+Classical signal features & clinical signal & 7 & 6 \\
+Classical signal features & clinical signal & 8 & 5 \\
+Classical signal features & clinical signal & 9 & 9 \\
+Classical signal features & clinical signal & 10 & 7 \\
+Classical signal features & clinical signal & 11 & 10 \\
+Classical signal features & clinical signal & 12 & 12 \\
+Signal + SSL & clinical signal & 1 & 1 \\
+Signal + SSL & SSL embedding & 2 & 2 \\
+Signal + SSL & SSL embedding & 3 & 6 \\
+Signal + SSL & SSL embedding & 4 & 18 \\
+Signal + SSL & SSL embedding & 5 & 31 \\
+Signal + SSL & SSL embedding & 6 & 10 \\
+Signal + SSL & clinical signal & 7 & 5 \\
+Signal + SSL & SSL embedding & 8 & 13 \\
+Signal + SSL & SSL embedding & 9 & 8 \\
+Signal + SSL & SSL embedding & 10 & 32 \\
+Signal + SSL & SSL embedding & 11 & 29 \\
+Signal + SSL & SSL embedding & 12 & 3 \\
+Signal + SSL & SSL embedding & 13 & 58 \\
+Signal + SSL & SSL embedding & 14 & 76 \\
+Signal + SSL & SSL embedding & 15 & 26 \\
+Signal + SSL + phenotype & clinical signal & 1 & 1 \\
+Signal + SSL + phenotype & SSL embedding & 2 & 2 \\
+Signal + SSL + phenotype & SSL embedding & 3 & 5 \\
+Signal + SSL + phenotype & SSL embedding & 4 & 17 \\
+Signal + SSL + phenotype & SSL embedding & 5 & 35 \\
+Signal + SSL + phenotype & SSL embedding & 6 & 9 \\
+Signal + SSL + phenotype & clinical signal & 7 & 6 \\
+Signal + SSL + phenotype & SSL embedding & 8 & 8 \\
+Signal + SSL + phenotype & SSL embedding & 9 & 23 \\
+Signal + SSL + phenotype & SSL embedding & 10 & 29 \\
+Signal + SSL + phenotype & SSL embedding & 11 & 3 \\
+Signal + SSL + phenotype & SSL embedding & 12 & 15 \\
+Signal + SSL + phenotype & SSL embedding & 13 & 58 \\
+Signal + SSL + phenotype & SSL embedding & 14 & 4 \\
+Signal + SSL + phenotype & SSL embedding & 15 & 77 \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\end{document}

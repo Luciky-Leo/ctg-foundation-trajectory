@@ -35,14 +35,15 @@ The repository is intended as a code and source-data archive, not as a deployabl
 ```text
 config/                  Pipeline configuration
 scripts/                 Data download, preprocessing, modelling and reporting scripts
-results/                 Analysis tables, manuscript figures, source data and reports
-manuscript_overleaf/     Journal-targeted LaTeX manuscript source, figures and source data
-submission_packages/     Final journal submission packages, including the Frontiers official LaTeX package
-reproducibility/         Fixed split files and reviewer-facing sensitivity tables
+manuscript_overleaf/     Manuscript source, figures, source data and supplementary tables
+submission_packages/     Journal submission packages, including the current R1 Frontiers package
+reproducibility/         Fixed split files, locked-replay summaries and reviewer-facing sensitivity tables
 docs/PROJECT_STRUCTURE.md Detailed active/archive path guide
 archive/                 Deprecated experiments retained for traceability
 requirements.txt         Minimal Python package list
 run_pipeline.ps1         Synthetic smoke-test pipeline
+R1_RELEASE_NOTES_20260707.md R1 revision release notes and locked-replay summary
+ZENODO_R1_NEW_VERSION_UPLOAD_20260707.md Manual Zenodo new-version upload metadata
 ```
 
 ## Fast smoke test
@@ -122,12 +123,15 @@ Run a compact transformer sweep:
 The fixed record-level train/test validation used CTU-UHB/CTU-CHB as the primary raw-signal cohort. The primary endpoint was umbilical artery pH <7.15 or 5-minute Apgar score <7.
 
 - Signal features: AUROC 0.6303, AUPRC 0.3366.
-- Signal + SSL embeddings: AUROC 0.6482, AUPRC 0.4432.
-- Signal + SSL + signal phenotype manuscript candidate: AUROC 0.6560, AUPRC 0.4324.
+- SSL embeddings alone: AUROC 0.4947, AUPRC 0.2125.
+- Signal + SSL embeddings: AUROC 0.6025, AUPRC 0.3765.
+- Signal + SSL + signal phenotype manuscript candidate: AUROC 0.6168, AUPRC 0.4016.
 - Development-only model-selection sensitivity selected a smaller transformer configuration with held-out AUPRC 0.3872.
 - SSL PCA sensitivity retained similar enrichment with fewer predictors: PCA10 AUPRC 0.4241 and PCA20 AUPRC 0.4256.
 
-Interpretation: the model is framed as a risk-enrichment and phenotyping workflow, not as a clinically deployable diagnostic predictor.
+These values correspond to the fixed-seed locked replay used for the R1 revision. The originally submitted unseeded values (signal + SSL AUPRC 0.4432; final AUPRC 0.4324) were not retained because the exact run could not be reproduced. Bootstrap AUPRC-difference intervals versus signal-only features crossed zero, so SSL is framed as an interpretable representation, phenotype-enrichment and recalibration layer rather than as a stable discrimination-improvement result.
+
+Interpretation: the model is framed as a retrospective risk-enrichment and phenotyping workflow, not as a clinically deployable diagnostic predictor.
 
 ## Current Best Transformer Sweep
 
@@ -144,10 +148,10 @@ epochs=4
 
 Validation:
 
-- signal + SSL embeddings: AUROC 0.6482, AUPRC 0.4432.
-- signal + SSL + signal phenotype: AUROC 0.6560, AUPRC 0.4324.
+- signal + SSL embeddings: AUROC 0.6025, AUPRC 0.3765.
+- signal + SSL + signal phenotype: AUROC 0.6168, AUPRC 0.4016.
 
-The same configuration trained for 12 epochs did not improve validation performance, so longer training should not be assumed to help.
+The selected architecture's 12-epoch refit is reported for training-dynamics inspection only; downstream representation quality was judged from fixed held-out embeddings, phenotype structure and reviewer-requested sensitivity analyses.
 
 ## CTGDL External Representation Validation
 
@@ -161,7 +165,7 @@ Interpretation: external FHRMA data show substantial dataset shift, which is imp
 
 ## Manuscript and reporting files
 
-The manuscript source package is in `manuscript_overleaf/`. The current target-journal package is `submission_packages/frontiers_signal_processing_20260601/`, including the official Frontiers LaTeX template version under `07_official_frontiers_latex/`. Supplementary tables include reviewer-facing sensitivity analyses and a TRIPOD+AI checklist mapping.
+The manuscript source package is in `manuscript_overleaf/`. The current R1 Frontiers package is `submission_packages/frontiers_signal_processing_r1_20260707/`, including the official Frontiers LaTeX template, compiled manuscript PDF, compiled supplementary PDF, separate Reviewer 1/Reviewer 2 response PDFs, source-data CSV files, supplementary tables S1-S11 and standalone supplementary-table PDFs. The previous first-submission package is retained under `submission_packages/frontiers_signal_processing_20260601/` for traceability.
 
 ## Code archive
 
@@ -169,7 +173,9 @@ The manuscript source package is in `manuscript_overleaf/`. The current target-j
 
 Repository URL: https://github.com/Luciky-Leo/ctg-foundation-trajectory
 
-Versioned Zenodo release DOI: https://doi.org/10.5281/zenodo.20485068
+Latest published Zenodo version DOI before the R1 update: https://doi.org/10.5281/zenodo.20485068
+
+Zenodo concept DOI for all versions: https://doi.org/10.5281/zenodo.20364141
 
 This repository includes `.zenodo.json` and `CITATION.cff` metadata for Zenodo/GitHub release archiving.
 

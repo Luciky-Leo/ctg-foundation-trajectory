@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage{hyperref}
+\usepackage{setspace}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setstretch{1.08}
+\emergencystretch=3em
+\sloppy
+
+\title{Response to Reviewer 1 - R1}
+\author{Frontiers in Signal Processing R1 revision}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Response to Reviewer 1 - R1}
+
+Manuscript: Self-supervised biomedical signal representation learning from intrapartum cardiotocography for neonatal risk enrichment
+
+
+Journal: Frontiers in Signal Processing
+
+
+Revision date: 07 July 2026
+
+
+We thank Reviewer 1 for the constructive comments. Point-by-point responses are provided below.
+
+
+\subsection*{Reviewer 1}
+
+\subsubsection*{R1-1. Abstract completion}
+
+\textbf{Reviewer request.} Complete the abstract/result chain that ended mid-sentence.
+
+
+\textbf{Response.} Corrected. The abstract and upload text now contain a complete result chain: signal-only baseline, seeded locked-replay SSL-containing model result, phenotype-augmented final model rationale, recalibration, external-representation boundary and conclusion. We adopted the seeded locked replay as the reproducibility basis: signal-only AUPRC was 0.3366, signal+SSL AUPRC was 0.3765, and the signal-plus-SSL-plus-signal-phenotype model reached AUPRC 0.4016. Because both SSL-containing AUPRC-difference confidence intervals versus signal-only features crossed zero, the revised abstract frames SSL as an interpretable representation, phenotype-enrichment and recalibration layer rather than as a statistically resolved AUPRC-improvement claim.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/01_manuscript_frontiers_full/Frontiers_Original_Research_Manuscript.docx}.
+
+
+\subsubsection*{R1-2. Figure 1 workflow labels}
+
+\textbf{Reviewer request.} Correct 60-minute/mixed-masking labels and improve workflow figure.
+
+
+\textbf{Response.} Corrected and redesigned. Figure 1 is now workflow-first: Panel A foregrounds open-data roles, the leakage-controlled 386/166 record split, 10-minute FHR/UC windows, downstream risk/phenotype/recalibration analyses and the external representation-only boundary. Panel B is a smaller SSL method inset and now states 10-minute windows and channel masking for the final model; Panel C combines cohort scale and outcome balance. The previous evidence-map bookkeeping panel was removed from the main figure.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{CTG_Foundation_Trajectory/results/manuscript/source_data/Figure_1_source_data.csv}; \path{Frontiers_Signal_Processing_Submission_Package_20260601/04_figures_images/Figure_1_study_design_pipeline.jpg}.
+
+
+\subsubsection*{R1-3. Supplementary figure naming}
+
+\textbf{Reviewer request.} Correct legacy main-figure numbering for the two supplementary figures.
+
+
+\textbf{Response.} Corrected. The active package separates main Figures 1-4 from Supplementary Figures S1/S2. The supplementary figure files and source-data references now use Supplementary Figure S1 and Supplementary Figure S2 naming.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/05_supplementary_files/supplementary_figures/Supplementary_Figure_S1_model_selection_and_sensitivity.jpg}; \path{Frontiers_Signal_Processing_Submission_Package_20260601/05_supplementary_files/supplementary_figures/Supplementary_Figure_S2_external_domain_shift.jpg}.
+
+
+\subsubsection*{R1-4. Final model rationale and SSL ablation}
+
+\textbf{Reviewer request.} Justify final model despite signal+SSL being marginally higher; note SSL-alone underperforms.
+
+
+\textbf{Response.} Revised. We now treat SSL-alone as an ablation and explicitly state that the phenotype-augmented final model is retained for interpretability, phenotype inspection and recalibration rather than because it establishes a statistically resolved held-out AUPRC improvement. The originally submitted values noted by the reviewer (signal+SSL AUPRC 0.4432 and final AUPRC 0.4324) came from an unseeded run that we could not exactly reproduce; to guarantee reproducibility, we re-ran the full pipeline with a fixed seed and all values in this revision correspond to that locked replay. Under the locked replay, SSL embeddings alone were insufficient as a stand-alone predictor (AUPRC 0.2125), signal+SSL reached AUPRC 0.3765, and the final signal-plus-SSL-plus-signal-phenotype model reached AUPRC 0.4016. The AUPRC-difference confidence intervals versus signal-only features crossed zero, so SSL is presented as an interpretive and phenotype-enrichment layer rather than as an independent discrimination-gain result.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/01_manuscript_frontiers_full/Frontiers_Original_Research_Manuscript.docx}.
+
+
+\subsubsection*{R1-5. pH <7.15 endpoint rationale}
+
+\textbf{Reviewer request.} Justify pH <7.15 and relate to stricter thresholds.
+
+
+\textbf{Response.} Added. The Methods now explain that pH <7.15 was selected as a broader at-risk acidemia endpoint to preserve event count for an open-data risk-enrichment study, while stricter pH-only thresholds of <7.10 and <7.05 are reported as sensitivity analyses. The text also states that this threshold does not replace severe metabolic-acidosis definitions.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/01_manuscript_frontiers_full/Frontiers_Original_Research_Manuscript.docx}.
+
+
+\subsubsection*{R1-6. Reconstruction-loss instability}
+
+\textbf{Reviewer request.} Explain whether unstable reconstruction-loss trace affects representation quality.
+
+
+\textbf{Response.} Added. The manuscript and Supplementary Figure S1 caption now clarify that the oscillating reconstruction-loss trace was used for training-dynamics inspection only. Model selection and interpretation rely on fixed held-out embeddings, phenotype structure and downstream validation, so the unstable reconstruction trace is not used as stand-alone representation-quality evidence.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/06_upload_text/Response_to_Reviewers_R1_20260707_route_pending.md}.
+
+
+\subsubsection*{R1-7. CTU SSL phenotype risk gradient}
+
+\textbf{Reviewer request.} Mention the rising CTU SSL-phenotype risk gradient shown in S2D.
+
+
+\textbf{Response.} Added with boundary language. The external representation section now mentions the CTU-UHB SSL-phenotype risk gradient shown in Supplementary Figure S2D while preserving the boundary that CTGDL/FHRMA are \path{representation-transfer/domain-shift} evidence only and not external outcome validation. This statement is used as source-cohort phenotype-ordering evidence only and is not presented as an SSL discrimination-gain or external outcome-validation claim.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{Frontiers_Signal_Processing_Submission_Package_20260601/06_upload_text/Response_to_Reviewers_R1_20260707_route_pending.md}.
+
+
+\subsubsection*{R1-8. AI text artifacts and repetitions}
+
+\textbf{Reviewer request.} Remove AI-generated text artifacts and repetitions.
+
+
+\textbf{Response.} Revised and audited. We performed a targeted pass for stock AI-like phrases and repetitive prose using the same restricted phrase list as the R1 text-compliance audit. The audit reports zero critical AI-artifact hits and confirms that the active manuscript, official LaTeX and upload text remain synchronized for the corrected abbreviation definitions.
+
+
+\textbf{Verification.} Status \texttt{READY\_TO\_POST}; evidence status \texttt{PASS}; evidence: \path{R1_QA_20260707/r1_text_compliance_audit_20260707/R1_TEXT_COMPLIANCE_AUDIT_20260707.md}.
+
+
+\end{document}

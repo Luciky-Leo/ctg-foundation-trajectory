@@ -1,0 +1,12 @@
+table,file,rows,columns,display_blocks,description
+Supplementary Table 1,Supplementary_Table_1_datasets_and_cohort_scale.csv,8,10,3,"Dataset sources, cohort scale, record-level split, window counts, and external assessment role"
+Supplementary Table 2,Supplementary_Table_2_model_performance_bootstrap.csv,40,8,2,Held-out model performance with 2000-bootstrap confidence intervals
+Supplementary Table 3,Supplementary_Table_3_bootstrap_model_differences.csv,9,7,2,Bootstrap pairwise model differences and zero-crossing flags
+Supplementary Table 4,Supplementary_Table_4_dynamic_phenotype_summary_and_prototypes.csv,8,39,24,Signal and SSL phenotype summaries with representative prototype records
+Supplementary Table 5,Supplementary_Table_5_prediction_explainability.csv,48,16,5,Permutation importance by feature family and top individual predictors
+Supplementary Table 6,Supplementary_Table_6_missingness_sensitivity.csv,39,12,4,Performance and model-difference sensitivity after removing missingness features
+Supplementary Table 7,Supplementary_Table_7_recalibration_and_decision_curve.csv,126,15,5,"Cross-fitted recalibration metrics, recalibration differences, and decision curve summaries"
+Supplementary Table 8,Supplementary_Table_8_external_representation_validation.csv,12,5,2,CTGDL-FHRMA domain-shift and phenotype-assignment assessment
+Supplementary Table 9,Supplementary_Table_9_reviewer_sensitivity_analyses.csv,24,24,14,"Reviewer-requested sensitivity analyses for development-only model selection, SSL PCA dimensionality reduction, elastic-net regularization and pH-threshold outcome definitions"
+Supplementary Table 10,Supplementary_Table_10_TRIPOD_AI_checklist.csv,52,5,1,TRIPOD+AI reporting checklist mapping for the manuscript
+Supplementary Table 11,Supplementary_Table_11_transformer_hyperparameters.csv,28,5,1,"Transformer input, tokenization, masking, objective, optimizer and training hyperparameters"

@@ -1,0 +1,152 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage{booktabs,longtable,array,pdflscape}
+\usepackage{url,hyperref,microtype}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\emergencystretch=3em
+\sloppy
+
+\title{Supplementary Table 2. Held-out model performance with 2000-bootstrap confidence intervals}
+\author{Frontiers in Signal Processing R1 supplementary table}
+\date{07 July 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Table 2. Held-out model performance with 2000-bootstrap confidence intervals}
+
+Standalone display version for LaTeX upload/review. Machine-readable source: source\_\allowbreak{}tables/\allowbreak{}Supplementary\_\allowbreak{}Table\_\allowbreak{}2\_\allowbreak{}model\_\allowbreak{}performance\_\allowbreak{}bootstrap.\allowbreak{}csv. Rows: 40; columns: 8. The source table is split below into source-defined sections and column blocks so that all non-empty cells remain readable.
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 2, column block 1 of 2}\label{tab:standalone_s2_g1_block1}\\
+\toprule
+model & model label & metric & point & bootstrap mean \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 2, column block 1 of 2.}}\\
+\toprule
+model & model label & metric & point & bootstrap mean \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & Signal features & auroc & 0.\allowbreak{}6303 & 0.\allowbreak{}6293 \\
+Classical signal features & Signal features & auprc & 0.\allowbreak{}3366 & 0.\allowbreak{}3522 \\
+Classical signal features & Signal features & brier & 0.\allowbreak{}2525 & 0.\allowbreak{}2528 \\
+Classical signal features & Signal features & Calibration intercept & -\allowbreak{}1.\allowbreak{}384 &  \\
+Classical signal features & Signal features & Calibration slope & 0.\allowbreak{}4876 &  \\
+SSL embeddings & SSL embeddings & auroc & 0.\allowbreak{}4947 & 0.\allowbreak{}4936 \\
+SSL embeddings & SSL embeddings & auprc & 0.\allowbreak{}2125 & 0.\allowbreak{}2269 \\
+SSL embeddings & SSL embeddings & brier & 0.\allowbreak{}2639 & 0.\allowbreak{}2639 \\
+SSL embeddings & SSL embeddings & Calibration intercept & -\allowbreak{}1.\allowbreak{}361 &  \\
+SSL embeddings & SSL embeddings & Calibration slope & -\allowbreak{}0.\allowbreak{}0415 &  \\
+Signal + SSL & Signal + SSL & auroc & 0.\allowbreak{}6025 & 0.\allowbreak{}6007 \\
+Signal + SSL & Signal + SSL & auprc & 0.\allowbreak{}3765 & 0.\allowbreak{}3832 \\
+Signal + SSL & Signal + SSL & brier & 0.\allowbreak{}2701 & 0.\allowbreak{}2707 \\
+Signal + SSL & Signal + SSL & Calibration intercept & -\allowbreak{}1.\allowbreak{}36 &  \\
+Signal + SSL & Signal + SSL & Calibration slope & 0.\allowbreak{}3136 &  \\
+signal phenotype only & Signal phenotype only & auroc & 0.\allowbreak{}6003 & 0.\allowbreak{}6 \\
+signal phenotype only & Signal phenotype only & auprc & 0.\allowbreak{}2488 & 0.\allowbreak{}2538 \\
+signal phenotype only & Signal phenotype only & brier & 0.\allowbreak{}2523 & 0.\allowbreak{}2525 \\
+signal phenotype only & Signal phenotype only & Calibration intercept & -\allowbreak{}1.\allowbreak{}368 &  \\
+signal phenotype only & Signal phenotype only & Calibration slope & 0.\allowbreak{}4662 &  \\
+SSL phenotype only & SSL phenotype only & auroc & 0.\allowbreak{}5949 & 0.\allowbreak{}5962 \\
+SSL phenotype only & SSL phenotype only & auprc & 0.\allowbreak{}246 & 0.\allowbreak{}2543 \\
+SSL phenotype only & SSL phenotype only & brier & 0.\allowbreak{}246 & 0.\allowbreak{}2458 \\
+SSL phenotype only & SSL phenotype only & Calibration intercept & -\allowbreak{}1.\allowbreak{}38 &  \\
+SSL phenotype only & SSL phenotype only & Calibration slope & 1.\allowbreak{}456 &  \\
+signal + signal phenotype & Signal + signal phenotype & auroc & 0.\allowbreak{}6328 & 0.\allowbreak{}6321 \\
+signal + signal phenotype & Signal + signal phenotype & auprc & 0.\allowbreak{}3495 & 0.\allowbreak{}3618 \\
+signal + signal phenotype & Signal + signal phenotype & brier & 0.\allowbreak{}2503 & 0.\allowbreak{}2506 \\
+signal + signal phenotype & Signal + signal phenotype & Calibration intercept & -\allowbreak{}1.\allowbreak{}377 &  \\
+signal + signal phenotype & Signal + signal phenotype & Calibration slope & 0.\allowbreak{}5031 &  \\
+Signal + SSL phenotype & Signal + SSL phenotype & auroc & 0.\allowbreak{}6667 & 0.\allowbreak{}6654 \\
+Signal + SSL phenotype & Signal + SSL phenotype & auprc & 0.\allowbreak{}3732 & 0.\allowbreak{}3879 \\
+Signal + SSL phenotype & Signal + SSL phenotype & brier & 0.\allowbreak{}2483 & 0.\allowbreak{}2486 \\
+Signal + SSL phenotype & Signal + SSL phenotype & Calibration intercept & -\allowbreak{}1.\allowbreak{}426 &  \\
+Signal + SSL phenotype & Signal + SSL phenotype & Calibration slope & 0.\allowbreak{}5602 &  \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & auroc & 0.\allowbreak{}6168 & 0.\allowbreak{}6151 \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & auprc & 0.\allowbreak{}4016 & 0.\allowbreak{}4069 \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & brier & 0.\allowbreak{}2652 & 0.\allowbreak{}2657 \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & Calibration intercept & -\allowbreak{}1.\allowbreak{}359 &  \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & Calibration slope & 0.\allowbreak{}3448 &  \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\begin{landscape}
+\scriptsize
+\setlength\LTleft{0.025\linewidth}
+\setlength\LTright{0.025\linewidth}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth} L{0.184\linewidth}}
+\caption{Supplementary Table 2, column block 2 of 2}\label{tab:standalone_s2_g1_block2}\\
+\toprule
+model & model label & 95\% CI lower & 95\% CI upper & Valid bootstrap resamples \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Continued from Supplementary Table 2, column block 2 of 2.}}\\
+\toprule
+model & model label & 95\% CI lower & 95\% CI upper & Valid bootstrap resamples \\
+\midrule
+\endhead
+\endfoot
+\bottomrule
+\endlastfoot
+Classical signal features & Signal features & 0.\allowbreak{}5254 & 0.\allowbreak{}7284 & 2000 \\
+Classical signal features & Signal features & 0.\allowbreak{}2173 & 0.\allowbreak{}4941 & 2000 \\
+Classical signal features & Signal features & 0.\allowbreak{}2234 & 0.\allowbreak{}2834 & 2000 \\
+Classical signal features & Signal features &  &  &  \\
+Classical signal features & Signal features &  &  &  \\
+SSL embeddings & SSL embeddings & 0.\allowbreak{}3795 & 0.\allowbreak{}6035 & 2000 \\
+SSL embeddings & SSL embeddings & 0.\allowbreak{}1477 & 0.\allowbreak{}3248 & 2000 \\
+SSL embeddings & SSL embeddings & 0.\allowbreak{}2394 & 0.\allowbreak{}29 & 2000 \\
+SSL embeddings & SSL embeddings &  &  &  \\
+SSL embeddings & SSL embeddings &  &  &  \\
+Signal + SSL & Signal + SSL & 0.\allowbreak{}4927 & 0.\allowbreak{}7045 & 2000 \\
+Signal + SSL & Signal + SSL & 0.\allowbreak{}2399 & 0.\allowbreak{}5243 & 2000 \\
+Signal + SSL & Signal + SSL & 0.\allowbreak{}2315 & 0.\allowbreak{}3066 & 2000 \\
+Signal + SSL & Signal + SSL &  &  &  \\
+Signal + SSL & Signal + SSL &  &  &  \\
+signal phenotype only & Signal phenotype only & 0.\allowbreak{}4951 & 0.\allowbreak{}697 & 2000 \\
+signal phenotype only & Signal phenotype only & 0.\allowbreak{}168 & 0.\allowbreak{}3519 & 2000 \\
+signal phenotype only & Signal phenotype only & 0.\allowbreak{}2298 & 0.\allowbreak{}2751 & 2000 \\
+signal phenotype only & Signal phenotype only &  &  &  \\
+signal phenotype only & Signal phenotype only &  &  &  \\
+SSL phenotype only & SSL phenotype only & 0.\allowbreak{}4917 & 0.\allowbreak{}6912 & 2000 \\
+SSL phenotype only & SSL phenotype only & 0.\allowbreak{}1654 & 0.\allowbreak{}3538 & 2000 \\
+SSL phenotype only & SSL phenotype only & 0.\allowbreak{}2368 & 0.\allowbreak{}2548 & 2000 \\
+SSL phenotype only & SSL phenotype only &  &  &  \\
+SSL phenotype only & SSL phenotype only &  &  &  \\
+signal + signal phenotype & Signal + signal phenotype & 0.\allowbreak{}5243 & 0.\allowbreak{}7306 & 2000 \\
+signal + signal phenotype & Signal + signal phenotype & 0.\allowbreak{}221 & 0.\allowbreak{}5007 & 2000 \\
+signal + signal phenotype & Signal + signal phenotype & 0.\allowbreak{}2216 & 0.\allowbreak{}2807 & 2000 \\
+signal + signal phenotype & Signal + signal phenotype &  &  &  \\
+signal + signal phenotype & Signal + signal phenotype &  &  &  \\
+Signal + SSL phenotype & Signal + SSL phenotype & 0.\allowbreak{}5642 & 0.\allowbreak{}7578 & 2000 \\
+Signal + SSL phenotype & Signal + SSL phenotype & 0.\allowbreak{}246 & 0.\allowbreak{}5381 & 2000 \\
+Signal + SSL phenotype & Signal + SSL phenotype & 0.\allowbreak{}2189 & 0.\allowbreak{}2814 & 2000 \\
+Signal + SSL phenotype & Signal + SSL phenotype &  &  &  \\
+Signal + SSL phenotype & Signal + SSL phenotype &  &  &  \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & 0.\allowbreak{}5111 & 0.\allowbreak{}7191 & 2000 \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & 0.\allowbreak{}2605 & 0.\allowbreak{}5471 & 2000 \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype & 0.\allowbreak{}226 & 0.\allowbreak{}302 & 2000 \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype &  &  &  \\
+Signal + SSL + phenotype & Signal + SSL + signal phenotype &  &  &  \\
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+\end{document}
