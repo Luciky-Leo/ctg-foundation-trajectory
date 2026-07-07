@@ -1,13 +1,13 @@
 # Round 1 - Compile And Asset Audit
 
-Generated: 2026-07-07T13:46:10.060700+00:00
+Generated: 2026-07-07T14:24:13.190297+00:00
 
 ## Compile status
 
 | tex | pdf_exists | pdf_bytes | pages | fatal_error | warning_count |
 |---|---:|---:|---:|---:|---:|
-| frontiers_ctg_manuscript.tex | True | 2736887 | 16 | False | 39 |
-| frontiers_ctg_supplementary_material.tex | True | 820094 | 111 | False | 629 |
+| frontiers_ctg_manuscript.tex | True | 2736890 | 16 | False | 39 |
+| frontiers_ctg_supplementary_material.tex | True | 820092 | 111 | False | 629 |
 | Response_to_Reviewer_1_R1_20260707.tex | True | 101665 | 3 | False | 12 |
 | Response_to_Reviewer_2_R1_20260707.tex | True | 98501 | 3 | False | 6 |
 

@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1783431846.74346 "frontiers_ctg_supplementary_material.xdv" "frontiers_ctg_supplementary_material.pdf" "frontiers_ctg_supplementary_material" 1783431848.12282 0
-  "frontiers_ctg_supplementary_material.xdv" 1783431845.43949 858416 6f434a2fa71237ccca5092ec16a6aded "xelatex"
+["xdvipdfmx"] 1783434116.19008 "frontiers_ctg_supplementary_material.xdv" "frontiers_ctg_supplementary_material.pdf" "frontiers_ctg_supplementary_material" 1783434117.48979 0
+  "frontiers_ctg_supplementary_material.xdv" 1783434115.61423 858416 5de89dcb9e96b53d92d0420ffbeafbf2 "xelatex"
   (generated)
   "frontiers_ctg_supplementary_material.pdf"
   (rewritten before read)
-["xelatex"] 1783431842.58195 "frontiers_ctg_supplementary_material.tex" "frontiers_ctg_supplementary_material.xdv" "frontiers_ctg_supplementary_material" 1783431847.88781 0
+["xelatex"] 1783434113.00128 "frontiers_ctg_supplementary_material.tex" "frontiers_ctg_supplementary_material.xdv" "frontiers_ctg_supplementary_material" 1783434117.30991 0
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -111,10 +111,10 @@
   "figures/Supplementary_Figure_S1_model_selection_and_sensitivity.png" 1783417187 201723 a85bbd98b2634066613f3fba30c00742 ""
   "figures/Supplementary_Figure_S2_external_domain_shift.png" 1783417329 334470 8a08adb5cc04e32baea9b5a0c68625e8 ""
   "figures/Supplementary_Figure_S3_endpoint_threshold_and_sample_size.png" 1783417443 164814 aef5b278d7271bb67568ff3f4d9a1d11 ""
-  "frontiers_ctg_supplementary_material.aux" 1783431845.43109 35142 00f41f9c1624d17586b1974654adeeb7 "xelatex"
-  "frontiers_ctg_supplementary_material.out" 1783431844.39118 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "frontiers_ctg_supplementary_material.tex" 1783431798.08432 144142 c8ef7313aafd13880764b8f984c7afe3 ""
-  "frontiers_suppmat.cls" 1783431796.53265 27903 9f7ca35f0cd63743b3b9acfd59c0ec94 ""
+  "frontiers_ctg_supplementary_material.aux" 1783434115.60719 35142 00f41f9c1624d17586b1974654adeeb7 "xelatex"
+  "frontiers_ctg_supplementary_material.out" 1783434114.66209 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "frontiers_ctg_supplementary_material.tex" 1783434085.06397 144142 89f9668e8a0de4dd37e670748700dfb9 ""
+  "frontiers_suppmat.cls" 1783434082.29589 27903 9f7ca35f0cd63743b3b9acfd59c0ec94 ""
   "logo1.pdf" 1780252982 27591 899d477facd432dc673c414d48371133 ""
   (generated)
   "frontiers_ctg_supplementary_material.aux"

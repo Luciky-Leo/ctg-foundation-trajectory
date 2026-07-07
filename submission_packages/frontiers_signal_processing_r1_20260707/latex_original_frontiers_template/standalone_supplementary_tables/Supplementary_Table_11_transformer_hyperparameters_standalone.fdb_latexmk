@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1783431887.73933 "Supplementary_Table_11_transformer_hyperparameters_standalone.tex" "Supplementary_Table_11_transformer_hyperparameters_standalone.pdf" "Supplementary_Table_11_transformer_hyperparameters_standalone" 1783431889.67853 0
+["pdflatex"] 1783434170.62479 "Supplementary_Table_11_transformer_hyperparameters_standalone.tex" "Supplementary_Table_11_transformer_hyperparameters_standalone.pdf" "Supplementary_Table_11_transformer_hyperparameters_standalone" 1783434171.96683 0
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -63,9 +63,9 @@
   "/mnt/e/WSL/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1781015041 155326 0afce9e40c71e5c0dc86e0d513d47306 ""
   "/mnt/e/WSL/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1780890814 2985505 3f187ef2d3f55a9247146ec98371c544 ""
   "/mnt/e/WSL/texlive/2026/texmf.cnf" 1780890771.36443 496 01ab80fa0036a81d2df86fb0ac70c709 ""
-  "Supplementary_Table_11_transformer_hyperparameters_standalone.aux" 1783431888.95447 527 66cf21e2490e7b6ca5930894c1df9978 "pdflatex"
-  "Supplementary_Table_11_transformer_hyperparameters_standalone.out" 1783431888.83858 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Supplementary_Table_11_transformer_hyperparameters_standalone.tex" 1783431798.45934 5483 de03ebe927d8bd8915cff4983de312d5 ""
+  "Supplementary_Table_11_transformer_hyperparameters_standalone.aux" 1783434171.479 527 66cf21e2490e7b6ca5930894c1df9978 "pdflatex"
+  "Supplementary_Table_11_transformer_hyperparameters_standalone.out" 1783434171.39691 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Supplementary_Table_11_transformer_hyperparameters_standalone.tex" 1783434085.36231 5483 de03ebe927d8bd8915cff4983de312d5 ""
   (generated)
   "Supplementary_Table_11_transformer_hyperparameters_standalone.aux"
   "Supplementary_Table_11_transformer_hyperparameters_standalone.log"

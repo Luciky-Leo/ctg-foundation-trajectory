@@ -173,7 +173,7 @@ The manuscript source package is in `manuscript_overleaf/`. The current R1 Front
 
 Repository URL: https://github.com/Luciky-Leo/ctg-foundation-trajectory
 
-Latest published Zenodo version DOI before the R1 update: https://doi.org/10.5281/zenodo.20485068
+Current R1 Zenodo version DOI: https://doi.org/10.5281/zenodo.21242760
 
 Zenodo concept DOI for all versions: https://doi.org/10.5281/zenodo.20364141
 

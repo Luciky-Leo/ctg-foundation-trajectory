@@ -49,5 +49,8 @@ The previous published version DOI before this R1 update was:
 
 `10.5281/zenodo.20485068`
 
-After publishing the new Zenodo version, update `CITATION.cff`, `README.md`, and the manuscript Data Availability statement if the exact new version DOI rather than the concept DOI is required.
+The published R1 version DOI is:
 
+`10.5281/zenodo.21242760`
+
+`CITATION.cff`, `README.md`, and the manuscript Data Availability statement cite this exact version-level DOI.

@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex frontiers_ctg_manuscript"] 1783431826.8997 "frontiers_ctg_manuscript.aux" "frontiers_ctg_manuscript.bbl" "frontiers_ctg_manuscript" 1783431836.16926 0
+["bibtex frontiers_ctg_manuscript"] 1783431826.8997 "frontiers_ctg_manuscript.aux" "frontiers_ctg_manuscript.bbl" "frontiers_ctg_manuscript" 1783434120.00649 0
   "./Frontiers-Harvard.bst" 1780252982 31641 1341c127ed7af43085eb64600f38bbe5 ""
   "./references.bib" 1783370229 11446 03d9993dd4c4f315566e0f857148a935 ""
-  "frontiers_ctg_manuscript.aux" 1783431830.27754 14713 5e358a2182c5c4953751d9bac55f8c4e "xelatex"
+  "frontiers_ctg_manuscript.aux" 1783434115.83142 14713 5e358a2182c5c4953751d9bac55f8c4e "xelatex"
   (generated)
   "frontiers_ctg_manuscript.bbl"
   "frontiers_ctg_manuscript.blg"
   (rewritten before read)
-["xdvipdfmx"] 1783431831.81233 "frontiers_ctg_manuscript.xdv" "frontiers_ctg_manuscript.pdf" "frontiers_ctg_manuscript" 1783431836.41033 0
-  "frontiers_ctg_manuscript.xdv" 1783431830.28755 617700 3ceafb2303825c799c2b311031d0fddf "xelatex"
+["xdvipdfmx"] 1783434116.49984 "frontiers_ctg_manuscript.xdv" "frontiers_ctg_manuscript.pdf" "frontiers_ctg_manuscript" 1783434120.25103 0
+  "frontiers_ctg_manuscript.xdv" 1783434115.8381 617700 f1f6d48aca9a7b37b75a8e2ccec054b8 "xelatex"
   (generated)
   "frontiers_ctg_manuscript.pdf"
   (rewritten before read)
-["xelatex"] 1783431827.24105 "frontiers_ctg_manuscript.tex" "frontiers_ctg_manuscript.xdv" "frontiers_ctg_manuscript" 1783431836.17152 0
+["xelatex"] 1783434112.9331 "frontiers_ctg_manuscript.tex" "frontiers_ctg_manuscript.xdv" "frontiers_ctg_manuscript" 1783434120.0089 0
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/mnt/e/WSL/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -117,15 +117,15 @@
   "/mnt/e/WSL/texlive/2026/texmf-dist/web2c/texmf.cnf" 1770478701 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "/mnt/e/WSL/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1780890832 5429978 5e05ca3c0358f1570252b11e48847ebb ""
   "/mnt/e/WSL/texlive/2026/texmf.cnf" 1780890771.36443 496 01ab80fa0036a81d2df86fb0ac70c709 ""
-  "FrontiersinHarvard.cls" 1783431796.52365 28683 481ad81cc8e690e52eb5d9a064e3ee22 ""
-  "figures/Figure_1_study_design_pipeline.png" 1783431797.2706 2048002 ab65479aff4b60f7f3ff0809d073928a ""
+  "FrontiersinHarvard.cls" 1783434082.28594 28683 481ad81cc8e690e52eb5d9a064e3ee22 ""
+  "figures/Figure_1_study_design_pipeline.png" 1783434082.9995 2048002 ab65479aff4b60f7f3ff0809d073928a ""
   "figures/Figure_2_model_validation_and_explanation.png" 1783416841 242570 b9bd2befb94b0509f0e69d9fc17d4a71 ""
   "figures/Figure_3_dynamic_phenotype_prototypes.png" 1783416855 202691 eadc7a6098462317ecb9ef7f2432cda1 ""
-  "figures/Figure_4_recalibration_and_clinical_utility.png" 1783431797.66582 203890 8c0d0342f91b551bf69cd10fbeaebc11 ""
-  "frontiers_ctg_manuscript.aux" 1783431830.27754 14713 5e358a2182c5c4953751d9bac55f8c4e "xelatex"
+  "figures/Figure_4_recalibration_and_clinical_utility.png" 1783434083.34904 203890 8c0d0342f91b551bf69cd10fbeaebc11 ""
+  "frontiers_ctg_manuscript.aux" 1783434115.83142 14713 5e358a2182c5c4953751d9bac55f8c4e "xelatex"
   "frontiers_ctg_manuscript.bbl" 1783431826.97942 10320 08d84537b2367be181ecae7635d530fc "bibtex frontiers_ctg_manuscript"
-  "frontiers_ctg_manuscript.out" 1783431830.28155 5569 f8db3ecb49b67a84cb62c71ca442bb05 "xelatex"
-  "frontiers_ctg_manuscript.tex" 1783431798.03398 50845 da5e921a49aa3afb4132f460426ae58d ""
+  "frontiers_ctg_manuscript.out" 1783434115.83505 5569 f8db3ecb49b67a84cb62c71ca442bb05 "xelatex"
+  "frontiers_ctg_manuscript.tex" 1783434085.02032 50845 58dc2e57a4af202c4199a7a0869efb83 ""
   "logo1.pdf" 1780252982 27591 899d477facd432dc673c414d48371133 ""
   (generated)
   "frontiers_ctg_manuscript.aux"

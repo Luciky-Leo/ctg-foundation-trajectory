@@ -57,9 +57,8 @@ Related identifier:
 
 ## After Publishing
 
-Record the new Zenodo version DOI here and update `CITATION.cff`, `README.md`, and the manuscript Data Availability statement if exact version-level citation is required.
+The new Zenodo version was published and the exact version-level DOI has been propagated to `CITATION.cff`, `README.md`, and the manuscript Data Availability statement.
 
 New version DOI:
 
-`TODO_AFTER_ZENODO_PUBLISH`
-
+`https://doi.org/10.5281/zenodo.21242760`
