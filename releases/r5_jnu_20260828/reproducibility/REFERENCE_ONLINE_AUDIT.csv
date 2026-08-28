@@ -1,0 +1,7 @@
+﻿key,source,identifier,observed_title,status,evidence_url
+bai2026jnuctg,Zenodo API,10.5281/zenodo.21800730,JNU-CTG: A Large-Scale Continuous Cardiotocography Dataset for Fetal Well-being Assessment,PASS,https://zenodo.org/api/records/21800730
+prismctg2026-code,GitHub API,sfwon17/Prism-CTG,Prism-CTG,PASS,https://github.com/sfwon17/Prism-CTG
+prismctg2026,arXiv API,2605.02917,PRISM-CTG: A Foundation Model for Cardiotocography Analysis with Multi-View SSL,PASS,https://arxiv.org/abs/2605.02917
+fridman2026ctgfoundation,arXiv API,2601.06149,A Foundation Model Approach for Fetal Stress Prediction During Labor From cardiotocography (CTG) recordings,PASS,https://arxiv.org/abs/2601.06149
+mendis2025crossdatabase,Crossref API,10.1109/JTEHM.2025.3548401,Cross-Database Evaluation of Deep Learning Methods for Intrapartum Cardiotocography Classification,PASS,https://doi.org/10.1109/JTEHM.2025.3548401
+benmbarek2026humanai,Crossref API,10.1038/s41746-026-02556-y,Randomised study of human machine collaboration for cardiotocography interpretation during labour,PASS,https://doi.org/10.1038/s41746-026-02556-y

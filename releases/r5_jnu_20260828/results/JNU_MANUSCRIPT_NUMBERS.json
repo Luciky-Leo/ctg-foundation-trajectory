@@ -1,0 +1,256 @@
+{
+  "source_tables": [
+    "development_risk_distribution_summary.csv",
+    "development_morphology_distribution_summary.csv",
+    "development_paired_hierarchical_bootstrap.csv",
+    "fixed_test_distribution_summary.csv",
+    "fixed_test_paired_hierarchical_bootstrap.csv"
+  ],
+  "encoder_summary": [
+    {
+      "route": "random",
+      "development_auprc_median": 0.3611393844203654,
+      "development_auprc_q1": 0.3535981360986939,
+      "development_auprc_q3": 0.362233102260619,
+      "development_auroc_median": 0.6584340081639385,
+      "morphology_macro_auprc_median": 0.454259190699174,
+      "morphology_macro_auroc_median": 0.621132129839352,
+      "fixed_test_auprc_median": 0.3840235328635329,
+      "fixed_test_auroc_median": 0.5978163992869876
+    },
+    {
+      "route": "ctu_only",
+      "development_auprc_median": 0.379749811064037,
+      "development_auprc_q1": 0.3531217223269717,
+      "development_auprc_q3": 0.3811731573757702,
+      "development_auroc_median": 0.6690718673978477,
+      "morphology_macro_auprc_median": 0.47892709346851,
+      "morphology_macro_auroc_median": 0.6392313288969772,
+      "fixed_test_auprc_median": 0.4017174049907016,
+      "fixed_test_auroc_median": 0.5944741532976826
+    },
+    {
+      "route": "jnu_only",
+      "development_auprc_median": 0.3658260013694367,
+      "development_auprc_q1": 0.3654188945766466,
+      "development_auprc_q3": 0.3751027074220554,
+      "development_auroc_median": 0.6702263637488146,
+      "morphology_macro_auprc_median": 0.5155447176873468,
+      "morphology_macro_auroc_median": 0.6737556374366643,
+      "fixed_test_auprc_median": 0.4011848608721555,
+      "fixed_test_auroc_median": 0.6091800356506238
+    },
+    {
+      "route": "jnu_to_ctu",
+      "development_auprc_median": 0.3681646386195198,
+      "development_auprc_q1": 0.3679569478572378,
+      "development_auprc_q3": 0.369109374133995,
+      "development_auroc_median": 0.6719993402877995,
+      "morphology_macro_auprc_median": 0.5076057203527351,
+      "morphology_macro_auroc_median": 0.6801892207474112,
+      "fixed_test_auprc_median": 0.3419848079956876,
+      "fixed_test_auroc_median": 0.5951426024955436
+    },
+    {
+      "route": "jnu_asymmetric",
+      "development_auprc_median": 0.3801946962978069,
+      "development_auprc_q1": 0.3701114145385213,
+      "development_auprc_q3": 0.3822398045657817,
+      "development_auroc_median": 0.6475075248422876,
+      "morphology_macro_auprc_median": 0.4459802452065987,
+      "morphology_macro_auroc_median": 0.6004596149986148,
+      "fixed_test_auprc_median": null,
+      "fixed_test_auroc_median": null
+    }
+  ],
+  "paired_bootstrap": [
+    {
+      "data_role": "development",
+      "analysis": "risk",
+      "metric": "auprc",
+      "candidate": "jnu_to_ctu",
+      "baseline": "ctu_only",
+      "point_difference": 0.0030420383753629,
+      "ci_low": -0.0304346889488483,
+      "ci_high": 0.0316220208186181,
+      "positive_seed_count": 3,
+      "seed_count": 5
+    },
+    {
+      "data_role": "development",
+      "analysis": "morphology_macro",
+      "metric": "auroc",
+      "candidate": "jnu_to_ctu",
+      "baseline": "ctu_only",
+      "point_difference": 0.0401212953139243,
+      "ci_low": 0.0155055756605334,
+      "ci_high": 0.0646827304468068,
+      "positive_seed_count": 5,
+      "seed_count": 5
+    },
+    {
+      "data_role": "development",
+      "analysis": "morphology_macro",
+      "metric": "auroc",
+      "candidate": "jnu_to_ctu",
+      "baseline": "random",
+      "point_difference": 0.0610895942262278,
+      "ci_low": 0.0344144262922754,
+      "ci_high": 0.0884410788421032,
+      "positive_seed_count": 5,
+      "seed_count": 5
+    },
+    {
+      "data_role": "development",
+      "analysis": "morphology_macro",
+      "metric": "auroc",
+      "candidate": "jnu_to_ctu",
+      "baseline": "classical_signal",
+      "point_difference": -0.0555065287249285,
+      "ci_low": -0.0923705114997607,
+      "ci_high": -0.0199773466654712,
+      "positive_seed_count": 0,
+      "seed_count": 5
+    },
+    {
+      "data_role": "development",
+      "analysis": "risk",
+      "metric": "auprc",
+      "candidate": "jnu_asymmetric",
+      "baseline": "jnu_only",
+      "point_difference": 0.0098178727784773,
+      "ci_low": -0.0290496947541891,
+      "ci_high": 0.0443769886424569,
+      "positive_seed_count": 4,
+      "seed_count": 5
+    },
+    {
+      "data_role": "development",
+      "analysis": "morphology_macro",
+      "metric": "auroc",
+      "candidate": "jnu_asymmetric",
+      "baseline": "jnu_only",
+      "point_difference": -0.078694614861151,
+      "ci_low": -0.1006473915450275,
+      "ci_high": -0.0551734136136915,
+      "positive_seed_count": 0,
+      "seed_count": 5
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "analysis": "risk",
+      "metric": "auprc",
+      "candidate": "jnu_to_ctu",
+      "baseline": "ctu_only",
+      "point_difference": -0.0403448965549168,
+      "ci_low": -0.0766069047226523,
+      "ci_high": 0.0015920902907563,
+      "positive_seed_count": 0,
+      "seed_count": 5
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "analysis": "risk",
+      "metric": "auprc",
+      "candidate": "jnu_only",
+      "baseline": "ctu_only",
+      "point_difference": 0.0004622049541217,
+      "ci_low": -0.0203806144307038,
+      "ci_high": 0.0239514476341684,
+      "positive_seed_count": 2,
+      "seed_count": 5
+    }
+  ],
+  "input_sensitivity": [
+    {
+      "data_role": "development",
+      "route": "ctu_only",
+      "input_variant": "fhr_only",
+      "auprc_median": 0.364451998529068,
+      "delta_vs_full": -0.01529781253496898
+    },
+    {
+      "data_role": "development",
+      "route": "ctu_only",
+      "input_variant": "uc_only",
+      "auprc_median": 0.3600396065495552,
+      "delta_vs_full": -0.0197102045144818
+    },
+    {
+      "data_role": "development",
+      "route": "ctu_only",
+      "input_variant": "one_hz",
+      "auprc_median": 0.3675944760473789,
+      "delta_vs_full": -0.012155335016658109
+    },
+    {
+      "data_role": "development",
+      "route": "jnu_to_ctu",
+      "input_variant": "fhr_only",
+      "auprc_median": 0.3405195998979282,
+      "delta_vs_full": -0.02764503872159163
+    },
+    {
+      "data_role": "development",
+      "route": "jnu_to_ctu",
+      "input_variant": "uc_only",
+      "auprc_median": 0.3788971815404915,
+      "delta_vs_full": 0.0107325429209717
+    },
+    {
+      "data_role": "development",
+      "route": "jnu_to_ctu",
+      "input_variant": "one_hz",
+      "auprc_median": 0.3659606023088588,
+      "delta_vs_full": -0.0022040363106610172
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "route": "ctu_only",
+      "input_variant": "fhr_only",
+      "auprc_median": 0.4113132877433246,
+      "delta_vs_full": 0.00959588275262302
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "route": "ctu_only",
+      "input_variant": "uc_only",
+      "auprc_median": 0.3600536126921839,
+      "delta_vs_full": -0.04166379229851769
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "route": "ctu_only",
+      "input_variant": "one_hz",
+      "auprc_median": 0.3909939267391836,
+      "delta_vs_full": -0.010723478251517982
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "route": "jnu_to_ctu",
+      "input_variant": "fhr_only",
+      "auprc_median": 0.3960800483605761,
+      "delta_vs_full": 0.0540952403648885
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "route": "jnu_to_ctu",
+      "input_variant": "uc_only",
+      "auprc_median": 0.3520553512307058,
+      "delta_vs_full": 0.010070543235018214
+    },
+    {
+      "data_role": "fixed_test_exploratory",
+      "route": "jnu_to_ctu",
+      "input_variant": "one_hz",
+      "auprc_median": 0.3322657866509834,
+      "delta_vs_full": -0.009719021344704204
+    }
+  ],
+  "promotion": {
+    "risk_gate": false,
+    "morphology_representation_gate": true,
+    "main_figure_promotion": false,
+    "decision": "SUPPLEMENT_ONLY"
+  }
+}

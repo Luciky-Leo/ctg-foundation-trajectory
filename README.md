@@ -2,7 +2,11 @@
 
 Code, manuscript source, and submission package for:
 
-Self-supervised biomedical signal representation learning from intrapartum cardiotocography for neonatal risk enrichment
+Self-supervised biomedical signal representation learning from intrapartum cardiotocography: stability, ablation, and exploratory neonatal risk enrichment
+
+## Current release
+
+The current Reviewer 5 revision is `v1.4.0-r2` (2026-08-29). Its authoritative public payload is under `releases/r5_jnu_20260828/`. Earlier manuscript candidates and submission packages remain available for traceability but are not the current evidence base.
 
 ## Overview
 
@@ -15,7 +19,8 @@ The repository is intended as a code and source-data archive, not as a deployabl
 | Role | Dataset | Use |
 |---|---|---|
 | Primary signal cohort | CTU-UHB / CTU-CHB Intrapartum CTG Database | Raw FHR and UC time-series, clinical outcomes |
-| External/harmonized validation | CTGDL | Multi-source processed CTG files; license and DUA checks required for each subset |
+| Cross-domain label-free pretraining | JNU-CTG | 20,769 antepartum records from 12,606 patient groups; labels withheld during SSL |
+| External representation context | CTGDL-FHRMA | Representation/domain-shift analysis only; not neonatal-outcome validation |
 | Feature-level baseline | UCI Cardiotocography | Traditional CTG features and expert labels |
 | Annotation support | CTU-CHB annotation dataset | Optional expert annotation layer for interpretability analysis |
 
@@ -38,6 +43,7 @@ scripts/                 Data download, preprocessing, modelling and reporting s
 manuscript_overleaf/     Manuscript source, figures, source data and supplementary tables
 submission_packages/     Journal submission packages, including the current R1 Frontiers package
 reproducibility/         Fixed split files, locked-replay summaries and reviewer-facing sensitivity tables
+releases/r5_jnu_20260828  Current R2 manuscript, scripts, aggregate results, figures and audits
 docs/PROJECT_STRUCTURE.md Detailed active/archive path guide
 archive/                 Deprecated experiments retained for traceability
 requirements.txt         Minimal Python package list
@@ -118,54 +124,26 @@ Run a compact transformer sweep:
 .\.venv312\Scripts\python.exe .\scripts\04_models\run_transformer_sweep.py --epochs 4
 ```
 
-## Current manuscript-candidate result
+## Current R2 evidence
 
-The fixed record-level train/test validation used CTU-UHB/CTU-CHB as the primary raw-signal cohort. The primary endpoint was umbilical artery pH <7.15 or 5-minute Apgar score <7.
+The current analysis freezes the 386/166 CTU-UHB record split, a compact p80-d48-l2 mixed-mask encoder, five training seeds and a downstream model with 10 classical signal features plus five training-fitted SSL principal components. The fixed test set had historical configuration exposure and is therefore reported as exploratory rather than fully independent.
 
-- Signal features: AUROC 0.6303, AUPRC 0.3366.
-- SSL embeddings alone: AUROC 0.4947, AUPRC 0.2125.
-- Signal + SSL embeddings: AUROC 0.6025, AUPRC 0.3765.
-- Signal + SSL + signal phenotype manuscript candidate: AUROC 0.6168, AUPRC 0.4016.
-- Development-only model-selection sensitivity selected a smaller transformer configuration with held-out AUPRC 0.3872.
-- SSL PCA sensitivity retained similar enrichment with fewer predictors: PCA10 AUPRC 0.4241 and PCA20 AUPRC 0.4256.
+- Signal baseline fixed-test AUPRC: 0.3765; AUROC: 0.6428.
+- Reduced SSL five-seed median fixed-test AUPRC: 0.3935; AUROC: 0.5954.
+- All paired AUPRC intervals versus the signal baseline crossed zero.
+- Development-only objective ablations did not outperform a random encoder.
 
-These values correspond to the fixed-seed locked replay used for the R1 revision. The originally submitted unseeded values (signal + SSL AUPRC 0.4432; final AUPRC 0.4324) were not retained because the exact run could not be reproduced. Bootstrap AUPRC-difference intervals versus signal-only features crossed zero, so SSL is framed as an interpretable representation, phenotype-enrichment and recalibration layer rather than as a stable discrimination-improvement result.
+JNU-CTG supplied 62,307 non-overlapping 10-minute windows for a prespecified public cross-domain sensitivity. JNU-to-CTU adaptation did not improve development risk enrichment over CTU-only SSL (paired mean AUPRC difference 0.0030, 95% CI -0.0304 to 0.0316) and had lower exploratory fixed-test AUPRC (0.3420 versus 0.4017). It did transfer expert-labelled morphology information: median macro-AUROC increased from 0.6392 to 0.6802 versus CTU-only SSL, but remained below classical signal features (0.7357).
 
-Interpretation: the model is framed as a retrospective risk-enrichment and phenotyping workflow, not as a clinically deployable diagnostic predictor.
+The prespecified promotion decision is therefore `SUPPLEMENT_ONLY`. The allowed claim is transfer of morphology information, not improved neonatal-risk prediction, external outcome validation or clinical deployment.
 
-## Current Best Transformer Sweep
+## CTGDL external representation context
 
-The best compact sweep result so far is:
-
-```text
-patch_len=80
-d_model=64
-layers=3
-mask_strategy=channel
-contrastive_weight=0.2
-epochs=4
-```
-
-Validation:
-
-- signal + SSL embeddings: AUROC 0.6025, AUPRC 0.3765.
-- signal + SSL + signal phenotype: AUROC 0.6168, AUPRC 0.4016.
-
-The selected architecture's 12-epoch refit is reported for training-dynamics inspection only; downstream representation quality was judged from fixed held-out embeddings, phenotype structure and reviewer-requested sensitivity analyses.
-
-## CTGDL External Representation Validation
-
-CTGDL FHRMA processed files have been downloaded and embedded using the current best transformer. This is representation/domain-shift validation, not neonatal outcome validation.
-
-- CTGDL FHRMA records: 135.
-- CTGDL FHRMA windows: 2604.
-- CTU-vs-FHRMA embedding domain classifier AUROC: 0.9088.
-
-Interpretation: external FHRMA data show substantial dataset shift, which is important evidence for the paper's robustness section.
+The selected encoder was applied to 135 CTGDL-FHRMA records. The revised domain classifier AUROC is 0.8811. Because a harmonized neonatal endpoint was unavailable, this analysis tests representation transport and source-domain shift only.
 
 ## Manuscript and reporting files
 
-The manuscript source package is in `manuscript_overleaf/`. The current R1 Frontiers package is `submission_packages/frontiers_signal_processing_r1_20260707/`, including the official Frontiers LaTeX template, compiled manuscript PDF, compiled supplementary PDF, separate Reviewer 1/Reviewer 2 response PDFs, source-data CSV files, supplementary tables S1-S11 and standalone supplementary-table PDFs. The previous first-submission package is retained under `submission_packages/frontiers_signal_processing_20260601/` for traceability.
+The current R2 manuscript, supplement, Reviewer 5 response, scripts, aggregate results, figures, supplementary tables S1-S18 and reproducibility audits are under `releases/r5_jnu_20260828/`. The R1 and first-submission packages remain under `submission_packages/` for traceability.
 
 ## Code archive
 
@@ -173,7 +151,7 @@ The manuscript source package is in `manuscript_overleaf/`. The current R1 Front
 
 Repository URL: https://github.com/Luciky-Leo/ctg-foundation-trajectory
 
-Current R1 Zenodo version DOI: https://doi.org/10.5281/zenodo.21242760
+Previous R1 Zenodo version DOI: https://doi.org/10.5281/zenodo.21242760
 
 Zenodo concept DOI for all versions: https://doi.org/10.5281/zenodo.20364141
 

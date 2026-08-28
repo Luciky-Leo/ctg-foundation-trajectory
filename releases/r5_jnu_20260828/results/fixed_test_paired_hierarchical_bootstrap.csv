@@ -1,0 +1,9 @@
+metric,candidate,baseline,point_mean_across_seeds,median_seed_difference,positive_seed_count,seed_count,ci_low,ci_high,bootstrap_iterations,interpretation
+auprc,jnu_only,random,0.01232231875352131,0.008998135141885744,4,5,-0.021368338721261506,0.053519154876132485,2000,exploratory_fixed_test_with_potential_selection_induced_optimism
+auroc,jnu_only,random,0.008422459893048106,0.013368983957219194,3,5,-0.016921642314764153,0.03293270040519925,2000,exploratory_fixed_test_with_potential_selection_induced_optimism
+auprc,jnu_only,ctu_only,0.00046220495412172544,-0.008642035062311204,2,5,-0.02038061443070387,0.023951447634168493,2000,exploratory_fixed_test_with_potential_selection_induced_optimism
+auroc,jnu_only,ctu_only,0.011274509803921594,0.017156862745097978,3,5,-0.016999743677375216,0.041172326096063756,2000,exploratory_fixed_test_with_potential_selection_induced_optimism
+auprc,jnu_to_ctu,random,-0.0284847827555173,-0.04064195082134198,0,5,-0.0725850517191495,0.022202654511645707,2000,exploratory_fixed_test_with_potential_selection_induced_optimism
+auroc,jnu_to_ctu,random,-0.011319073083778997,-0.004679144385026701,1,5,-0.03747146408414914,0.012711544306756997,2000,exploratory_fixed_test_with_potential_selection_induced_optimism
+auprc,jnu_to_ctu,ctu_only,-0.04034489655491689,-0.025737768208765277,0,5,-0.07660690472265233,0.0015920902907563283,2000,exploratory_fixed_test_with_potential_selection_induced_optimism
+auroc,jnu_to_ctu,ctu_only,-0.008467023172905508,-0.005124777183600826,2,5,-0.040693245822278123,0.0228583524318818,2000,exploratory_fixed_test_with_potential_selection_induced_optimism

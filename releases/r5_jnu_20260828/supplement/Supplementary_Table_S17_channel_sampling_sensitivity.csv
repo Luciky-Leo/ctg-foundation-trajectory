@@ -1,0 +1,13 @@
+data_role,route,input_variant,auprc_median,delta_vs_full
+development,ctu_only,fhr_only,0.364451998529068,-0.01529781253496898
+development,ctu_only,uc_only,0.3600396065495552,-0.0197102045144818
+development,ctu_only,one_hz,0.3675944760473789,-0.012155335016658109
+development,jnu_to_ctu,fhr_only,0.3405195998979282,-0.02764503872159163
+development,jnu_to_ctu,uc_only,0.3788971815404915,0.0107325429209717
+development,jnu_to_ctu,one_hz,0.3659606023088588,-0.0022040363106610172
+fixed_test_exploratory,ctu_only,fhr_only,0.4113132877433246,0.00959588275262302
+fixed_test_exploratory,ctu_only,uc_only,0.3600536126921839,-0.04166379229851769
+fixed_test_exploratory,ctu_only,one_hz,0.3909939267391836,-0.010723478251517982
+fixed_test_exploratory,jnu_to_ctu,fhr_only,0.3960800483605761,0.0540952403648885
+fixed_test_exploratory,jnu_to_ctu,uc_only,0.3520553512307058,0.010070543235018214
+fixed_test_exploratory,jnu_to_ctu,one_hz,0.3322657866509834,-0.009719021344704204

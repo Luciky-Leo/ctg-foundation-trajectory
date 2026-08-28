@@ -1,0 +1,216 @@
+% Reviewer-5 targeted revision; all numerical results are from the locked R2 route.
+\documentclass[utf8]{FrontiersinHarvard}
+
+\usepackage{url,hyperref,lineno,microtype,subcaption}
+\hypersetup{hidelinks}
+\usepackage[singlespacing]{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+
+\linenumbers
+
+\def\keyFont{\fontsize{8}{11}\helveticabold }
+\def\firstAuthorLast{Gui {et~al.}}
+\def\Authors{Xiaoqian Gui\,$^{1,\dagger}$, Kaisi Zhu\,$^{2,\dagger}$, Ziyi Jiang\,$^{3,\dagger}$ and Feifan Lu\,$^{4,*}$}
+\def\Address{$^{1}$Changhai Center for Simulation, Learning and Innovation, Changhai Hospital, Naval Medical University, Shanghai, China \\
+$^{2}$Department of Anesthesiology, Changhai Hospital, Naval Medical University, Shanghai, China \\
+$^{3}$Department of General Internal Medicine, The 929th Hospital, Affiliated with Changhai Hospital, Naval Medical University, China \\
+$^{4}$Department of Obstetrics and Gynecology, Changhai Hospital, Naval Medical University, Shanghai, China}
+\def\corrAuthor{Feifan Lu}
+\def\corrEmail{luff94@163.com}
+
+\begin{document}
+\onecolumn
+\firstpage{1}
+
+\title[Self-supervised CTG representations]{Self-supervised biomedical signal representation learning from intrapartum cardiotocography: stability, ablation, and exploratory neonatal risk enrichment}
+
+\author[\firstAuthorLast ]{\Authors}
+\address{}
+\correspondance{}
+\extraAuth{$^\dagger$ These authors have contributed equally to this work.}
+\maketitle
+
+\begin{abstract}
+\section{}
+Intrapartum cardiotocography (CTG) contains long paired fetal heart rate (FHR) and uterine contraction (UC) trajectories, but evidence that self-supervised learning (SSL) adds stable neonatal-outcome information in small open cohorts remains limited. We evaluated a compact patch-based transformer as a transparent representation and sensitivity workflow rather than as a deployable predictor. CTU-UHB was fixed at 386 development and 166 test records; the composite endpoint (umbilical artery pH $<$7.15 or 5-minute Apgar $<$7) occurred in 79 and 34 records. Development-only selection froze a 74,768-parameter encoder and a downstream model containing 10 signal features plus five training-fitted SSL principal components. In the historically exposed fixed test set, the signal baseline achieved AUPRC 0.3765 and AUROC 0.6428; the reduced SSL model had five-seed median AUPRC 0.3935 and AUROC 0.5954, with all paired AUPRC intervals versus signal features crossing zero. A fixed-development objective ablation also failed to outperform a random encoder. We then added a prespecified cross-domain sensitivity using JNU-CTG: 20,769 antepartum records from 12,606 patient groups yielded 62,307 non-overlapping 10-minute windows, with all clinical labels withheld during pretraining. Across five seeds, JNU pretraining followed by CTU-development adaptation produced development median AUPRC 0.3682 versus 0.3797 for CTU-only SSL (paired mean difference 0.0030, 95\% CI $-0.0304$ to 0.0316). The same route improved frozen-encoder morphology macro-AUROC from 0.6392 to 0.6802 (difference 0.0401, 95\% CI 0.0155--0.0647) and exceeded a random encoder, but remained below classical signal features (0.7357). Exploratory fixed-test AUPRC was 0.3420 for JNU-to-CTU versus 0.4017 for CTU-only SSL. Thus, larger public pretraining transferred expert-labelled morphology information but did not establish stable neonatal-risk enrichment. The fixed test set had prior historical exposure and may retain selection-induced optimism; CTGDL-FHRMA remained representation/domain-shift analysis only.
+
+\tiny
+\keyFont{\section{Keywords:} cardiotocography; biomedical signal processing; self-supervised learning; time-series representation learning; risk enrichment}
+\end{abstract}
+
+\section{Introduction}
+
+Intrapartum CTG is widely used to monitor fetal status during labour, yet interpretation remains difficult because adverse neonatal outcomes are uncommon, visual agreement is imperfect and many abnormal traces do not correspond to clinically important acidemia \citep{alfirevic2017,figo2015,nichd2008,francis2024}. FHR and UC traces are dynamic physiological signals: their joint morphology reflects baseline regulation, variability, decelerative responses and contraction-associated stress. Static summaries and categorical rule systems improve standardization but compress much of that temporal structure \citep{mendis2023}. A signal-processing model may therefore be useful if it represents long trajectories in a compact form, remains interpretable at the record level and is evaluated without overstating clinical validity.
+
+Self-supervised time-series models learn representations from unlabelled signals through pretext objectives such as masked reconstruction and contrastive consistency \citep{zerveas2021,yue2022,zhang2022tfc}. Patch tokenization, as used in PatchTST-style models, reduces long sequences to tractable local tokens and can preserve short-range morphology while lowering transformer cost \citep{nie2023}. Mixed masking can expose an encoder to isolated missing segments, contiguous gaps and channel-specific degradation; masked reconstruction encourages recovery of local signal structure, whereas NT-Xent encourages two augmented views of the same window to have consistent embeddings. These design elements are technically suitable for CTG, where signal interruption, transient artefact and long monitoring duration are routine. However, suitability does not establish that SSL improves neonatal outcome prediction, especially when the labelled cohort and event count are small.
+
+Recent large CTG studies demonstrate what strong clinical validation requires. For example, a multicentre deep-learning study used more than 22,000 deliveries with internal and external evaluations \citep{park2025nationwide}. A cross-database study also showed that input channel and sampling rate can materially affect transport, with 1-Hz ResNet analysis providing the strongest geometric-mean cross-database AUROC in that comparison \citep{mendis2025crossdatabase}. Concurrent CTG representation preprints have explored large-scale multi-view pretraining and channel-asymmetric masked reconstruction \citep{prismctg2026,fridman2026ctgfoundation}. These studies motivate sensitivity analyses but are not head-to-head benchmarks for the present open-data pipeline. Open CTG datasets remain valuable for reproducible method development, but they require narrower claims. External public datasets may test whether an embedding transports across signal sources, yet cannot provide external clinical validation when outcome definitions are not harmonized. Similarly, a test set viewed during prior architecture exploration cannot later be described as fully independent.
+
+The 2026 JNU-CTG release provides an unusually large public antepartum resource: 20,769 continuous 30-minute recordings from 12,606 pregnancies, with paired FHR and UC waveforms at 4 Hz \citep{bai2026jnuctg}. Its pregnancy stage and outcome context differ from CTU-UHB, so outcome pooling would be invalid. It nevertheless permits a direct test of a narrower question: does label-withheld public antepartum pretraining transfer physiological morphology or neonatal-risk enrichment to an intrapartum cohort when patient grouping, architecture and downstream dimensionality are frozen in advance?
+
+We therefore restructured this study around four questions. First, can a compact CTG encoder be selected using development records only, with fold-specific pretraining? Second, are its downstream results stable across seeds, lower-dimensional models and objective/masking ablations? Third, does label-withheld JNU pretraining transfer morphology or risk-enrichment information without pooling incompatible outcomes? Fourth, do learned embeddings support clinically inspectable phenotypes, recalibration and external representation analysis without implying clinical deployment? The resulting study is a retrospective delivery-level risk-enrichment analysis without a prespecified lead-time horizon. Its purpose is to provide transparent evidence about representation feasibility and its limitations, not to establish diagnostic superiority or real-time decision support.
+
+\section{Results}
+
+\subsection{Development-only selection produced a smaller locked encoder}
+
+The primary CTU-UHB cohort comprised 552 records, fixed before the present reanalysis into 386 development records and 166 test records. The composite endpoint occurred in 79 development records (20.47\%) and 34 test records (20.48\%). Four prespecified compact encoders were compared by three-fold stratified validation inside the 386 development records. SSL pretraining was repeated within each fold using only that fold's development-training windows; no development-validation or fixed-test record contributed to fold-specific pretraining. Mean development AUPRC was 0.4045 for the p60-d64-l2 mixed configuration, 0.3962 for p120-d64-l2 block, 0.3938 for p80-d48-l2 mixed and 0.3900 for p80-d64-l3 channel. The best model's one-standard-error threshold was 0.3218. The smallest eligible model, p80-d48-l2 mixed (74,768 trainable parameters), was therefore selected and frozen (Figure~\ref{fig:design}; Supplementary Figure~S1A).
+
+The selected encoder used 10-minute paired FHR/UC windows, non-overlapping 80-point patches, a 48-dimensional token space, two transformer layers and four attention heads. Its combined objective assigned weight 1.0 to masked reconstruction and 0.1 to NT-Xent consistency. Five fixed random seeds were then used for full-development pretraining. The downstream primary model reduced each 48-dimensional record embedding to five principal components fitted in development records and combined these with 10 prespecified signal features (Figure~\ref{fig:design}B).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/Figure_1_R5_JNU_final.png}
+\caption{\textbf{Leakage-aware CTG evidence chain and bounded public-pretraining sensitivity.} (A) CTU-UHB records were fixed into 386 development and 166 test records. Fold-specific SSL pretraining and all downstream fitting used development records only; the historically exposed fixed test set is exploratory. JNU-CTG contributed label-withheld antepartum windows only to a prespecified cross-domain sensitivity, and CTGDL-FHRMA remained representation-domain context without outcome validation. (B) The frozen encoder used 10-minute 4-Hz FHR/UC windows, patch length 80, mixed masking, two transformer layers with $d_{model}=48$, masked reconstruction and NT-Xent consistency. Encoder origins and channel/sampling sensitivities were compared without changing the architecture or downstream dimensionality. (C) Public-data scale and CTU outcome balance. JNU bars use a logarithmic display and are annotated with exact counts. (D) Data roles and permitted claims. The JNU route did not pass the prespecified joint risk-and-morphology promotion gate, so its detailed results remain supplementary.}
+\label{fig:design}
+\end{figure}
+
+\subsection{Reduced SSL features did not provide a statistically resolved increment}
+
+The 10-feature signal baseline achieved test AUPRC 0.3765, AUROC 0.6428 and Brier score 0.2482. Across five independently initialized selected encoders, the reduced SSL model achieved median AUPRC 0.3935 (IQR 0.3929--0.4021; range 0.3916--0.4042), median AUROC 0.5954 (range 0.5867--0.6058) and median Brier score 0.2628 (range 0.2623--0.2643). Thus, the AUPRC point estimates were modestly higher, but rank discrimination and raw probability error were worse than the signal baseline. Seed-specific AUPRC differences versus the signal baseline ranged from 0.0151 to 0.0277; all five paired bootstrap 95\% confidence intervals crossed zero (Figure~\ref{fig:performance}A--D). These results do not demonstrate a stable predictive advantage for SSL.
+
+The primary model used 15 predictors and 79 development events, corresponding to 5.27 events per predictor. This reduced the dimensionality relative to the historical 64-embedding model but did not remove the overfitting concern. Sensitivity analyses yielded AUPRC 0.4229 with 10 SSL principal components, 0.4210 with 20 components, 0.3918 with five components and elastic-net regularization, and 0.3967 when missingness fractions were reintroduced. These analyses were not used to choose the primary model and remain exploratory because the fixed test set had already been viewed.
+
+\subsection{Objective ablations weakened the causal algorithmic claim}
+
+On a fixed 289/97 development split, a random encoder achieved AUPRC 0.3333. Reconstruction-only, NT-Xent-only, the combined objective and the combined objective without jitter achieved AUPRCs of 0.3174, 0.2991, 0.3106 and 0.3100, respectively (Figure~\ref{fig:performance}E). Mask-strategy sensitivities produced AUPRC 0.3461 for random masking, 0.3312 for block masking, 0.3296 for channel masking and 0.3106 for mixed masking (Supplementary Figure~S1C). Because these are single fixed-development sensitivities and the combined objective did not outperform the random encoder, they do not support attributing downstream performance to a specific SSL objective. They instead show that the present cohort is insufficient for a strong component-level efficacy claim.
+
+\subsection{Large public pretraining transferred morphology but not neonatal-risk enrichment}
+
+JNU-CTG yielded 62,307 non-overlapping 10-minute windows from 20,769 recordings and 12,606 patient groups. All Apgar, asphyxia, FIGO and other clinical labels were excluded from SSL. We compared random initialization, CTU-development-only SSL, JNU-only SSL and JNU pretraining followed by CTU-development adaptation using the frozen architecture, identical three-fold development assignments and five seeds. Median development out-of-fold AUPRCs were 0.3611, 0.3797, 0.3658 and 0.3682, respectively (Supplementary Figure~S3A; Supplementary Table~S14). For JNU-to-CTU versus CTU-only, the hierarchical paired mean AUPRC difference was 0.0030 (95\% CI $-0.0304$ to 0.0316; positive in three of five seeds). Thus, the prespecified risk-enrichment promotion gate was not met.
+
+Frozen-encoder linear probes gave a different but bounded result. Across seven expert morphology tasks, median macro-AUROC was 0.6211 for random embeddings, 0.6392 for CTU-only SSL, 0.6738 for JNU-only SSL and 0.6802 for JNU-to-CTU adaptation. The JNU-to-CTU difference was 0.0401 (95\% CI 0.0155--0.0647) versus CTU-only and 0.0611 (95\% CI 0.0344--0.0884) versus random, with positive differences in all five seeds. Classical signal features nevertheless remained stronger (macro-AUROC 0.7357); the JNU-to-CTU difference versus signal features was $-0.0555$ (95\% CI $-0.0924$ to $-0.0200$). This supports transfer of morphology information, not superiority over conventional summaries (Supplementary Figure~S3B,C; Supplementary Tables~S15--S16).
+
+The fixed-test results, opened only after the development promotion decision, remained exploratory because of historical test exposure. Median AUPRC was 0.4017 for CTU-only SSL, 0.4012 for JNU-only SSL and 0.3420 for JNU-to-CTU adaptation. The JNU-to-CTU paired mean difference versus CTU-only was $-0.0403$ (95\% CI $-0.0766$ to 0.0016; positive in zero of five seeds). FHR-only, UC-only and 1-Hz sensitivities changed direction between development and fixed-test analyses, and channel-asymmetric JNU masking improved neither morphology nor a resolved risk signal. These results were therefore retained in the supplement and did not alter the primary model or conclusion (Supplementary Figure~S3D--F; Supplementary Tables~S17--S18).
+
+\subsection{Phenotypes remained descriptive rather than predictive}
+
+Phenotypes were evaluated as an interpretation layer rather than included in the primary risk model. At $k=4$, adding the signal phenotype to the reduced SSL model changed AUPRC from 0.3929 to 0.3978, whereas adding the SSL phenotype or both phenotype families reduced AUPRC to 0.3511 and 0.3457 (Figure~\ref{fig:performance}F). Results at $k=3$ and $k=5$ were similarly inconsistent. Figure 3 summarizes the phenotype contrasts and robustness analyses. Signal phenotype 2 nevertheless remained clinically inspectable: it concentrated neonatal risk (34.4\%), had lower mean cord pH, more decelerations and longer deceleration burden than the other phenotypes; phenotype 4 had stronger UC-event burden but lower neonatal-risk prevalence. Bootstrap and reclustering analyses supported the direction of these signal-phenotype contrasts. This pattern is consistent with an interpretable dynamic phenotype, but it neither proves a fetal-distress mechanism nor establishes incremental prediction.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/Figure_2_R5_revised.png}
+\caption{\textbf{Fixed-test performance, stability and ablation.} (A,B) Precision--recall and receiver-operating-characteristic curves for the signal baseline and the central-seed reduced SSL model. (C) AUPRC and AUROC across five encoder seeds. (D) Paired bootstrap AUPRC differences between each reduced SSL model and the signal baseline; all 95\% intervals cross zero. (E) Development-only objective ablation, including the random-encoder negative control. (F) Fixed-test AUPRC changes after adding signal and/or SSL phenotypes to the central-seed reduced SSL model. Panels A--D and F use the fixed test set with potential selection-induced optimism; Panel E is a fixed development-only sensitivity analysis.}
+\label{fig:performance}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/Figure_3_dynamic_phenotype_prototypes.jpg}
+\caption{\textbf{Clinical interpretation and robustness of signal phenotypes.} (A) Neonatal-risk prevalence and mean cord pH across four development-fitted signal phenotypes. (B) Expert-derived morphology summaries, including deceleration and UC-event burden. (C) Bootstrap-supported targeted contrasts for phenotype 2 risk, cord pH and decelerative burden and phenotype 4 UC burden. (D) Direction preservation across 200 reclustering perturbations. Phenotypes are descriptive and do not establish causal fetal pathophysiology.}
+\label{fig:phenotypes}
+\end{figure}
+
+\subsection{Endpoint sensitivity showed heterogeneity and sparse-event instability}
+
+For pH $<$7.15 alone, there were 72 development and 33 test events; signal and reduced SSL AUPRCs were 0.4161 and 0.4044. For pH $<$7.10, there were 37 development and 19 test events, with AUPRCs 0.4507 and 0.4588. For pH $<$7.05, there were 25 development and 15 test events, with AUPRCs 0.5721 and 0.5382. The 5-minute Apgar endpoint had only 15 development and four test events, and both AUPRC estimates were approximately 0.059. These analyses show that conclusions depend on endpoint definition and that severe-outcome estimates are unstable. They are descriptive boundary analyses rather than confirmatory secondary endpoints.
+
+\subsection{Recalibration improved probability error but not representation validity}
+
+Raw signal predictions had Brier score 0.2482, expected calibration error (ECE) 0.2874, calibration intercept $-1.4267$ and slope 0.6518. Platt recalibration, fitted from development-only out-of-fold predictions, reduced the Brier score to 0.1543 and ECE to 0.0386; the intercept and slope were $-0.2404$ and 0.9006. Raw reduced SSL predictions had Brier score 0.2636, ECE 0.2747, intercept $-1.3920$ and slope 0.3860. Platt recalibration reduced Brier score to 0.1579 and ECE to 0.0915, with intercept $-0.5638$ and slope 0.6440 (Figure~\ref{fig:calibration}A--D). Isotonic recalibration was less stable. Across thresholds 0.10--0.30, mean net benefit was 0.0482 for the Platt-calibrated signal model and 0.0356 for the Platt-calibrated reduced SSL model (Figure~\ref{fig:calibration}E,F). Recalibration improved the probability scale but did not rescue the unresolved incremental value of SSL.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/Figure_4_R5_calibration.png}
+\caption{\textbf{Calibration, risk distributions and decision curves.} (A,B) Raw and Platt-recalibrated calibration curves for the signal and reduced SSL models. (C) Reduced SSL predicted-risk distributions by event status under raw, Platt and isotonic calibration. (D) Brier score and ECE for both models and calibration methods. (E) Decision curves for the Platt-calibrated models. (F) Mean net benefit across thresholds 0.10--0.30. Calibration was fitted in development records only and evaluated in the fixed test set.}
+\label{fig:calibration}
+\end{figure}
+
+\subsection{External analysis demonstrated domain shift, not clinical transportability}
+
+The selected central-seed encoder was applied to 135 CTGDL-FHRMA records. A classifier separating CTU-UHB from CTGDL-FHRMA embeddings achieved AUROC 0.8811, indicating substantial source-domain information in the representation. CTGDL records could be assigned to CTU-derived SSL centroids, but assignments were concentrated in two phenotypes and centroid distances were shifted (Supplementary Figure~S2). Because CTGDL-FHRMA did not provide a directly harmonized version of the study endpoint, this analysis tests representation transportability and domain shift only. It is not external outcome validation and does not establish clinical transportability.
+
+\section{Discussion}
+
+This targeted reanalysis changes the interpretation of the study. A development-only selection route produced a smaller encoder and a lower-dimensional downstream model, but the evidence did not establish that SSL improved neonatal outcome prediction. Reduced SSL models had modestly higher AUPRC point estimates across five seeds, yet every paired confidence interval crossed zero, and AUROC and Brier score were worse than the signal baseline. More importantly, the combined reconstruction--contrastive objective did not outperform a random encoder in the fixed-development ablation. The scientifically defensible conclusion is therefore representation feasibility with unresolved incremental predictive value.
+
+The distinction between enrichment and diagnosis is central. AUPRC was retained as the primary metric because it reflects the concentration of events among high-scoring records in a low-prevalence setting \citep{davis2006}. However, an AUPRC point increase without a resolved paired interval, accompanied by lower AUROC and worse raw Brier score, cannot be described as broad predictive improvement. The model is not a definitive fetal-distress classifier, and the analysis does not support autonomous triage, operative-delivery decisions or real-time clinical alerts. Platt recalibration improved probability error, as expected when raw scores are miscalibrated \citep{vanCalster2019}, but calibration is conditional on the present cohort and endpoint and cannot substitute for prospective validation.
+
+The signal phenotypes remain the most clinically interpretable contribution. Phenotype 2 combined higher risk, lower cord pH and greater decelerative burden, a pattern consistent with abnormal fetal response to intrapartum stress. The wording ``consistent with'' is deliberate: retrospective clustering cannot prove hypoxic causality, and the deceleration summaries are algorithmic proxies. Moreover, adding signal phenotype changed AUPRC only minimally and SSL phenotypes reduced it. Phenotypes should therefore be used to organize trajectory heterogeneity and generate testable physiological hypotheses, not as evidence that clustering improves prediction.
+
+The revised workflow directly addresses model-selection leakage but cannot erase historical test exposure. The present architecture was chosen solely by development-fold AUPRC with fold-specific SSL pretraining and a one-standard-error rule. Nevertheless, an earlier exploratory analysis ranked configurations using fixed-test AUPRC. Once those labels and results have been viewed, the same test set cannot regain full independence. We therefore call it a fixed test set with potential selection-induced optimism, relegate the historical 0.4016 AUPRC result to the supplement, and avoid using either route as definitive validation. Only a new outcome-harmonized cohort or a prospectively locked temporal cohort can resolve this limitation.
+
+Sample size remains another major limitation. The primary reduced model had 15 predictors but only 79 development events (5.27 events per predictor). PCA and penalization reduce effective complexity but do not eliminate small-sample instability. The endpoint sensitivities were even smaller, particularly Apgar $<$7 with four test events. All severe-outcome estimates must therefore be treated as exploratory. A future confirmatory study should prespecify the endpoint, representation, calibration method and temporal cutoff before data access. As a practical planning target rather than a formal sample-size calculation, approximately 300 primary events would provide about 20 events per 15 effective predictors, followed by external evaluation containing at least 100 events; formal simulation should then account for prevalence, clustering by centre, temporal drift and the expected optimism correction \citep{steyerberg2019,tripodai2024}.
+
+The added JNU experiment sharpens the negative boundary. More unlabelled pretraining data did improve CTU expert-morphology probes relative to random and CTU-only embeddings, showing that the frozen encoder retained transferable physiological structure. That gain did not extend to stable neonatal-risk enrichment and did not exceed classical signal features. The result cautions against equating pretraining scale or a ``foundation'' label with clinically useful transfer. It also agrees with emerging CTG work in treating channel design, signal dropout and sampling rate as model-specific empirical questions rather than universal defaults \citep{mendis2025crossdatabase,prismctg2026,fridman2026ctgfoundation}.
+
+The analysis also lacks a clinically defined prediction horizon. Complete available intrapartum records were summarized at the delivery level, so the work cannot claim that risk was available a specified number of minutes before delivery or intervention. Future prospective evaluation should freeze lead-time cutoffs such as 30 or 60 minutes before a decision point, exclude post-decision signal, test centre-specific transport and evaluate whether predictions change management without increasing unnecessary intervention. A recent randomized multi-reader CTG study further illustrates that eventual translation should be judged by whether calibrated assistance improves human decisions, not by autonomous model performance alone \citep{benmbarek2026humanai}. The external CTGDL analysis shows why such validation is necessary: a domain AUROC of 0.8811 indicates substantial dataset shift, not successful transport.
+
+In summary, this study provides an auditable open-data pipeline for patch-based CTG representation learning, fold-specific development selection, negative controls, seed stability, interpretable signal phenotypes and recalibration. It also shows that technically plausible SSL components do not automatically confer predictive benefit in a small labelled cohort. The appropriate next step is new, prospectively locked and outcome-harmonized validation, not a larger retrospective claim from the same test records.
+
+\section{Methods}
+
+\subsection{Study design and data sources}
+
+This was a retrospective open-data biomedical signal-processing study. CTU-UHB/CTU-CHB was the primary raw-signal cohort because it provides paired intrapartum FHR and UC signals with neonatal metadata \citep{goldberger2000,chudacek2014,ctuuhb}. JNU-CTG was used only for public cross-domain SSL sensitivity analysis \citep{bai2026jnuctg}. CTGDL-FHRMA was used for external representation and domain-shift analysis \citep{ctgdl}. UCI Cardiotocography was retained as a feature-level contextual resource but was not used for raw-signal outcome validation \citep{uci}. The analysis used public de-identified data and did not involve participant contact or re-identification.
+
+\subsection{Outcome definition and prediction horizon}
+
+The primary endpoint was positive when available metadata indicated umbilical artery pH $<$7.15 or 5-minute Apgar score $<$7. The broader pH threshold retained sufficient events for an open-data enrichment analysis and was not intended to define severe metabolic acidosis. Prespecified sensitivity outcomes were pH $<$7.15 alone, 5-minute Apgar $<$7 alone, pH $<$7.10 and pH $<$7.05. This is a retrospective delivery-level risk-enrichment analysis without a prespecified lead-time horizon. Complete available intrapartum records were used; consequently, no claim of advance warning or real-time clinical availability is made.
+
+\subsection{Fixed record split and signal processing}
+
+The existing record-level split contained 386 development and 166 test records. It was applied before window extraction to prevent overlapping windows from the same record crossing development and test sets. Signals were represented at 4 Hz as 10-minute windows, producing 2,400 time points per channel. The corpus contained 7,602 windows, of which 5,301 belonged to development records. The present reanalysis did not use test records for architecture selection, PCA fitting, normalization, phenotype-centroid fitting, supervised model fitting, threshold selection or recalibration. Because the test set had been viewed in historical exploratory architecture ranking, it is reported as a fixed test set with potential selection-induced optimism rather than as a fully independent validation set.
+
+\subsection{Development-only architecture selection}
+
+Four prespecified compact configurations varied patch length, model dimension, layer count, masking strategy and contrastive weight: p80-d64-l3 channel, p60-d64-l2 mixed, p80-d48-l2 mixed and p120-d64-l2 block. The 386 development records were divided by three-fold stratified cross-validation. Within each fold, SSL pretraining used only development-training windows; the resulting embeddings, PCA and supervised model were fitted without access to that fold's validation records. Configurations were ranked by mean fold AUPRC. The one-standard-error rule selected the smallest model whose mean was within one standard error of the highest mean. The selected configuration was then frozen before five full-development seed fits. Historical fixed-test configuration ranking was not used in the revised selection route and its 0.4016 AUPRC estimate is reported only as an exploratory historical result in Supplementary Table S9.
+
+\subsection{Self-supervised encoder and ablations}
+
+Each two-channel window was divided into non-overlapping patches. The selected model used patch length 80, 60 channel-time tokens, $d_{model}=48$, two transformer layers, four attention heads, feed-forward width four times the model dimension, GELU activation, dropout 0.1 and a 64-dimensional projection head. Mixed masking targeted 25\% of tokens. Two Gaussian-jittered views (standard deviation 0.02) were masked independently. Reconstruction loss was mean squared error over masked patches; NT-Xent used temperature 0.2. The total loss was reconstruction loss plus 0.1 times contrastive loss. Models were trained for four epochs with batch size 64, AdamW, learning rate 0.001, weight decay 0.0001 and gradient-norm clipping at 1.0. The full encoder had 74,768 trainable parameters and was trained on an NVIDIA GeForce RTX 5080 Laptop GPU using PyTorch 2.12.0+cu130.
+
+Component sensitivities used a fixed 75\%/25\% stratified split inside development records (289/97 records). The prespecified objective ablations were random encoder, reconstruction-only, NT-Xent-only, combined objective and combined objective without jitter. Mask sensitivities compared random, block, channel and mixed masking. These analyses were method sensitivities; test-set performance was not used to choose an objective or mask after the architecture was frozen.
+
+\subsection{Public cross-domain pretraining and morphology probes}
+
+The JNU-CTG archive (Zenodo 21800730; CC BY 4.0) was verified against the published MD5 checksum \texttt{ac1cfcba2f1b3336596544211d776771}. All 20,769 30-minute 4-Hz recordings were readable and mapped to 12,606 patient groups. Each record was divided into three non-overlapping 10-minute windows, yielding 62,307 windows with two channels and 2,400 points per channel. Apgar scores, neonatal-asphyxia diagnoses, FIGO annotations, demographics and all other clinical labels were withheld from SSL. Patient identifiers were retained for audit and no supervised JNU split was used in the present study.
+
+The architecture, mask fraction, optimizer, epochs, CTU folds, downstream 10-signal-plus-five-PC model and seeds 20260521--20260525 remained frozen. Four encoder origins were compared: random initialization, fold-specific CTU-development-only SSL, JNU-only SSL and JNU pretraining followed by fold-specific CTU-development adaptation. The sequential route never used CTU validation or fixed-test records during pretraining. A channel-asymmetric JNU mask, in which FHR patches were masked while corresponding UC patches remained visible, was evaluated only as a development sensitivity motivated by concurrent work \citep{fridman2026ctgfoundation}; it was not used to reselect the primary encoder.
+
+Frozen embeddings were evaluated by record-grouped, development-only linear probes for seven CTU expert-event tasks: any acceleration; any, early, late, prolonged or variable deceleration; and any tachycardia. Classical signal features and a random encoder were prespecified comparators. We reported macro-AUPRC, macro-AUROC, balanced accuracy and F1 across tasks. FHR-only, UC-only and 1-Hz inputs were evaluated with the same folds and seeds. Development differences were estimated with 2,000 paired hierarchical bootstrap resamples, averaging paired seed differences for risk and paired seed-task differences for morphology. The prespecified promotion rule required JNU-to-CTU to improve both development AUPRC versus CTU-only and morphology macro-AUROC versus CTU-only and random, with positive lower confidence limits and concordance in at least four of five seeds. Because the risk condition failed, JNU results were assigned to the supplement before the fixed test set was accessed.
+
+\subsection{Classical features, reduced SSL model and regularization}
+
+The signal baseline used 10 prespecified summaries: mean FHR, FHR standard deviation, FHR 5th, 50th and 95th percentiles, mean UC, UC standard deviation, UC 95th percentile, FHR--UC correlation and deceleration-proxy count. FHR and UC missing fractions were excluded from the primary baseline and reintroduced only in sensitivity analysis. Signal variables were median-imputed and standardized using development-fitted parameters. Window embeddings were averaged by record; embedding variables were then imputed and standardized in development records and reduced by development-fitted principal-component analysis. The primary reduced SSL model combined the 10 signal variables with five SSL principal components. Both primary models used class-balanced L2 logistic regression. Elastic-net logistic regression, 10 or 20 SSL components and inclusion of missingness were sensitivity analyses. All transformations were fitted in development records and applied unchanged to test records.
+
+\subsection{Phenotype analysis}
+
+Signal phenotypes were fitted from standardized classical signal summaries by k-means. SSL phenotypes were fitted separately from standardized record embeddings. For the central analysis, $k=4$, random seed 20260521 and 50 initializations were used. Imputers, scalers and centroids were fitted in development records; test and CTGDL records were assigned to the nearest frozen centroid. The value $k=4$ was chosen as a compact clinically inspectable resolution rather than by outcome optimization. Sensitivities at $k=3$ and $k=5$ tested whether incremental performance conclusions depended on cluster count. Phenotype variables were not included in the primary model; signal phenotype, SSL phenotype and both were added only in secondary incremental analyses.
+
+\subsection{Stability, performance and uncertainty}
+
+The selected encoder was trained with seeds 20260521--20260525. For each seed, a development-fitted five-component SSL model was evaluated in the fixed test set. AUPRC was the primary enrichment metric, with AUROC and Brier score as complementary discrimination and probability-error measures \citep{davis2006}. Seed distributions were summarized by median, IQR and range. AUPRC differences versus the fixed signal baseline were estimated by 2,000 paired bootstrap resamples of test records. No fixed-test confidence interval was used to choose an architecture, objective, seed, PCA dimension or regularization setting.
+
+\subsection{Calibration and decision curves}
+
+Platt and isotonic calibrators were trained from five-fold stratified out-of-fold development predictions. The risk model was then fitted on all development records and the calibrator applied once to the fixed test predictions. Calibration was summarized by Brier score, ECE, calibration intercept and slope \citep{vanCalster2019}. Decision-curve net benefit was calculated across risk thresholds, with a prespecified descriptive summary from 0.10 to 0.30 \citep{vickers2006}. Recalibration was treated as conversion of a cohort-specific enrichment score to a more interpretable probability scale, not as evidence of clinical validity.
+
+\subsection{External representation and reproducibility}
+
+The central-seed selected encoder was applied to 135 CTGDL-FHRMA records. CTU-UHB and CTGDL embeddings were compared by principal components, a domain classifier and distances to CTU-fitted SSL centroids. No external neonatal endpoint was fitted because a directly harmonized outcome was unavailable. Supporting source data are provided in Supplementary Table S1, Supplementary Table S2A, Supplementary Table S2B, Supplementary Table S3A, Supplementary Table S3B, Supplementary Table S4A, Supplementary Table S4B, Supplementary Table S5, Supplementary Table S6, Supplementary Table S7, Supplementary Table S8A, Supplementary Table S8B, Supplementary Table S9, Supplementary Table S10, Supplementary Table S11, Supplementary Table S12, Supplementary Table S13, Supplementary Table S14, Supplementary Table S15, Supplementary Table S16, Supplementary Table S17 and Supplementary Table S18. Code, fixed splits, source-data tables, environment information and seeds are available at \url{https://github.com/Luciky-Leo/ctg-foundation-trajectory}. Versioned research artifacts are archived under the Zenodo concept DOI \url{https://doi.org/10.5281/zenodo.20364141}, which resolves to the latest deposited version.
+
+\section*{Conflict of Interest Statement}
+The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
+
+\section*{Author Contributions}
+X.G., K.Z. and Z.J. contributed equally to source-data verification, literature and clinical-context review, figure and supplementary-material checking, and manuscript revision. F.L. conceived and supervised the study, designed and implemented the methodology, curated the public data, performed the formal analyses, generated the figures and source-data tables, and drafted and revised the manuscript. All authors read and approved the final manuscript.
+
+\section*{Funding}
+The authors declare that this research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors.
+
+\section*{Acknowledgments}
+The authors acknowledge the maintainers of CTU-UHB/CTU-CHB, JNU-CTG, CTGDL-FHRMA and UCI Cardiotocography and the open-source scientific software communities used in this analysis. During manuscript preparation, generative AI tools were used for language editing, formatting assistance, code and LaTeX workflow support, and schematic refinement. The authors reviewed and verified all analyses, references, text, figures and source-data tables and take full responsibility for the final content.
+
+\section*{Data Availability Statement}
+The CTU-UHB/CTU-CHB dataset is publicly available through PhysioNet. JNU-CTG is available under CC BY 4.0 at \url{https://doi.org/10.5281/zenodo.21800730}. CTGDL-FHRMA is available through its public Zenodo record with subset-specific access caveats. UCI Cardiotocography is available through the UCI Machine Learning Repository. Derived source-data tables, fixed splits and revision analyses are available at \url{https://github.com/Luciky-Leo/ctg-foundation-trajectory} and under the Zenodo concept DOI \url{https://doi.org/10.5281/zenodo.20364141}. The historical repository name does not imply that the present compact encoder is a foundation model.
+
+\setlength{\bibsep}{0pt}
+\bibliographystyle{Frontiers-Harvard}
+\bibliography{references}
+
+\end{document}

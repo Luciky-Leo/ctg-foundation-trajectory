@@ -1,0 +1,234 @@
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+
+\bibitem[{Alfirevic et~al.(2017)Alfirevic, Devane, Gyte, and
+  Cuthbert}]{alfirevic2017}
+Alfirevic, Z., Devane, D., Gyte, G. M.~L., and Cuthbert, A. (2017).
+\newblock Continuous cardiotocography ({CTG}) as a form of electronic fetal
+  monitoring ({EFM}) for fetal assessment during labour.
+\newblock \emph{Cochrane Database of Systematic Reviews} ,
+  CD006066\doi{10.1002/14651858.CD006066.pub3}
+\bibAnnoteFile{alfirevic2017}
+
+\bibitem[{Ayres-de Campos et~al.(2015)Ayres-de Campos, Spong, and
+  Chandraharan}]{figo2015}
+Ayres-de Campos, D., Spong, C.~Y., and Chandraharan, E. (2015).
+\newblock {FIGO} consensus guidelines on intrapartum fetal monitoring:
+  cardiotocography.
+\newblock \emph{International Journal of Gynecology and Obstetrics} 131,
+  13--24.
+\newblock \doi{10.1016/j.ijgo.2015.06.020}
+\bibAnnoteFile{figo2015}
+
+\bibitem[{Bai(2026)}]{bai2026jnuctg}
+[Dataset] Bai, J. (2026).
+\newblock {JNU-CTG}: A large-scale continuous cardiotocography dataset for
+  fetal well-being assessment.
+\newblock \doi{10.5281/zenodo.21800730}.
+\newblock Dataset; CC BY 4.0
+\bibAnnoteFile{bai2026jnuctg}
+
+\bibitem[{Ben~M'Barek et~al.(2026)Ben~M'Barek, Ben~M'Barek, Jauvion, Whelehan,
+  Papageorghiou, Le~Pennec et~al.}]{benmbarek2026humanai}
+Ben~M'Barek, I., Ben~M'Barek, B., Jauvion, G., Whelehan, V., Papageorghiou, A.,
+  Le~Pennec, E., et~al. (2026).
+\newblock Randomised study of human machine collaboration for cardiotocography
+  interpretation during labour.
+\newblock \emph{npj Digital Medicine} 9, 365.
+\newblock \doi{10.1038/s41746-026-02556-y}
+\bibAnnoteFile{benmbarek2026humanai}
+
+\bibitem[{Campos and Bernardes(2000)}]{uci}
+[Dataset] Campos, D. and Bernardes, J. (2000).
+\newblock Cardiotocography.
+\newblock UCI Machine Learning Repository.
+\newblock \doi{10.24432/C51S4N}
+\bibAnnoteFile{uci}
+
+\bibitem[{Chudacek et~al.(2014)Chudacek, Spilka, Bursa, Janku, Hruban, Huptych
+  et~al.}]{chudacek2014}
+Chudacek, V., Spilka, J., Bursa, M., Janku, P., Hruban, L., Huptych, M., et~al.
+  (2014).
+\newblock Open access intrapartum {CTG} database.
+\newblock \emph{BMC Pregnancy and Childbirth} 14, 16.
+\newblock \doi{10.1186/1471-2393-14-16}
+\bibAnnoteFile{chudacek2014}
+
+\bibitem[{Collins et~al.(2024)Collins, Moons, Dhiman, Riley, Beam, Van~Calster
+  et~al.}]{tripodai2024}
+Collins, G.~S., Moons, K. G.~M., Dhiman, P., Riley, R.~D., Beam, A.~L.,
+  Van~Calster, B., et~al. (2024).
+\newblock {TRIPOD+AI} statement: updated guidance for reporting clinical
+  prediction models that use regression or machine learning methods.
+\newblock \emph{BMJ} 385, e078378.
+\newblock \doi{10.1136/bmj-2023-078378}
+\bibAnnoteFile{tripodai2024}
+
+\bibitem[{Davis and Goadrich(2006)}]{davis2006}
+Davis, J. and Goadrich, M. (2006).
+\newblock The relationship between precision-recall and {ROC} curves.
+\newblock In \emph{Proceedings of the 23rd International Conference on Machine
+  Learning}. 233--240.
+\newblock \doi{10.1145/1143844.1143874}
+\bibAnnoteFile{davis2006}
+
+\bibitem[{Francis et~al.(2024)Francis, Luz, Wu, Stock, and
+  Townsend}]{francis2024}
+Francis, F., Luz, S., Wu, H., Stock, S.~J., and Townsend, R. (2024).
+\newblock Machine learning on cardiotocography data to classify fetal outcomes:
+  a scoping review.
+\newblock \emph{Computers in Biology and Medicine} 172, 108220.
+\newblock \doi{10.1016/j.compbiomed.2024.108220}
+\bibAnnoteFile{francis2024}
+
+\bibitem[{Fridman(2025)}]{ctgdl}
+[Dataset] Fridman, N. (2025).
+\newblock {CTGDL}: A multi-source cardiotocography dataset for fetal stress
+  prediction and {CTG} analysis.
+\newblock Zenodo dataset record.
+\newblock \doi{10.5281/zenodo.19510407}
+\bibAnnoteFile{ctgdl}
+
+\bibitem[{Fridman and Ben~Shachar(2026)}]{fridman2026ctgfoundation}
+[Dataset] Fridman, N. and Ben~Shachar, B. (2026).
+\newblock A foundation model approach for fetal stress prediction during labor
+  from cardiotocography ({CTG}) recordings
+\bibAnnoteFile{fridman2026ctgfoundation}
+
+\bibitem[{Goldberger et~al.(2000)Goldberger, Amaral, Glass, Hausdorff, Ivanov,
+  Mark et~al.}]{goldberger2000}
+Goldberger, A.~L., Amaral, L. A.~N., Glass, L., Hausdorff, J.~M., Ivanov,
+  P.~C., Mark, R.~G., et~al. (2000).
+\newblock Physiobank, physiotoolkit, and physionet: components of a new
+  research resource for complex physiologic signals.
+\newblock \emph{Circulation} 101, e215--e220.
+\newblock \doi{10.1161/01.CIR.101.23.e215}
+\bibAnnoteFile{goldberger2000}
+
+\bibitem[{Macones et~al.(2008)Macones, Hankins, Spong, Hauth, and
+  Moore}]{nichd2008}
+Macones, G.~A., Hankins, G. D.~V., Spong, C.~Y., Hauth, J., and Moore, T.
+  (2008).
+\newblock The 2008 national institute of child health and human development
+  workshop report on electronic fetal monitoring: update on definitions,
+  interpretation, and research guidelines.
+\newblock \emph{Journal of Obstetric, Gynecologic, and Neonatal Nursing} 37,
+  510--515.
+\newblock \doi{10.1111/j.1552-6909.2008.00284.x}
+\bibAnnoteFile{nichd2008}
+
+\bibitem[{Mendis et~al.(2025)Mendis, Karmakar, Palaniswami, Brownfoot, and
+  Keenan}]{mendis2025crossdatabase}
+Mendis, L., Karmakar, D., Palaniswami, M., Brownfoot, F., and Keenan, E.
+  (2025).
+\newblock Cross-database evaluation of deep learning methods for intrapartum
+  cardiotocography classification.
+\newblock \emph{IEEE Journal of Translational Engineering in Health and
+  Medicine} 13, 123--135.
+\newblock \doi{10.1109/JTEHM.2025.3548401}
+\bibAnnoteFile{mendis2025crossdatabase}
+
+\bibitem[{Mendis et~al.(2023)Mendis, Palaniswami, Brownfoot, and
+  Keenan}]{mendis2023}
+Mendis, L., Palaniswami, M., Brownfoot, F., and Keenan, E. (2023).
+\newblock Computerised cardiotocography analysis for the automated detection of
+  fetal compromise during labour: a review.
+\newblock \emph{Bioengineering} 10, 1007.
+\newblock \doi{10.3390/bioengineering10091007}
+\bibAnnoteFile{mendis2023}
+
+\bibitem[{Nie et~al.(2023)Nie, Nguyen, Sinthong, and Kalagnanam}]{nie2023}
+Nie, Y., Nguyen, N.~H., Sinthong, P., and Kalagnanam, J. (2023).
+\newblock A time series is worth 64 words: long-term forecasting with
+  transformers.
+\newblock In \emph{International Conference on Learning Representations}
+\bibAnnoteFile{nie2023}
+
+\bibitem[{Park et~al.(2025)Park, Choi, Park, Kwak, Ko, Seong
+  et~al.}]{park2025nationwide}
+Park, C.~E., Choi, B., Park, R.~W., Kwak, D.~W., Ko, H.~S., Seong, W.~J.,
+  et~al. (2025).
+\newblock Automated interpretation of cardiotocography using deep learning in a
+  nationwide multicenter study.
+\newblock \emph{Scientific Reports} 15, 19617.
+\newblock \doi{10.1038/s41598-025-02849-4}
+\bibAnnoteFile{park2025nationwide}
+
+\bibitem[{{PhysioNet}(2014)}]{ctuuhb}
+[Dataset] {PhysioNet} (2014).
+\newblock {CTU-CHB/CTU-UHB} intrapartum cardiotocography database.
+\newblock PhysioNet.
+\newblock Accessed 24 May 2026
+\bibAnnoteFile{ctuuhb}
+
+\bibitem[{Steyerberg(2019)}]{steyerberg2019}
+Steyerberg, E.~W. (2019).
+\newblock \emph{Clinical Prediction Models: A Practical Approach to
+  Development, Validation, and Updating} (Springer), 2 edn.
+\newblock \doi{10.1007/978-3-030-16399-0}
+\bibAnnoteFile{steyerberg2019}
+
+\bibitem[{Van~Calster et~al.(2019)Van~Calster, McLernon, van Smeden, Wynants,
+  and Steyerberg}]{vanCalster2019}
+Van~Calster, B., McLernon, D.~J., van Smeden, M., Wynants, L., and Steyerberg,
+  E.~W. (2019).
+\newblock Calibration: the {Achilles} heel of predictive analytics.
+\newblock \emph{BMC Medicine} 17, 230.
+\newblock \doi{10.1186/s12916-019-1466-7}
+\bibAnnoteFile{vanCalster2019}
+
+\bibitem[{Vickers and Elkin(2006)}]{vickers2006}
+Vickers, A.~J. and Elkin, E.~B. (2006).
+\newblock Decision curve analysis: a novel method for evaluating prediction
+  models.
+\newblock \emph{Medical Decision Making} 26, 565--574.
+\newblock \doi{10.1177/0272989X06295361}
+\bibAnnoteFile{vickers2006}
+
+\bibitem[{Wong et~al.(2026)Wong, Shankar, Albert, Fei, Li, Ben~M'Barek
+  et~al.}]{prismctg2026}
+[Dataset] Wong, S., Shankar, R., Albert, B., Fei, H., Li, L., Ben~M'Barek, I.,
+  et~al. (2026).
+\newblock {PRISM-CTG}: A foundation model for cardiotocography analysis with
+  multi-view {SSL}
+\bibAnnoteFile{prismctg2026}
+
+\bibitem[{Yue et~al.(2022)Yue, Wang, Duan, Yang, Huang, Tong et~al.}]{yue2022}
+Yue, Z., Wang, Y., Duan, J., Yang, T., Huang, C., Tong, Y., et~al. (2022).
+\newblock {TS2Vec}: towards universal representation of time series.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence}
+  36, 8980--8987.
+\newblock \doi{10.1609/aaai.v36i8.20881}
+\bibAnnoteFile{yue2022}
+
+\bibitem[{Zerveas et~al.(2021)Zerveas, Jayaraman, Patel, Bhamidipaty, and
+  Eickhoff}]{zerveas2021}
+Zerveas, G., Jayaraman, S., Patel, D., Bhamidipaty, A., and Eickhoff, C.
+  (2021).
+\newblock A transformer-based framework for multivariate time series
+  representation learning.
+\newblock In \emph{Proceedings of the 27th ACM SIGKDD Conference on Knowledge
+  Discovery and Data Mining}. 2114--2124.
+\newblock \doi{10.1145/3447548.3467401}
+\bibAnnoteFile{zerveas2021}
+
+\bibitem[{Zhang et~al.(2022)Zhang, Zhao, Tsiligkaridis, and
+  Zitnik}]{zhang2022tfc}
+Zhang, X., Zhao, Z., Tsiligkaridis, T., and Zitnik, M. (2022).
+\newblock Self-supervised contrastive pre-training for time series via
+  time-frequency consistency.
+\newblock In \emph{Advances in Neural Information Processing Systems}. vol.~35
+\bibAnnoteFile{zhang2022tfc}
+
+\end{thebibliography}

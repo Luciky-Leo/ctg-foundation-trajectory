@@ -1,0 +1,57 @@
+category,check,status,observed,expected
+leakage,jnu_qc_status,PASS,PASS,PASS
+leakage,jnu_archive_md5,PASS,ac1cfcba2f1b3336596544211d776771,published MD5
+leakage,jnu_license,PASS,CC BY 4.0,CC BY 4.0
+leakage,jnu_record_count,PASS,20769,20769
+leakage,jnu_readability,PASS,1.0,>=0.95
+leakage,jnu_patient_groups,PASS,12606,12606
+leakage,jnu_windows,PASS,62307,62307
+leakage,jnu_labels_withheld,PASS,[],[]
+leakage,jnu_index_rows,PASS,62307,62307
+leakage,jnu_index_records,PASS,20769,20769
+leakage,jnu_index_patients,PASS,12606,12606
+leakage,three_windows_per_record,PASS,{3: 20769},3 each
+leakage,patient_id_complete,PASS,0,0
+leakage,ctu_development_only_folds,PASS,"[np.int64(1), np.int64(2), np.int64(3)]",three folds; no test IDs
+leakage,ctu_validation_once,PASS,{1},{1}
+leakage,development_probability_ids,PASS,386,386
+leakage,fixed_probability_ids,PASS,166,166
+leakage,promotion_fixed_test_closed,PASS,False,False
+claim,promotion_decision,PASS,SUPPLEMENT_ONLY,SUPPLEMENT_ONLY
+claim,risk_gate_failed,PASS,False,False
+claim,main_figure_performance_gate_failed,PASS,False,False
+leakage,promotion_recorded_before_fixed_test,PASS,"{'promotion_fixed_test_accessed': False, 'fixed_test_role': 'exploratory'}",promotion fixed_test_accessed=false; fixed-test completion flag documents exploratory use
+runtime,training_state_count,PASS,50,50
+runtime,all_training_complete,PASS,{'COMPLETE'},{'COMPLETE'}
+runtime,all_epochs_complete,PASS,"[(4, 4)]","(4,4)"
+runtime,training_route_completeness,PASS,"{'jnu_mixed': 5, 'jnu_asymmetric': 5, 'fold_ctu': 15, 'fold_jnu_to_ctu': 15, 'all_dev_ctu': 5, 'all_dev_jnu_to_ctu': 5}","{'jnu_mixed': 5, 'jnu_asymmetric': 5, 'fold_ctu': 15, 'fold_jnu_to_ctu': 15, 'all_dev_ctu': 5, 'all_dev_jnu_to_ctu': 5}"
+runtime,frozen_encoder_configuration,PASS,"{'patch_len': 80, 'd_model': 48, 'layers': 2, 'nhead': 4, 'mask_strategy': 'mixed', 'epochs': 4}","{'patch_len': 80, 'd_model': 48, 'layers': 2, 'nhead': 4, 'mask_strategy': 'mixed', 'epochs': 4}"
+runtime,five_fixed_seeds,PASS,"[np.int64(20260521), np.int64(20260522), np.int64(20260523), np.int64(20260524), np.int64(20260525)]","[20260521, 20260522, 20260523, 20260524, 20260525]"
+numeric,development_risk_recomputation,PASS,55/55,55/55
+numeric,fixed_test_risk_recomputation,PASS,50/50,50/50
+numeric,morphology_task_recomputation,PASS,210/210,210/210
+numeric,morphology_macro_recomputation,PASS,30,30
+claim,required_main_numbers_and_boundaries,PASS,all present,all present
+claim,forbidden_overclaims_absent,PASS,none,none
+claim,supplement_states_no_external_outcome_validation,PASS,present,present
+claim,reviewer_response_complete,PASS,5,5
+figure,figure1_design_only_jnu_branch,PASS,bounded branch,bounded branch
+figure,jnu_not_promoted_into_main_figure2,PASS,eb0b7d635218472fbaebb032e2b1569a12e5b547adb4230e3350b06bdbca15a0,eb0b7d635218472fbaebb032e2b1569a12e5b547adb4230e3350b06bdbca15a0
+figure,figure_export_set,PASS,8 present,8 present
+figure,image_dimensions:Figure_1_final_study_design.png,PASS,2125x2834 at 300.0 dpi,>=2000x1600 at >=299 dpi (Frontiers-compatible 300-dpi export)
+figure,image_dimensions:Supplementary_Figure_S3_JNU_cross_domain_sensitivity.png,PASS,2125x2078 at 300.0 dpi,>=2000x1600 at >=299 dpi (Frontiers-compatible 300-dpi export)
+figure,figure1_text_overlap_audit,PASS,0,0
+figure,figure_s3_text_overlap_audit,PASS,0,0
+package,main_pdf_pages,PASS,14,14
+package,main_pdf_no_blank_pages,PASS,572,>100 extracted characters/page
+package,supplement_pdf_pages,PASS,9,9
+package,supplement_pdf_no_blank_pages,PASS,431,>100 extracted characters/page
+package,response_pdf_pages,PASS,4,4
+package,response_pdf_no_blank_pages,PASS,2692,>100 extracted characters/page
+package,latex_no_undefined_citations_or_references,PASS,none,none
+package,latex_overfull_within_visual_tolerance,PASS,8.53581,<=10 pt and visually reviewed
+reference,all_citation_keys_resolve,PASS,[],none missing
+reference,latest_reference_entries_present,PASS,"['bai2026jnuctg', 'benmbarek2026humanai', 'fridman2026ctgfoundation', 'mendis2025crossdatabase', 'prismctg2026']","['bai2026jnuctg', 'benmbarek2026humanai', 'fridman2026ctgfoundation', 'mendis2025crossdatabase', 'prismctg2026']"
+package,jnu_machine_readable_tables,PASS,"['Supplementary_Table_S14_encoder_origin_risk_stability.csv', 'Supplementary_Table_S15_frozen_encoder_morphology_probes.csv', 'Supplementary_Table_S16_jnu_paired_hierarchical_bootstrap.csv', 'Supplementary_Table_S17_channel_sampling_sensitivity.csv', 'Supplementary_Table_S18_jnu_data_leakage_audit.csv']",S14-S18
+package,machine_readable_table_count,PASS,22,22
+numeric,predecessor_targeted_audit,PASS,PASS,PASS

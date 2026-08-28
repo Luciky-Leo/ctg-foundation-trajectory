@@ -1,0 +1,9 @@
+data_role,analysis,metric,candidate,baseline,point_difference,ci_low,ci_high,positive_seed_count,seed_count
+development,risk,auprc,jnu_to_ctu,ctu_only,0.0030420383753629,-0.0304346889488483,0.0316220208186181,3,5
+development,morphology_macro,auroc,jnu_to_ctu,ctu_only,0.0401212953139243,0.0155055756605334,0.0646827304468068,5,5
+development,morphology_macro,auroc,jnu_to_ctu,random,0.0610895942262278,0.0344144262922754,0.0884410788421032,5,5
+development,morphology_macro,auroc,jnu_to_ctu,classical_signal,-0.0555065287249285,-0.0923705114997607,-0.0199773466654712,0,5
+development,risk,auprc,jnu_asymmetric,jnu_only,0.0098178727784773,-0.0290496947541891,0.0443769886424569,4,5
+development,morphology_macro,auroc,jnu_asymmetric,jnu_only,-0.078694614861151,-0.1006473915450275,-0.0551734136136915,0,5
+fixed_test_exploratory,risk,auprc,jnu_to_ctu,ctu_only,-0.0403448965549168,-0.0766069047226523,0.0015920902907563,0,5
+fixed_test_exploratory,risk,auprc,jnu_only,ctu_only,0.0004622049541217,-0.0203806144307038,0.0239514476341684,2,5

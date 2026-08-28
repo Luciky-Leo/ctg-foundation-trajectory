@@ -1,0 +1,12 @@
+metric,value
+ctu_records,552.0
+ctgdl_fhrma_records,135.0
+embedding_dimensions,48.0
+domain_classifier_auroc_ctgdl_vs_ctu,0.8811342932706435
+pca_explained_variance_pc1_pc2,0.5492339179598167
+ctu_median_nearest_centroid_distance,5.1608251219736205
+ctgdl_median_nearest_centroid_distance,5.35253193189546
+ctgdl_assigned_ssl_phenotype_0,3.0
+ctgdl_assigned_ssl_phenotype_1,57.0
+ctgdl_assigned_ssl_phenotype_2,5.0
+ctgdl_assigned_ssl_phenotype_3,70.0

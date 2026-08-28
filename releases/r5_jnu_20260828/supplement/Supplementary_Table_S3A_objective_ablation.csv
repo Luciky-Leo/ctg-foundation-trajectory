@@ -1,0 +1,6 @@
+ablation,scope,epochs,reconstruction_weight,contrastive_weight,jitter_std,mask_strategy,auprc,auroc,brier,n_train,n_validation,events_train,events_validation,n_predictors,events_per_predictor
+random_encoder,development_only_method_sensitivity,0,1.0,0.1,0.02,mixed,0.33331331385402097,0.6883116883116884,0.23849198349397704,289,97,59,20,15,3.933333333333333
+reconstruction_only,development_only_method_sensitivity,4,1.0,0.0,0.02,mixed,0.3174399344697212,0.6655844155844155,0.24082222582115084,289,97,59,20,15,3.933333333333333
+nt_xent_only,development_only_method_sensitivity,4,0.0,0.2,0.02,mixed,0.29910131265563916,0.6694805194805196,0.2432552662848202,289,97,59,20,15,3.933333333333333
+combined,development_only_method_sensitivity,4,1.0,0.1,0.02,mixed,0.3105799982901873,0.675974025974026,0.2448161652619468,289,97,59,20,15,3.933333333333333
+combined_no_jitter,development_only_method_sensitivity,4,1.0,0.1,0.0,mixed,0.31004243962534656,0.6785714285714286,0.2453300565601222,289,97,59,20,15,3.933333333333333

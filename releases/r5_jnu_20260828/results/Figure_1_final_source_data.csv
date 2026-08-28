@@ -1,0 +1,29 @@
+panel,item,role,value,claim_boundary
+A,primary_cohort,CTU-UHB,552 labelled records,primary outcome cohort
+A,fixed_split,development/test,386/166 records,fixed before R5 reanalysis
+A,architecture_selection,3-fold development-only validation,fold-specific SSL pretraining,test not used for R5 configuration selection
+A,seed_refit,frozen p80-d48-l2 encoder,5 fixed seeds,architecture and downstream dimensions unchanged
+A,primary_model,10 signal features + 5 SSL PCs,15 predictors,PCA fitted in development records
+A,test_boundary,fixed test,exploratory risk enrichment,historical exposure may cause selection optimism
+A,jnu_branch,JNU-CTG,"20,769 records; 12,606 patient groups; 62,307 windows",labels excluded; sensitivity branch; not primary-model selection
+A,external_branch,CTGDL-FHRMA,135 records,representation/domain context only; no outcome validation
+A,prediction_horizon,delivery-level analysis,no prespecified lead-time,not a deployment claim
+B,input,FHR + UC,10 min at 4 Hz; 2400 points/channel,SSL labels withheld
+B,tokenization,patch length 80,30 patches/channel; 60 total tokens,non-overlapping patches
+B,masking,mixed,25% target,selected development-only configuration
+B,masking_sensitivity,FHR-asymmetric,development-only,not used to replace the frozen route
+B,encoder,transformer,d_model=48; 2 layers; 4 heads,"74,768 trainable parameters"
+B,embedding,record embedding,window mean; 48 dimensions,record aggregation downstream
+B,objective_reconstruction,masked reconstruction,weight 1.0,development-only SSL objective
+B,objective_contrastive,NT-Xent consistency,weight 0.1,temperature 0.2
+B,encoder_origins,random; CTU-only; JNU-only; JNU-to-CTU,prespecified comparison,no post-test route selection
+C,jnu_records,records,"20,769",antepartum public CTG
+C,jnu_groups,patient groups,"12,606",group identifier retained
+C,ctu_all,records,552,intrapartum CTU-UHB
+C,development,records/events,386/79,20.47% primary outcome
+C,fixed_test,records/events,166/34,20.48% primary outcome
+C,ctgdl,records,135,external representation branch
+D,representation,JNU and CTU development,labels withheld,representation learning
+D,morphology,CTU expert events,linear probe,representation task only
+D,risk,CTU development and fixed test,exploratory,no stable incremental benefit
+D,external_outcome,none harmonized,not performed,no external outcome validation
