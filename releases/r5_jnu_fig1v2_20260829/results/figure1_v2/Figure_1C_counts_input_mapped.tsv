@@ -1,0 +1,5 @@
+label	count	role	color	log10_count
+JNU-CTG records	20769	JNU pretraining	#7561B2	4.317415586331099
+JNU patient groups	12606	JNU pretraining	#7561B2	4.100577302789596
+CTU-UHB records	552	Outcome cohort	#3977B4	2.741939077729199
+CTGDL records	135	Domain context	#C9832E	2.130333768495006

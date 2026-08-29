@@ -1,0 +1,11 @@
+audit_item,result
+archive_identifier,Zenodo 21800730; CC BY 4.0
+archive_md5,ac1cfcba2f1b3336596544211d776771; matched
+waveform_readability,"20,769/20,769 records readable (100%)"
+patient_grouping,"12,606 unique patient groups retained"
+ssl_windows,"62,307 non-overlapping 10-minute windows; FHR+UC; 4 Hz"
+jnu_labels_used_in_ssl,None; clinical labels withheld
+ctu_fold_isolation,Fold-specific adaptation used development-training records only
+fixed_test_access,Opened after development promotion decision; historical exposure disclosed
+promotion_decision,Supplement-only because the risk-enrichment gate failed
+external_outcome_validation,Not performed

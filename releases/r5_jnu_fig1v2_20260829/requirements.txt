@@ -1,0 +1,6 @@
+# Verified against WSL micromamba env research-py312 on 2026-07-07.
+numpy==2.4.6
+pandas==2.3.3
+scikit-learn==1.8.0
+matplotlib==3.10.9
+torch==2.12.0+cpu

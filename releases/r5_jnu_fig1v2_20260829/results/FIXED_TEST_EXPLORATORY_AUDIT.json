@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "analysis_role": "exploratory_fixed_test_with_potential_selection_induced_optimism",
+  "n_records": 166,
+  "events": 34,
+  "jnu_to_ctu_auprc_median": 0.34198480799568765,
+  "ctu_only_auprc_median": 0.40171740499070163,
+  "jnu_to_ctu_minus_ctu_only": {
+    "metric": "auprc",
+    "candidate": "jnu_to_ctu",
+    "baseline": "ctu_only",
+    "point_mean_across_seeds": -0.04034489655491689,
+    "median_seed_difference": -0.025737768208765277,
+    "positive_seed_count": 0,
+    "seed_count": 5,
+    "ci_low": -0.07660690472265233,
+    "ci_high": 0.0015920902907563283,
+    "bootstrap_iterations": 2000,
+    "interpretation": "exploratory_fixed_test_with_potential_selection_induced_optimism"
+  },
+  "conclusion": "No stable incremental neonatal-risk enrichment from JNU-to-CTU adaptation."
+}

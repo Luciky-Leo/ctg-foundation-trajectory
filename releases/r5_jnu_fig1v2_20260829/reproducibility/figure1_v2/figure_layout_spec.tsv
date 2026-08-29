@@ -1,0 +1,5 @@
+Figure	Panel	Panel role	Final x mm	Final y mm	Final width mm	Final height mm	Render width mm	Render height mm	Scale in assembly	Panel label x mm	Panel label y mm	Font target	Line width target	Output PDF/SVG	Output PNG	Reason
+Figure 1	A	Study workflow	0	0	180	78.35	180	78.35	100%	0	0	Arial 6-8 pt	0.5-0.7 pt	outputs/A/Figure_1A_image2_workflow.pdf	outputs/A/Figure_1A_image2_workflow.png	Full-width lead panel with minimal workflow labels
+Figure 1	B	SSL method	0	80.35	180	86.08	180	86.08	100%	0	80.35	Arial 6-8 pt	0.5-0.7 pt	outputs/B/Figure_1B_image2_ssl.pdf	outputs/B/Figure_1B_image2_ssl.png	Full-width method panel to retain architecture legibility
+Figure 1	C	Cohort scale and outcome balance	0	168.43	87	68	87	68	100%	0	168.43	Arial 6-8 pt	0.5-0.7 pt	outputs/C/Figure_1C_persist.pdf	outputs/C/Figure_1C_persist.png	Quantitative comparison at final half-width slot
+Figure 1	D	Analysis roles and claim boundaries	93	168.43	87	68	87	68	100%	93	168.43	Arial 6-8 pt	0.5-0.7 pt	outputs/D/Figure_1D_persist.pdf	outputs/D/Figure_1D_persist.png	Compact matrix at final half-width slot

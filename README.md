@@ -6,7 +6,7 @@ Self-supervised biomedical signal representation learning from intrapartum cardi
 
 ## Current release
 
-The current Reviewer 5 revision is `v1.4.0-r2` (2026-08-29). Its authoritative public payload is under `releases/r5_jnu_20260828/`. Earlier manuscript candidates and submission packages remain available for traceability but are not the current evidence base.
+The current Reviewer 5 revision is `v1.4.1-r2` (2026-08-29). Its authoritative public payload is under `releases/r5_jnu_fig1v2_20260829/`. Version `v1.4.0-r2` and earlier manuscript candidates remain available for traceability but are not the current presentation package.
 
 ## Overview
 
@@ -43,7 +43,7 @@ scripts/                 Data download, preprocessing, modelling and reporting s
 manuscript_overleaf/     Manuscript source, figures, source data and supplementary tables
 submission_packages/     Journal submission packages, including the current R1 Frontiers package
 reproducibility/         Fixed split files, locked-replay summaries and reviewer-facing sensitivity tables
-releases/r5_jnu_20260828  Current R2 manuscript, scripts, aggregate results, figures and audits
+releases/r5_jnu_fig1v2_20260829  Current R2 manuscript, scripts, aggregate results, Figure 1 v2 and audits
 docs/PROJECT_STRUCTURE.md Detailed active/archive path guide
 archive/                 Deprecated experiments retained for traceability
 requirements.txt         Minimal Python package list

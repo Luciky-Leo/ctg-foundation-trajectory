@@ -1,0 +1,8 @@
+analysis_task	data_role	status	boundary
+Representation learning	Unlabeled public CTG	supporting	JNU + CTU development
+Representation learning	CTU development	supporting	fold-specific SSL
+Morphology probe	CTU expert labels	supporting	representation task
+Risk enrichment	CTU development	supporting	model fitting
+Risk enrichment	Fixed test	exploratory	historically exposed
+Domain context	CTGDL	context	representation transport
+Outcome validation	Harmonized external	absent	not available

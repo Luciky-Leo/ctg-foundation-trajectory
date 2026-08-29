@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "risk_promotion_gate": false,
+  "morphology_representation_gate": true,
+  "main_figure_promotion": false,
+  "decision": "SUPPLEMENT_ONLY",
+  "reason": "JNU transfer must improve both development risk enrichment and morphology representation relative to CTU-only/random under paired intervals.",
+  "risk_jnu_to_ctu_minus_ctu_only": {
+    "analysis": "risk",
+    "metric": "auprc",
+    "candidate": "jnu_to_ctu",
+    "baseline": "ctu_only",
+    "point_mean_across_seeds": 0.003042038375362954,
+    "median_seed_difference": 0.006088484097428903,
+    "positive_seed_count": 3,
+    "seed_count": 5,
+    "ci_low": -0.030434688948848303,
+    "ci_high": 0.031622020818618195,
+    "bootstrap_iterations": 2000,
+    "point_mean_across_seeds_tasks": null
+  },
+  "morphology_jnu_to_ctu_minus_ctu_only": {
+    "analysis": "morphology_macro",
+    "metric": "auroc",
+    "candidate": "jnu_to_ctu",
+    "baseline": "ctu_only",
+    "point_mean_across_seeds": null,
+    "median_seed_difference": 0.04089611849947709,
+    "positive_seed_count": 5,
+    "seed_count": 5,
+    "ci_low": 0.015505575660533418,
+    "ci_high": 0.0646827304468068,
+    "bootstrap_iterations": 2000,
+    "point_mean_across_seeds_tasks": 0.04012129531392432
+  },
+  "morphology_jnu_to_ctu_minus_random": {
+    "analysis": "morphology_macro",
+    "metric": "auroc",
+    "candidate": "jnu_to_ctu",
+    "baseline": "random",
+    "point_mean_across_seeds": null,
+    "median_seed_difference": 0.06545602043335633,
+    "positive_seed_count": 5,
+    "seed_count": 5,
+    "ci_low": 0.03441442629227544,
+    "ci_high": 0.08844107884210321,
+    "bootstrap_iterations": 2000,
+    "point_mean_across_seeds_tasks": 0.06108959422622788
+  },
+  "fixed_test_accessed": false
+}

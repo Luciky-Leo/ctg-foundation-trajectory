@@ -1,0 +1,317 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Supplementary material}\par
+\vspace{6pt}
+{\large Self-supervised biomedical signal representation learning from intrapartum cardiotocography: stability, ablation, and exploratory neonatal risk enrichment}
+\end{center}
+
+\section*{Supplementary Figure S1}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/Figure_S1_R5_model_selection_ablation.png}
+\end{center}
+\textbf{AI model selection and sensitivity.} (A) Mean development AUPRC and standard error for four prespecified architectures. The vertical dashed line is the one-standard-error eligibility threshold; p80-d48-l2 mixed was the smallest eligible model. (B) Mask-strategy sensitivity on a fixed development split. (C) Objective ablation including the random-encoder negative control. (D) Fixed-test dimensionality, regularization and missingness sensitivities. Panels B and C were not used to reselect the final architecture; Panel D is exploratory because the fixed test set had prior exposure.
+
+\clearpage
+\section*{Supplementary Figure S2}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/Supplementary_Figure_S2_R5_external_representation.png}
+\end{center}
+\textbf{External representation transport and domain shift.} (A) Principal-component projection of selected-encoder embeddings from CTU-UHB and CTGDL-FHRMA. (B) Domain-classifier ROC curve (AUROC 0.8811). (C) CTGDL-FHRMA assignments to CTU-fitted SSL phenotype centroids. (D) Distance to the nearest CTU phenotype centroid. This is representation/domain-shift validation, not external neonatal-outcome validation.
+
+\clearpage
+\section*{Supplementary Figure S3}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/Supplementary_Figure_S3_JNU_cross_domain_sensitivity.png}
+\end{center}
+\textbf{Public JNU-CTG cross-domain pretraining sensitivity.} (A) Five-seed development out-of-fold AUPRC by encoder origin. The dotted line denotes development outcome prevalence. (B) Macro-AUROC across seven CTU expert-morphology probes; classical signal features are a supervised conventional-feature comparator. (C) Paired hierarchical bootstrap differences for JNU pretraining followed by CTU adaptation. JNU transfer improved morphology probes relative to CTU-only and random embeddings, whereas its risk-enrichment interval crossed zero. (D) Exploratory fixed-test AUPRC after the development promotion decision; the dotted line denotes test outcome prevalence. (E) Median AUPRC change for FHR-only, UC-only and 1-Hz inputs relative to full 4-Hz FHR+UC. Directions differed between development and fixed-test analyses. (F) Channel-asymmetric minus mixed JNU masking. The morphology interval was negative and the risk interval crossed zero. Fixed-test panels retain potential selection-induced optimism; no JNU result represents external outcome validation.
+
+\clearpage
+\section*{Supplementary Table S1. Fixed cohort split}
+\begin{tabular}{lrrr}
+\toprule
+Split & Records & Events & Prevalence \\
+\midrule
+Development & 386 & 79 & 0.2047 \\
+Fixed test & 166 & 34 & 0.2048 \\
+\bottomrule
+\end{tabular}
+
+\section*{Supplementary Table S2. Development-only architecture selection}
+{\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xrrrr}
+\toprule
+Architecture & Mean AUPRC & SE & Parameters & Selected \\
+\midrule
+p60-d64-l2 mixed cw0.2 & 0.4045 & 0.0826 & 121,532 & No \\
+p120-d64-l2 block cw0.2 & 0.3962 & 0.0636 & 126,712 & No \\
+p80-d48-l2 mixed cw0.1 & 0.3938 & 0.0897 & 74,768 & Yes \\
+p80-d64-l3 channel cw0.2 & 0.3900 & 0.0832 & 172,816 & No \\
+\bottomrule
+\end{tabularx}
+}
+
+The highest mean AUPRC was 0.4045; its one-standard-error threshold was 0.3218. The smallest eligible architecture was selected. Fold-level results and split assignments are provided as CSV files.
+
+\section*{Supplementary Table S3. Development-only objective and mask sensitivities}
+\begin{tabular}{lrrr}
+\toprule
+Objective & AUPRC & AUROC & Brier \\
+\midrule
+Random encoder & 0.3333 & 0.6883 & 0.2385 \\
+Reconstruction only & 0.3174 & 0.6656 & 0.2408 \\
+NT-Xent only & 0.2991 & 0.6695 & 0.2433 \\
+Reconstruction + NT-Xent & 0.3106 & 0.6760 & 0.2448 \\
+Combined, no jitter & 0.3100 & 0.6786 & 0.2453 \\
+\bottomrule
+\end{tabular}
+
+\vspace{8pt}
+\begin{tabular}{lrrr}
+\toprule
+Mask strategy & AUPRC & AUROC & Brier \\
+\midrule
+Random & 0.3461 & 0.7104 & 0.2300 \\
+Block & 0.3312 & 0.7039 & 0.2372 \\
+Channel & 0.3296 & 0.6818 & 0.2352 \\
+Mixed & 0.3106 & 0.6760 & 0.2448 \\
+\bottomrule
+\end{tabular}
+
+All results used the same fixed 289/97 development split. They are component sensitivities, not test-set selection results.
+
+\section*{Supplementary Table S4. Five-seed stability and paired AUPRC differences}
+\begin{tabular}{rrrrrr}
+\toprule
+Seed & AUPRC & AUROC & Brier & $\Delta$AUPRC & 95\% CI \\
+\midrule
+20260521 & 0.3929 & 0.5996 & 0.2636 & 0.0164 & $-0.0596$, 0.0763 \\
+20260522 & 0.3935 & 0.5867 & 0.2628 & 0.0170 & $-0.0623$, 0.0864 \\
+20260523 & 0.4042 & 0.6058 & 0.2628 & 0.0277 & $-0.0597$, 0.1013 \\
+20260524 & 0.4021 & 0.5934 & 0.2623 & 0.0257 & $-0.0551$, 0.0886 \\
+20260525 & 0.3916 & 0.5954 & 0.2643 & 0.0151 & $-0.0665$, 0.0880 \\
+\bottomrule
+\end{tabular}
+
+The signal baseline was fixed across seeds (AUPRC 0.3765, AUROC 0.6428, Brier 0.2482). Differences are reduced SSL minus signal baseline using 2,000 paired bootstrap resamples.
+
+\section*{Supplementary Table S5. Dimensionality, regularization and missingness sensitivities}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Predictors & EPV & AUPRC & AUROC \\
+\midrule
+Signal 10 & 10 & 7.90 & 0.3765 & 0.6428 \\
+Signal 10 + SSL PCA5, L2 & 15 & 5.27 & 0.3929 & 0.5996 \\
+Signal 10 + SSL PCA10, L2 & 20 & 3.95 & 0.4229 & 0.6085 \\
+Signal 10 + SSL PCA20, L2 & 30 & 2.63 & 0.4210 & 0.6179 \\
+Signal 10 + SSL PCA5, elastic net & 15 & 5.27 & 0.3918 & 0.6005 \\
+Signal 12 + SSL PCA5, L2 & 17 & 4.65 & 0.3967 & 0.6217 \\
+\bottomrule
+\end{tabular}
+
+EPV, events per predictor, uses 79 development events. PCA10/20 and missingness results were not used to replace the prespecified PCA5 primary model.
+
+\section*{Supplementary Table S6. Phenotype incremental sensitivity}
+\begin{tabular}{llrrr}
+\toprule
+$k$ & Model & AUPRC & AUROC & Predictors \\
+\midrule
+3 & Reduced SSL & 0.3929 & 0.5996 & 15 \\
+3 & + signal phenotype & 0.3796 & 0.5762 & 17 \\
+3 & + SSL phenotype & 0.3804 & 0.6005 & 17 \\
+4 & Reduced SSL & 0.3929 & 0.5996 & 15 \\
+4 & + signal phenotype & 0.3978 & 0.6047 & 18 \\
+4 & + SSL phenotype & 0.3511 & 0.5858 & 18 \\
+4 & + both phenotypes & 0.3457 & 0.5831 & 21 \\
+5 & Reduced SSL & 0.3929 & 0.5996 & 15 \\
+5 & + signal phenotype & 0.3944 & 0.5960 & 19 \\
+5 & + SSL phenotype & 0.3736 & 0.5882 & 19 \\
+\bottomrule
+\end{tabular}
+
+Complete $k=3$, 4 and 5 rows, including both-phenotype models, are supplied as CSV. Phenotypes are secondary interpretation variables.
+
+\section*{Supplementary Table S7. Endpoint sensitivity}
+\begin{tabular}{llrrrr}
+\toprule
+Outcome & Model & Dev events & Test events & AUPRC & AUROC \\
+\midrule
+Composite & Signal & 79 & 34 & 0.3765 & 0.6428 \\
+Composite & Reduced SSL & 79 & 34 & 0.3929 & 0.5996 \\
+pH $<$7.15 & Signal & 72 & 33 & 0.4161 & 0.6437 \\
+pH $<$7.15 & Reduced SSL & 72 & 33 & 0.4044 & 0.6138 \\
+Apgar5 $<$7 & Signal & 15 & 4 & 0.0593 & 0.4599 \\
+Apgar5 $<$7 & Reduced SSL & 15 & 4 & 0.0591 & 0.6173 \\
+pH $<$7.10 & Signal & 37 & 19 & 0.4507 & 0.7479 \\
+pH $<$7.10 & Reduced SSL & 37 & 19 & 0.4588 & 0.7429 \\
+pH $<$7.05 & Signal & 25 & 15 & 0.5721 & 0.8283 \\
+pH $<$7.05 & Reduced SSL & 25 & 15 & 0.5382 & 0.7991 \\
+\bottomrule
+\end{tabular}
+
+The Apgar-only analysis has fewer than 10 test events and is reported only as an unstable exploratory estimate.
+
+\section*{Supplementary Table S8. Calibration metrics}
+\begin{tabular}{llrrrr}
+\toprule
+Model & Calibration & Brier & ECE & Intercept & Slope \\
+\midrule
+Signal & Raw & 0.2482 & 0.2874 & $-1.4267$ & 0.6518 \\
+Signal & Platt & 0.1543 & 0.0386 & $-0.2404$ & 0.9006 \\
+Signal & Isotonic & 0.1581 & 0.0588 & $-0.5425$ & 0.6506 \\
+Reduced SSL & Raw & 0.2636 & 0.2747 & $-1.3920$ & 0.3860 \\
+Reduced SSL & Platt & 0.1579 & 0.0915 & $-0.5638$ & 0.6440 \\
+Reduced SSL & Isotonic & 0.1694 & 0.0878 & $-0.8558$ & 0.4171 \\
+\bottomrule
+\end{tabular}
+
+\section*{Supplementary Table S9. Historical exploratory result}
+\begin{tabularx}{\textwidth}{p{4.2cm}rrX}
+\toprule
+Historical model & AUPRC & AUROC & Status \\
+\midrule
+Signal + 64 SSL dimensions + signal phenotype & 0.4016 & 0.6168 & Exploratory only. The fixed test set contributed to configuration ranking, so this estimate is not independent validation and is excluded from revised model selection and primary reporting. \\
+\bottomrule
+\end{tabularx}
+
+\section*{Supplementary Table S10. Selected encoder and computing environment}
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+Parameter & Value & Parameter & Value \\
+\midrule
+Patch length & 80 & Model dimension & 48 \\
+Layers & 2 & Attention heads & 4 \\
+Mask strategy & Mixed & Mask fraction & 0.25 \\
+Reconstruction weight & 1.0 & Contrastive weight & 0.1 \\
+Temperature & 0.2 & Jitter SD & 0.02 \\
+Epochs & 4 & Batch size & 64 \\
+Learning rate & 0.001 & Weight decay & 0.0001 \\
+Parameters & 74,768 & Training windows & 5,301 \\
+Framework & PyTorch 2.12.0+cu130 & Device & RTX 5080 Laptop GPU \\
+\bottomrule
+\end{tabular}
+
+\section*{Supplementary Table S11. External representation analysis}
+\begin{tabular}{lr}
+\toprule
+Metric & Value \\
+\midrule
+CTU-UHB records & 552 \\
+CTGDL-FHRMA records & 135 \\
+Embedding dimension & 48 \\
+Domain-classifier AUROC & 0.8811 \\
+External outcome validation & No \\
+Representation/domain-shift analysis & Yes \\
+\bottomrule
+\end{tabular}
+
+\section*{Supplementary Tables S12--S13. Reproducibility audit}
+
+Supplementary Table S12 provides SHA256 hashes for locked inputs. Supplementary Table S13 provides the 23-item output cross-audit, including fold-membership checks, recomputation of AUPRC, AUROC and Brier scores from record-level probability tables, seed completeness, endpoint event counts and figure-file checks. Both are supplied as machine-readable CSV files. The audit status was PASS.
+
+\section*{Supplementary Table S14. Encoder-origin risk stability}
+{\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xrrrr}
+\toprule
+Encoder origin & Dev AUPRC & Dev AUROC & Fixed-test AUPRC & Fixed-test AUROC \\
+\midrule
+Random initialization & 0.3611 & 0.6584 & 0.3840 & 0.5978 \\
+CTU-development-only SSL & 0.3797 & 0.6691 & 0.4017 & 0.5945 \\
+JNU-only SSL & 0.3658 & 0.6702 & 0.4012 & 0.6092 \\
+JNU pretraining $\rightarrow$ CTU adaptation & 0.3682 & 0.6720 & 0.3420 & 0.5951 \\
+JNU channel-asymmetric sensitivity & 0.3802 & 0.6475 & -- & -- \\
+\bottomrule
+\end{tabularx}
+}
+
+Values are medians across seeds 20260521--20260525. Development results are three-fold out-of-fold estimates. Fixed-test results are exploratory because the test set had historical exposure. The channel-asymmetric route was development-only.
+
+\section*{Supplementary Table S15. Frozen-encoder morphology probes}
+\begin{tabular}{lrr}
+\toprule
+Representation & Macro-AUPRC & Macro-AUROC \\
+\midrule
+Classical signal features & 0.5666 & 0.7357 \\
+Random encoder & 0.4543 & 0.6211 \\
+CTU-development-only SSL & 0.4789 & 0.6392 \\
+JNU-only SSL & 0.5155 & 0.6738 \\
+JNU pretraining $\rightarrow$ CTU adaptation & 0.5076 & 0.6802 \\
+JNU channel-asymmetric sensitivity & 0.4460 & 0.6005 \\
+\bottomrule
+\end{tabular}
+
+Values are medians across five seeds and seven expert-event tasks. Probes were fitted and evaluated only within record-grouped CTU development folds.
+
+\section*{Supplementary Table S16. JNU paired hierarchical bootstrap comparisons}
+{\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}Xr>{\raggedright\arraybackslash}p{2.4cm}r}
+\toprule
+Data role & Metric & Contrast & Difference & 95\% CI & Positive seeds \\
+\midrule
+Development & Risk AUPRC & JNU$\rightarrow$CTU vs CTU-only & 0.0030 & $-0.0304$, 0.0316 & 3/5 \\
+Development & Morphology AUROC & JNU$\rightarrow$CTU vs CTU-only & 0.0401 & 0.0155, 0.0647 & 5/5 \\
+Development & Morphology AUROC & JNU$\rightarrow$CTU vs random & 0.0611 & 0.0344, 0.0884 & 5/5 \\
+Development & Morphology AUROC & JNU$\rightarrow$CTU vs signal & $-0.0555$ & $-0.0924$, $-0.0200$ & 0/5 \\
+Development & Risk AUPRC & Asymmetric vs mixed JNU & 0.0098 & $-0.0290$, 0.0444 & 4/5 \\
+Development & Morphology AUROC & Asymmetric vs mixed JNU & $-0.0787$ & $-0.1006$, $-0.0552$ & 0/5 \\
+Fixed test & Risk AUPRC & JNU$\rightarrow$CTU vs CTU-only & $-0.0403$ & $-0.0766$, 0.0016 & 0/5 \\
+Fixed test & Risk AUPRC & JNU-only vs CTU-only & 0.0005 & $-0.0204$, 0.0240 & 2/5 \\
+\bottomrule
+\end{tabularx}
+}
+
+Each interval used 2,000 paired hierarchical bootstrap resamples. Fixed-test rows are exploratory and were not used for promotion.
+
+\section*{Supplementary Table S17. Channel and sampling-rate sensitivity}
+\begin{tabular}{lllrr}
+\toprule
+Data role & Encoder & Input & Median AUPRC & $\Delta$ vs full \\
+\midrule
+Development & CTU-only & FHR-only & 0.3645 & $-0.0153$ \\
+Development & CTU-only & UC-only & 0.3600 & $-0.0197$ \\
+Development & CTU-only & 1 Hz & 0.3676 & $-0.0122$ \\
+Development & JNU$\rightarrow$CTU & FHR-only & 0.3405 & $-0.0276$ \\
+Development & JNU$\rightarrow$CTU & UC-only & 0.3789 & 0.0107 \\
+Development & JNU$\rightarrow$CTU & 1 Hz & 0.3660 & $-0.0022$ \\
+Fixed test & CTU-only & FHR-only & 0.4113 & 0.0096 \\
+Fixed test & CTU-only & UC-only & 0.3601 & $-0.0417$ \\
+Fixed test & CTU-only & 1 Hz & 0.3910 & $-0.0107$ \\
+Fixed test & JNU$\rightarrow$CTU & FHR-only & 0.3961 & 0.0541 \\
+Fixed test & JNU$\rightarrow$CTU & UC-only & 0.3521 & 0.0101 \\
+Fixed test & JNU$\rightarrow$CTU & 1 Hz & 0.3323 & $-0.0097$ \\
+\bottomrule
+\end{tabular}
+
+Values are five-seed medians. The direction reversal across data roles precludes selecting an input variant from these sensitivities.
+
+\section*{Supplementary Table S18. JNU-CTG data and leakage audit}
+\begin{tabularx}{\textwidth}{p{5.1cm}X}
+\toprule
+Audit item & Result \\
+\midrule
+Archive identifier & Zenodo 21800730; CC BY 4.0 \\
+Archive MD5 & \texttt{ac1cfcba2f1b3336596544211d776771}; matched \\
+Waveform readability & 20,769/20,769 records readable (100\%) \\
+Patient grouping & 12,606 unique patient groups retained \\
+SSL windows & 62,307 non-overlapping 10-minute windows; FHR+UC; 4 Hz \\
+JNU labels used in SSL & None; Apgar, asphyxia, FIGO, demographics and other clinical labels withheld \\
+CTU fold isolation & Fold-specific adaptation used development-training records only \\
+Fixed-test access & Opened only after the development promotion decision; historical exposure disclosed \\
+Promotion decision & Supplement-only because the risk-enrichment gate failed \\
+External outcome validation & Not performed \\
+\bottomrule
+\end{tabularx}
+
+\end{document}

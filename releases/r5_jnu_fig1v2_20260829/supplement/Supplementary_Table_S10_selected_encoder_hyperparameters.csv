@@ -1,0 +1,26 @@
+parameter,value
+input_channels,2
+sampling_rate_hz,4
+window_minutes,10
+points_per_channel,2400
+patch_length,80
+channel_time_tokens,60
+d_model,48
+transformer_layers,2
+attention_heads,4
+dropout,0.1
+projection_dimension,64
+mask_strategy,mixed
+mask_fraction,0.25
+reconstruction_weight,1.0
+contrastive_weight,0.1
+nt_xent_temperature,0.2
+jitter_standard_deviation,0.02
+epochs,4
+batch_size,64
+learning_rate,0.001
+weight_decay,0.0001
+trainable_parameters,74768
+training_windows,5301
+training_device,NVIDIA GeForce RTX 5080 Laptop GPU
+torch_version,2.12.0+cu130

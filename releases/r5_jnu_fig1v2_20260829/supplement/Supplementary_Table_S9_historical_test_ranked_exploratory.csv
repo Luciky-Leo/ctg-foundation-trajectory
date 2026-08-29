@@ -1,0 +1,2 @@
+analysis_route,model,auprc,auroc,status,reason_not_primary
+historical_test_ranked,signal_plus_ssl_plus_signal_phenotype,0.4016,0.6168,exploratory_only,"The fixed test set contributed to configuration ranking; the estimate cannot be treated as independent validation and is excluded from revised model selection."

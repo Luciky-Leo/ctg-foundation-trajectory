@@ -1,0 +1,97 @@
+[
+  {
+    "path": "02_protocol/JNU_CROSS_DOMAIN_FROZEN_ADDENDUM.md",
+    "bytes": 3313,
+    "sha256": "d839876f2700c709ec3dbbcc3bf7bd078e151e083108a607c24ca05dedde7be1"
+  },
+  {
+    "path": "09_reproducibility/FROZEN_MODEL_CONFIG.json",
+    "bytes": 508,
+    "sha256": "d27c1ca0fd29dc2c8f75142d685a007917793aa0fea4ef3cfbea8c904c931d49"
+  },
+  {
+    "path": "09_reproducibility/ctu_development_folds.csv",
+    "bytes": 30900,
+    "sha256": "ba4433d78f93906467fe077dc4df7838129bbb3e1c194822ead47c8cc4195bd4"
+  },
+  {
+    "path": "04_data/jnu_processed/JNU_PREPROCESS_QC.json",
+    "bytes": 662,
+    "sha256": "feb563e22808196a4aec713cdae899500bf555a39cd1bef98f027960f00814f7"
+  },
+  {
+    "path": "04_data/jnu_processed/jnu_window_index.csv",
+    "bytes": 3081476,
+    "sha256": "8c12302c43afdc7355cfd46c76f02f252d9bcf39a8f4c9d3d2b890a4e2b29af3"
+  },
+  {
+    "path": "04_data/jnu_processed/jnu_ctg_windows_f16.npy",
+    "bytes": 598147328,
+    "sha256": "bd03a14274c048641e5409dbce3fcf99d38369fac8832bbd82b6085c6c7a39a5"
+  },
+  {
+    "path": "03_analysis/JNU_PROMOTION_DECISION.json",
+    "bytes": 1739,
+    "sha256": "3d887a4b67973269a27a956765baa2b5e3cb99c9b0642856b920b01a0ef6ce6c"
+  },
+  {
+    "path": "03_analysis/FIXED_TEST_EXPLORATORY_AUDIT.json",
+    "bytes": 812,
+    "sha256": "9deef1d4811195241bd72c0cac81b6ca401b0e35c1db8e062b06b2295c7b85ed"
+  },
+  {
+    "path": "04_tables/development_risk_probabilities.csv",
+    "bytes": 1989718,
+    "sha256": "96234e91296cb5aa3ce2d18e3e4f2dd0047bc26f0b4827d96ba27439caa2e8dc"
+  },
+  {
+    "path": "04_tables/fixed_test_risk_probabilities.csv",
+    "bytes": 854500,
+    "sha256": "3ccd986a051a3847a506c634f733f515fa9da18a9ad69c4bfe633554a34166cd"
+  },
+  {
+    "path": "04_tables/development_morphology_probabilities.csv",
+    "bytes": 5660785,
+    "sha256": "d7f60fc48cea276ab12a5def7919a284c2e9ce2f56fd05776e51a88f959eca17"
+  },
+  {
+    "path": "05_figures/Figure_1_final_study_design.png",
+    "bytes": 529032,
+    "sha256": "99309e4e15166ef1da5d6f58b9e50f9e5eff99d0515c03c93160ed409f2b30ba"
+  },
+  {
+    "path": "05_figures/Supplementary_Figure_S3_JNU_cross_domain_sensitivity.png",
+    "bytes": 233944,
+    "sha256": "cfc5602d0a9396e82aff9662d9469da49213950fb62c9e7eceb3b2da8bdc207e"
+  },
+  {
+    "path": "06_manuscript/frontiers_r5_jnu_source/frontiers_ctg_manuscript_r5.tex",
+    "bytes": 41554,
+    "sha256": "597b7cd188191f1bad6dd7c0ee97a0f1aa9fc89d83c438ec5d20b72b439d93ca"
+  },
+  {
+    "path": "06_manuscript/frontiers_r5_jnu_source/frontiers_ctg_supplementary_material_r5.tex",
+    "bytes": 15093,
+    "sha256": "6b19c5c591497a5e4eeca1451da30413ea0f902dc05b046c9e0885197e2647fd"
+  },
+  {
+    "path": "06_manuscript/frontiers_r5_jnu_source/frontiers_ctg_manuscript_r5.pdf",
+    "bytes": 2507968,
+    "sha256": "5871571817298883f7a1b214bfcf23061830ddb69f6e8ca675ba3bb9c6692d55"
+  },
+  {
+    "path": "06_manuscript/frontiers_r5_jnu_source/frontiers_ctg_supplementary_material_r5.pdf",
+    "bytes": 1204400,
+    "sha256": "81bfd9769f5cad7eccd24c464ddbfb7c09a14dd5d68e53484a378322082c7bbd"
+  },
+  {
+    "path": "07_response/Response_to_Reviewer_5_R2_JNU_20260828.md",
+    "bytes": 13111,
+    "sha256": "d6f96b0c519ce1b3da6d671c3ad6796b22bfb6963bb62d7d418b4643c6c6c388"
+  },
+  {
+    "path": "07_response/Response_to_Reviewer_5_R2_JNU_20260828.pdf",
+    "bytes": 35106,
+    "sha256": "cec0046ca6da427b2da96ba76d6d90d48f82dcf2094870d13dfe8d3c083e3a73"
+  }
+]

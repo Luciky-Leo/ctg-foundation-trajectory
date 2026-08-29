@@ -1,0 +1,24 @@
+check,status,observed,expected
+cohort_total,PASS,552,552
+development_records,PASS,386,386
+fixed_test_records,PASS,166,166
+development_events,PASS,79,79
+fixed_test_events,PASS,34,34
+architecture_fold_grid,PASS,12,4 architectures x 3 folds
+architecture_selection_scope,PASS,['development_only'],['development_only']
+development_only_split_membership,PASS,"p120_d64_l2_block_cw02/fold1: n=386, test_overlap=0; p120_d64_l2_block_cw02/fold2: n=386, test_overlap=0; p120_d64_l2_block_cw02/fold3: n=386, test_overlap=0; p60_d64_l2_mixed_cw02/fold1: n=386, test_overlap=0; p60_d64_l2_mixed_cw02/fold2: n=386, test_overlap=0; p60_d64_l2_mixed_cw02/fold3: n=386, test_overlap=0; p80_d48_l2_mixed_cw01/fold1: n=386, test_overlap=0; p80_d48_l2_mixed_cw01/fold2: n=386, test_overlap=0; p80_d48_l2_mixed_cw01/fold3: n=386, test_overlap=0; p80_d64_l3_channel_cw02/fold1: n=386, test_overlap=0; p80_d64_l3_channel_cw02/fold2: n=386, test_overlap=0; p80_d64_l3_channel_cw02/fold3: n=386, test_overlap=0",each fold contains all and only 386 development records
+development_validation_once,PASS,True,each development record appears in validation exactly once per architecture
+selected_architecture,PASS,p80_d48_l2_mixed_cw01,p80_d48_l2_mixed_cw01
+test_not_used_in_new_selection,PASS,0,0
+objective_ablation_complete,PASS,"['combined', 'combined_no_jitter', 'nt_xent_only', 'random_encoder', 'reconstruction_only']","['combined', 'combined_no_jitter', 'nt_xent_only', 'random_encoder', 'reconstruction_only']"
+mask_ablation_complete,PASS,"['block', 'channel', 'mixed', 'random']","['block', 'channel', 'mixed', 'random']"
+five_seed_stability,PASS,"[20260521, 20260522, 20260523, 20260524, 20260525]","[20260521, 20260522, 20260523, 20260524, 20260525]"
+primary_predictor_count,PASS,15,15
+primary_events_per_predictor,PASS,5.266666666666667,5.266666666666667
+paired_auprc_intervals_cross_zero,PASS,5/5,5/5
+risk_metric_recomputation,PASS,6/6,6/6
+calibration_metric_recomputation,PASS,6/6,6/6
+endpoint_event_counts,PASS,"{'apgar5_lt_7': 4, 'cord_ph_lt_7_05': 15, 'cord_ph_lt_7_10': 19, 'cord_ph_lt_7_15': 33, 'neonatal_risk': 34}","{'neonatal_risk': 34, 'cord_ph_lt_7_15': 33, 'apgar5_lt_7': 4, 'cord_ph_lt_7_10': 19, 'cord_ph_lt_7_05': 15}"
+external_representation_boundary,PASS,"{'selected_encoder': 'p80_d48_l2_mixed_cw01_seed_20260521', 'external_outcome_validation': False, 'representation_domain_shift_only': True, 'domain_classifier_auroc': 0.8811342932706435}",representation/domain-shift only; no external outcome validation
+external_domain_auroc,PASS,0.8811342932706435,0.8811342932706435
+figure_outputs_complete,PASS,all present,PNG and PDF for 5 figures
